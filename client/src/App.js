@@ -1,24 +1,20 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { Jumbotron, Button } from 'reactstrap';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
+    <div>
+      <Jumbotron>
+        <h1 className="display-3">Hello, world!</h1>
+        <p className="lead">This is a simple hero unit, a simple Jumbotron-style component for calling extra attention to featured content or information.</p>
+        <hr className="my-2" />
+        <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+        <p className="lead">
+          <Button color="primary">Learn More</Button>
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      </Jumbotron>
     </div>
   );
 }
