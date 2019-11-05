@@ -3,7 +3,12 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "cd ./client && npm run build && cd .. && node ./bin/www"
+    "start": "npm run start:prod",
+    "start:dev:react": "cd ./client && npm i && npm start && cd ..",
+    "start:dev:node": "npm i && node ./bin/www",
+    "start:prod": "npm run start:prod:react && npm run start:prod:node",
+    "start:prod:react": "cd ./client && npm i && npm run build && cd ..",
+    "start:prod:node": "npm i && node ./bin/www"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
