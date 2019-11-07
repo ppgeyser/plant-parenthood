@@ -8,8 +8,6 @@ function App() {
     <Router>
       <Switch>
         <Route exact path="/" component={About} />
-      </Switch>
-      <Switch>
         <Route component={noMatch} />
       </Switch>
     </Router>
