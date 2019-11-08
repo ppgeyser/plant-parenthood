@@ -15,16 +15,12 @@ function App() {
         {/* <NavBar /> */}
       </header>
       <Switch>
-<<<<<<< HEAD
         <Route exact path="/">
           <About />
           <Login />  
         </Route>
         <Route exact path="/cheese/:id" component={CheeseDetail} />
         <PrivateRoute path="/profile" component={Profile} />
-=======
-        <Route exact path="/" component={About} />
->>>>>>> 5f9d3d0557611a184970840a94b34cf471dd6dc3
         <Route component={noMatch} />
       </Switch>
     </Router>
