@@ -1,9 +1,10 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { PrivateRoute } from "./components/PrivateRoute";
+import { Login } from "./components/Login";
 import { About } from "./components/About";
 import { noMatch } from "./components/noMatch/";
 import { CheeseDetail } from "./pages/CheeseDetail";
-import { Login } from "./components/Login";
 import { Profile } from "./components/Profile";
 // import { NavBar } from "./components/NavBar";
 
@@ -19,7 +20,7 @@ function App() {
           <Login />  
         </Route>
         <Route exact path="/cheese/:id" component={CheeseDetail} />
-        <Route path="/profile" component={Profile} />
+        <PrivateRoute path="/profile" component={Profile} />
         <Route component={noMatch} />
       </Switch>
     </Router>
