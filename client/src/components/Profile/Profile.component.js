@@ -4,7 +4,7 @@ import { useAuth0 } from "../../react-auth0-spa";
 import { Link } from "react-router-dom";
 
 export const Profile = (props) => {
-  const { logout, loading, user } = useAuth0();
+  const { logout, loading, user} = useAuth0();
 
   if (loading || !user) {
     return (
@@ -28,7 +28,7 @@ export const Profile = (props) => {
       
       <h2>JSON below of your information!</h2>
       <br></br>
-      <code>{JSON.stringify(user, null, 2)}</code>
+      <code>{JSON.stringify(user, null, 2,)}</code>
       </div>
   );
 };

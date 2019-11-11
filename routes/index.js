@@ -12,9 +12,12 @@ router.get('/api/health', function(req, res, next) {
 router.get('/api/cheese/:id', (req, res) => {
   console.log('requested cheese id:', req.params.id);
   res.json({
+    cheese: {
+    id: 1,
     name: "Humboldt Fog",
     price: 1500,
     description: "Only the foggiest!"
+    }
   });
 });
 
