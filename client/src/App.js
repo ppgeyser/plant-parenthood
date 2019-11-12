@@ -4,9 +4,12 @@ import { PrivateRoute } from "./components/PrivateRoute";
 import { Login } from "./components/Login";
 import { About } from "./components/About";
 import { noMatch } from "./components/noMatch/";
-import { CheeseDetail } from "./pages/CheeseDetail";
 import { Profile } from "./components/Profile";
+import { Survey } from "./pages/Survey/Survey.component";
+import { Plants } from "./pages/Plants/Plants.component";
+import { PlantDetail } from "./pages/PlantDetail/PlantDetail.component";
 // import { NavBar } from "./components/NavBar";
+import { PagePlaceholder } from './pages/PagePlaceholder/PagePlaceholder.component';
 
 function App() {
   return (
@@ -19,8 +22,10 @@ function App() {
           <About />
           <Login />  
         </Route>
-        <Route exact path="/cheese/:id" component={CheeseDetail} />
-        <PrivateRoute path="/profile" component={Profile} />
+        <PrivateRoute exact path="/dashboard" component={Profile} />
+        <PrivateRoute exact path="/survey" component={Survey} />
+        <PrivateRoute exact path="/plants" component={Plants} />
+        <PrivateRoute exact path="/plants/:id" component={PlantDetail} />
         <Route component={noMatch} />
       </Switch>
     </Router>

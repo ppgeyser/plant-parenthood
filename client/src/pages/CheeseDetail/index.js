@@ -28,7 +28,7 @@ export class CheeseDetail extends React.Component {
                     console.log(`ERR - Could not load cheese id: ${id}`, err),
                     this.setState({
                         cheese: {
-                            name: 'Smelly Cheese',
+                            name: 'Smellyyyy Cheese',
                             price: 1000,
                             description: 'Stinky stuffffff!!',
                         }
