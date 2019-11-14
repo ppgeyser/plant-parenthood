@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { User } from '../../components/User'
 
 export class Plants extends Component {
     constructor(props){
@@ -13,6 +14,7 @@ export class Plants extends Component {
         return (
             <div>
                 <h1>Plants Page</h1>
+                <User />
             </div>
         );
     }
