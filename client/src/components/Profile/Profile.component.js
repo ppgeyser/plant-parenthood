@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { User } from '../../components/User'
 
 export const Profile = (props) => { 
-  const { logout, loading, user, key} = useAuth0();
+  const { logout, loading, user} = useAuth0();
 
   if (loading || !user) {
     return (

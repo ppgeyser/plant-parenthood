@@ -1,16 +1,13 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { PrivateRoute } from "./components/PrivateRoute";
-import { Login } from "./components/Login";
-import { About } from "./components/About";
 import { noMatch } from "./components/noMatch/";
-import { Profile } from "./components/Profile";
+import {Landing } from "./pages/Landing"
+// import { Profile } from "./components/Profile";
 import { Survey } from "./pages/Survey/Survey.component";
 import { Plants } from "./pages/Plants/Plants.component";
 import { PlantDetail } from "./pages/PlantDetail/PlantDetail.component";
 import  Dashboard  from "./pages/Dashboard";
-// import { NavBar } from "./components/NavBar";
-import { PagePlaceholder } from './pages/PagePlaceholder/PagePlaceholder.component';
 
 function App() {
   return (
@@ -19,10 +16,7 @@ function App() {
         {/* <NavBar /> */}
       </header>
       <Switch>
-        <Route exact path="/">
-          <About />
-          <Login />  
-        </Route>
+        <Route exact path="/" component={Landing} />
         <PrivateRoute exact path="/dashboard" component={Dashboard} />
         <PrivateRoute exact path="/survey" component={Survey} />
         <PrivateRoute exact path="/plants" component={Plants} />

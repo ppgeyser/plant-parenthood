@@ -1,4 +1,5 @@
 import React from 'react';
+import { Login } from '../../components/Login/Login.component'
 
 class Dashboard extends React.Component {
     constructor(props) {
@@ -15,7 +16,9 @@ class Dashboard extends React.Component {
             <div>
                 <p>This is the Dashboard Page</p>
                 <a href="/survey"  data={this.state.allPlants}>Survey</a>
+                <Login />
             </div>
+            
         )
     }
 }
