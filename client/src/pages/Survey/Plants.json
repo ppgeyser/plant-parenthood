@@ -1,0 +1,44 @@
+[
+    {
+        "plantId": "1",
+        "plantCare": {
+            "hardinessZone": "9-10",
+            "soil": "Sandy",
+            "sun": "Full sun, Part sun",
+            "water": "Once every 3 weeks"
+        },
+        "plantName": "Aloe Vera",
+        "plantPic": "https://www.almanac.com/sites/default/files/styles/primary_image_in_article/public/image_nodes/aloe-vera-white-pot_sunwand24-ss_edit.jpg?itok=Y7HnaYk3",
+        "plantType": "House Plant",
+        "plantSci": "Aloe Vera",
+        "plantScore": "12345"
+    },
+    {
+        "plantId": "2",
+        "plantCare": {
+            "hardinessZone": "8-10",
+            "soil": "Loamy",
+            "sun": "Full sun, Part sun, Shade",
+            "water": "Once every 4 weeks"
+        },
+        "plantName": "Snake Plant",
+        "plantPic": "https://www.almanac.com/sites/default/files/styles/primary_image_in_article/public/image_nodes/shutterstock_679786570.jpg?itok=X2jXqX-x",
+        "plantType": "House Plant",
+        "plantSci": "Sansevieria trifasciata",
+        "plantScore": "12345"
+    },
+    {
+        "plantId": "3",
+        "plantCare": {
+            "hardinessZone": "10-11",
+            "soil": "Sandy",
+            "sun": "Full sun",
+            "water": "Once every 2.5 weeks"
+        },
+        "plantName": "Geranium",
+        "plantPic": "https://www.almanac.com/sites/default/files/styles/primary_image_in_article/public/image_nodes/geranium-2422730_1920.jpg?itok=cyx72G4f",
+        "plantType": "Patio Plant",
+        "plantSci": "Pelargonium",
+        "plantScore": "12345"
+    },
+]
