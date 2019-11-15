@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+
 export class PlantDetail extends Component {
     constructor(props){
         super(props);

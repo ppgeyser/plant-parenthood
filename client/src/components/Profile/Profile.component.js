@@ -2,9 +2,10 @@ import React from "react";
 import { Button } from 'reactstrap';
 import { useAuth0 } from "../../react-auth0-spa";
 import { Link } from "react-router-dom";
+import { User } from '../../components/User'
 
-export const Profile = (props) => {
-  const { logout, loading, user} = useAuth0();
+export const Profile = (props) => { 
+  const { logout, loading, user, key} = useAuth0();
 
   if (loading || !user) {
     return (
@@ -24,11 +25,11 @@ export const Profile = (props) => {
             <Link to="/"><Button>Home</Button></Link>&nbsp;
         </span>
 
-      {/* we obviously don't need this bit below but I included it to show what we are requesting from what Auth0 calls the Scope */}
+      {/* This bit below will not be displayed in release */}
       
-      <h2>JSON below of your information!</h2>
       <br></br>
-      <code>{JSON.stringify(user, null, 2,)}</code>
+      <User />
+      <br></br>
       </div>
   );
 };
