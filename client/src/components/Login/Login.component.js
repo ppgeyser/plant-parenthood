@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { Redirect } from "react-router-dom";
 
 export const Login = (props) => {
-  const { isAuthenticated, loginWithRedirect, logout } = useAuth0();
+  const { isAuthenticated, loginWithRedirect } = useAuth0();
 
   return (
     <div className="text-center">
