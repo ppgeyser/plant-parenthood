@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import InfoCard from '../../components/InfoCard'
 
 
 export class PlantDetail extends Component {
@@ -14,6 +15,7 @@ export class PlantDetail extends Component {
         return (
             <div>
                 <h1>Plant ID: {this.props.match.params.id}</h1>
+                <InfoCard sun='bright' />
             </div>
         );
     }
