@@ -41,4 +41,186 @@
         "plantSci": "Pelargonium",
         "plantScore": "12345"
     },
+    {
+        "plantId": "4",
+        "plantCare": {
+            "hardinessZone": "0-0",
+            "soil": "Soiltype",
+            "sun": "Full sun",
+            "water": "Once every 2.5 weeks"
+        },
+        "plantName": "Common Name",
+        "plantPic": "urlhere",
+        "plantType": "House Plant",
+        "plantSci": "latin name",
+        "plantScore": "12345"
+    },
+    {
+        "plantId": "5",
+        "plantCare": {
+            "hardinessZone": "0-0",
+            "soil": "Soiltype",
+            "sun": "Full sun",
+            "water": "Once every 2.5 weeks"
+        },
+        "plantName": "Common Name",
+        "plantPic": "urlhere",
+        "plantType": "House Plant",
+        "plantSci": "latin name",
+        "plantScore": "12345"
+    },
+    {
+        "plantId": "6",
+        "plantCare": {
+            "hardinessZone": "0-0",
+            "soil": "Soiltype",
+            "sun": "Full sun",
+            "water": "Once every 2.5 weeks"
+        },
+        "plantName": "Common Name",
+        "plantPic": "urlhere",
+        "plantType": "House Plant",
+        "plantSci": "latin name",
+        "plantScore": "12345"
+    },
+    {
+        "plantId": "7",
+        "plantCare": {
+            "hardinessZone": "0-0",
+            "soil": "Soiltype",
+            "sun": "Full sun",
+            "water": "Once every 2.5 weeks"
+        },
+        "plantName": "Common Name",
+        "plantPic": "urlhere",
+        "plantType": "House Plant",
+        "plantSci": "latin name",
+        "plantScore": "12345"
+    },
+    {
+        "plantId": "8",
+        "plantCare": {
+            "hardinessZone": "0-0",
+            "soil": "Soiltype",
+            "sun": "Full sun",
+            "water": "Once every 2.5 weeks"
+        },
+        "plantName": "Common Name",
+        "plantPic": "urlhere",
+        "plantType": "House Plant",
+        "plantSci": "latin name",
+        "plantScore": "12345"
+    },
+    {
+        "plantId": "8",
+        "plantCare": {
+            "hardinessZone": "0-0",
+            "soil": "Soiltype",
+            "sun": "Full sun",
+            "water": "Once every 2.5 weeks"
+        },
+        "plantName": "Common Name",
+        "plantPic": "urlhere",
+        "plantType": "House Plant",
+        "plantSci": "latin name",
+        "plantScore": "12345"
+    },
+    {
+        "plantId": "9",
+        "plantCare": {
+            "hardinessZone": "0-0",
+            "soil": "Soiltype",
+            "sun": "Full sun",
+            "water": "Once every 2.5 weeks"
+        },
+        "plantName": "Common Name",
+        "plantPic": "urlhere",
+        "plantType": "House Plant",
+        "plantSci": "latin name",
+        "plantScore": "12345"
+    },
+    {
+        "plantId": "10",
+        "plantCare": {
+            "hardinessZone": "0-0",
+            "soil": "Soiltype",
+            "sun": "Full sun",
+            "water": "Once every 2.5 weeks"
+        },
+        "plantName": "Common Name",
+        "plantPic": "urlhere",
+        "plantType": "House Plant",
+        "plantSci": "latin name",
+        "plantScore": "12345"
+    },
+    {
+        "plantId": "11",
+        "plantCare": {
+            "hardinessZone": "0-0",
+            "soil": "Soiltype",
+            "sun": "Full sun",
+            "water": "Once every 2.5 weeks"
+        },
+        "plantName": "Common Name",
+        "plantPic": "urlhere",
+        "plantType": "House Plant",
+        "plantSci": "latin name",
+        "plantScore": "12345"
+    },
+    {
+        "plantId": "12",
+        "plantCare": {
+            "hardinessZone": "0-0",
+            "soil": "Soiltype",
+            "sun": "Full sun",
+            "water": "Once every 2.5 weeks"
+        },
+        "plantName": "Common Name",
+        "plantPic": "urlhere",
+        "plantType": "House Plant",
+        "plantSci": "latin name",
+        "plantScore": "12345"
+    },
+    {
+        "plantId": "13",
+        "plantCare": {
+            "hardinessZone": "0-0",
+            "soil": "Soiltype",
+            "sun": "Full sun",
+            "water": "Once every 2.5 weeks"
+        },
+        "plantName": "Common Name",
+        "plantPic": "urlhere",
+        "plantType": "House Plant",
+        "plantSci": "latin name",
+        "plantScore": "12345"
+    },
+    {
+        "plantId": "14",
+        "plantCare": {
+            "hardinessZone": "0-0",
+            "soil": "Soiltype",
+            "sun": "Full sun",
+            "water": "Once every 2.5 weeks"
+        },
+        "plantName": "Common Name",
+        "plantPic": "urlhere",
+        "plantType": "House Plant",
+        "plantSci": "latin name",
+        "plantScore": "12345"
+    },
+    {
+        "plantId": "15",
+        "plantCare": {
+            "hardinessZone": "0-0",
+            "soil": "Soiltype",
+            "sun": "Full sun",
+            "water": "Once every 2.5 weeks"
+        },
+        "plantName": "Common Name",
+        "plantPic": "urlhere",
+        "plantType": "House Plant",
+        "plantSci": "latin name",
+        "plantScore": "12345"
+    }
 ]
