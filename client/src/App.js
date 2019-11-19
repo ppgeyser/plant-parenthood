@@ -6,7 +6,10 @@ import {Landing } from "./pages/Landing"
 // import { Profile } from "./components/Profile";
 import { Survey } from "./pages/Survey/Survey.component";
 import { Plants } from "./pages/Plants/Plants.component";
-import { PlantDetail } from "./pages/PlantDetail/PlantDetail.component";
+
+import  AddPlant  from "./pages/AddPlant/";
+
+import PlantDetail from "./pages/PlantDetail/PlantDetail.component";
 import  Dashboard  from "./pages/Dashboard";
 
 function App() {
@@ -20,6 +23,9 @@ function App() {
         <PrivateRoute exact path="/dashboard" component={Dashboard} />
         <PrivateRoute exact path="/survey" component={Survey} />
         <PrivateRoute exact path="/plants" component={Plants} />
+
+        <PrivateRoute exact path="/addPlant" component={AddPlant} />
+
         <PrivateRoute exact path="/plants/:id" component={PlantDetail} />
         <Route component={noMatch} />
       </Switch>

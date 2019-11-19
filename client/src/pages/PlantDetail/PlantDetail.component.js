@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import InfoCard from '../../components/InfoCard'
 
 
-export class PlantDetail extends Component {
+class PlantDetail extends Component {
     constructor(props){
         super(props);
     }
@@ -20,3 +20,5 @@ export class PlantDetail extends Component {
         );
     }
 }
+
+export default PlantDetail;
