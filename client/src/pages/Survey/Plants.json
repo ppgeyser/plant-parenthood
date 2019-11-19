@@ -2,7 +2,6 @@
     {
         "plantId": "1",
         "plantCare": {
-            "hardinessZone": "9-10",
             "soil": "Sandy",
             "sun": "Full sun, Part sun",
             "water": "Once every 3 weeks"
@@ -11,12 +10,12 @@
         "plantPic": "https://www.almanac.com/sites/default/files/styles/primary_image_in_article/public/image_nodes/aloe-vera-white-pot_sunwand24-ss_edit.jpg?itok=Y7HnaYk3",
         "plantType": "House Plant",
         "plantSci": "Aloe Vera",
+        "nonToxic": true,
         "plantScore": "12345"
     },
     {
         "plantId": "2",
         "plantCare": {
-            "hardinessZone": "8-10",
             "soil": "Loamy",
             "sun": "Full sun, Part sun, Shade",
             "water": "Once every 4 weeks"
@@ -25,12 +24,12 @@
         "plantPic": "https://www.almanac.com/sites/default/files/styles/primary_image_in_article/public/image_nodes/shutterstock_679786570.jpg?itok=X2jXqX-x",
         "plantType": "House Plant",
         "plantSci": "Sansevieria trifasciata",
+        "nonToxic": true,
         "plantScore": "12345"
     },
     {
         "plantId": "3",
         "plantCare": {
-            "hardinessZone": "10-11",
             "soil": "Sandy",
             "sun": "Full sun",
             "water": "Once every 2.5 weeks"
@@ -39,188 +38,189 @@
         "plantPic": "https://www.almanac.com/sites/default/files/styles/primary_image_in_article/public/image_nodes/geranium-2422730_1920.jpg?itok=cyx72G4f",
         "plantType": "Patio Plant",
         "plantSci": "Pelargonium",
+        "nonToxic": true,
         "plantScore": "12345"
     },
     {
         "plantId": "4",
         "plantCare": {
-            "hardinessZone": "0-0",
-            "soil": "Soiltype",
-            "sun": "Full sun",
-            "water": "Once every 2.5 weeks"
+            "soil": "Well-draining potting soil",
+            "sun": "Bright room, indirect sun",
+            "water": "Once every 1.5 weeks or when top soil is dry"
         },
-        "plantName": "Common Name",
-        "plantPic": "urlhere",
+        "plantName": "Areca Palm",
+        "plantPic": "https://www.greenandvibrant.com/sites/default/files/field/image/Decorative-Areca-palm-near-white-brick-wall.jpg",
         "plantType": "House Plant",
-        "plantSci": "latin name",
+        "plantSci": "Dypsis lutescens",
+        "nonToxic": true,
         "plantScore": "12345"
     },
     {
         "plantId": "5",
         "plantCare": {
-            "hardinessZone": "0-0",
-            "soil": "Soiltype",
-            "sun": "Full sun",
-            "water": "Once every 2.5 weeks"
+            "soil": "Well-draining cactus potting soil",
+            "sun": "Partial Shade",
+            "water": "Once every 1.5 weeks or when top soil is dry"
         },
-        "plantName": "Common Name",
-        "plantPic": "urlhere",
+        "plantName": "Pothos",
+        "plantPic": "https://www.houseplantsexpert.com/image-files/golden_pothos1.jpg",
         "plantType": "House Plant",
-        "plantSci": "latin name",
+        "plantSci": "Epipremnum aureum",
+        "nonToxic": false,
         "plantScore": "12345"
     },
     {
         "plantId": "6",
         "plantCare": {
-            "hardinessZone": "0-0",
-            "soil": "Soiltype",
-            "sun": "Full sun",
-            "water": "Once every 2.5 weeks"
+            "soil": "Any potting mix",
+            "sun": "Bright room, indirect sun",
+            "water": "Once every 1 week"
         },
-        "plantName": "Common Name",
-        "plantPic": "urlhere",
+        "plantName": "Spider Plant",
+        "plantPic": "https://www.greenandvibrant.com/sites/default/files/field/image/Chlorophytum-Comosum-Spider-Plant.jpg",
         "plantType": "House Plant",
-        "plantSci": "latin name",
+        "plantSci": "Chlorophytum comosum vittatum ",
+        "nonToxic": true,
         "plantScore": "12345"
     },
     {
         "plantId": "7",
         "plantCare": {
-            "hardinessZone": "0-0",
-            "soil": "Soiltype",
-            "sun": "Full sun",
-            "water": "Once every 2.5 weeks"
+            "soil": "Well-draining potting soil",
+            "sun": "Low light tolerant, indirect sun",
+            "water": "Once every 1.5 weeks or when top soil is dry"
         },
-        "plantName": "Common Name",
-        "plantPic": "urlhere",
+        "plantName": "ZZ Plant",
+        "plantPic": "https://www.greenandvibrant.com/sites/default/files/field/image/zz-plant.jpg",
         "plantType": "House Plant",
-        "plantSci": "latin name",
+        "plantSci": "Zamioculcas zamiifolia",
+        "nonToxic": false,
         "plantScore": "12345"
     },
     {
         "plantId": "8",
         "plantCare": {
-            "hardinessZone": "0-0",
-            "soil": "Soiltype",
-            "sun": "Full sun",
-            "water": "Once every 2.5 weeks"
+            "soil": "Well-draining potting soil",
+            "sun": "Bright room, indirect sun",
+            "water": "Once every 1.5 weeks or when top soil is slightly dry"
         },
-        "plantName": "Common Name",
-        "plantPic": "urlhere",
+        "plantName": "Rubber tree",
+        "plantPic": "https://www.greenandvibrant.com/sites/default/files/field/image/An-isolated-indoor-ficus-elastica.jpg",
         "plantType": "House Plant",
-        "plantSci": "latin name",
+        "plantSci": "Ficus elastica",
+        "nonToxic": false,
         "plantScore": "12345"
     },
     {
         "plantId": "8",
         "plantCare": {
-            "hardinessZone": "0-0",
-            "soil": "Soiltype",
+            "soil": "Cactus potting soil",
             "sun": "Full sun",
-            "water": "Once every 2.5 weeks"
+            "water": "Once a month. No watering during winter months."
         },
-        "plantName": "Common Name",
-        "plantPic": "urlhere",
+        "plantName": "Bunny Ear Cactus",
+        "plantPic": "https://succulentcity.com/wp-content/uploads/2019/06/bunny-cactus-sc.jpg",
         "plantType": "House Plant",
         "plantSci": "latin name",
+        "nonToxic": true,
         "plantScore": "12345"
     },
     {
         "plantId": "9",
         "plantCare": {
-            "hardinessZone": "0-0",
-            "soil": "Soiltype",
-            "sun": "Full sun",
-            "water": "Once every 2.5 weeks"
+            "soil": "Orchid potting soil",
+            "sun": "Bright room, indirect sun",
+            "water": "Once every 1.5 weeks or when soil is dry"
         },
-        "plantName": "Common Name",
-        "plantPic": "urlhere",
+        "plantName": "Moth Orchid",
+        "plantPic": "https://www.greenandvibrant.com/sites/default/files/inline-images/types-of-orchids/Phalaenopsis-orchid.jpg",
         "plantType": "House Plant",
-        "plantSci": "latin name",
+        "plantSci": "Phalaenopsis",
+        "nonToxic": true,
         "plantScore": "12345"
     },
     {
         "plantId": "10",
         "plantCare": {
-            "hardinessZone": "0-0",
-            "soil": "Soiltype",
-            "sun": "Full sun",
-            "water": "Once every 2.5 weeks"
+            "soil": "Well-draining potting soil",
+            "sun": "Low light tolerant, indirect sun",
+            "water": "Once every 1.5 weeks or when top inch of soil is dry"
         },
-        "plantName": "Common Name",
-        "plantPic": "urlhere",
+        "plantName": "Cast Iron Plant",
+        "plantPic": "https://i0.wp.com/farmfoodfamily.com/wp-content/uploads/2018/09/cast-iron-plant-indoor.jpg?w=1000&ssl=1",
         "plantType": "House Plant",
-        "plantSci": "latin name",
+        "plantSci": "Aspidistra elatior",
+        "nonToxic": true,
         "plantScore": "12345"
     },
     {
         "plantId": "11",
         "plantCare": {
-            "hardinessZone": "0-0",
-            "soil": "Soiltype",
-            "sun": "Full sun",
-            "water": "Once every 2.5 weeks"
+            "soil": "Peat-based potting soil",
+            "sun": "Half light, half shade",
+            "water": "Once every 1 week. Keep soil moist."
         },
-        "plantName": "Common Name",
-        "plantPic": "urlhere",
+        "plantName": "Peace Lily",
+        "plantPic": "https://www.greenandvibrant.com/sites/default/files/field/image/peace-lily.jpg",
         "plantType": "House Plant",
-        "plantSci": "latin name",
+        "plantSci": "Spathiphyllum Wallisii",
+        "nonToxic": false,
         "plantScore": "12345"
     },
     {
         "plantId": "12",
         "plantCare": {
-            "hardinessZone": "0-0",
-            "soil": "Soiltype",
-            "sun": "Full sun",
-            "water": "Once every 2.5 weeks"
+            "soil": "Cactus potting soil",
+            "sun": "Low light tolerant, Full sun",
+            "water": "Once every 2 weeks or when soil is completely dry"
         },
-        "plantName": "Common Name",
-        "plantPic": "urlhere",
+        "plantName": "Zebra Plant",
+        "plantPic": "https://www.greenandvibrant.com/sites/default/files/inline-images/Zebra-Cactus.jpg",
         "plantType": "House Plant",
-        "plantSci": "latin name",
+        "plantSci": "Haworthia fasciata",
+        "nonToxic": true,
         "plantScore": "12345"
     },
     {
         "plantId": "13",
         "plantCare": {
-            "hardinessZone": "0-0",
-            "soil": "Soiltype",
-            "sun": "Full sun",
-            "water": "Once every 2.5 weeks"
+            "soil": "Well-draining potting soil",
+            "sun": "Shade or bright room, indirect sun",
+            "water": "Once every 1 week or when top soil is dry"
         },
-        "plantName": "Common Name",
-        "plantPic": "urlhere",
+        "plantName": "False Shamrock",
+        "plantPic": "https://cdn.apartmenttherapy.info/image/fetch/f_auto,q_auto:eco,c_fill,g_auto,w_1098,h_1373/https%3A%2F%2Fstorage.googleapis.com%2Fgen-atmedia%2F2%2F2018%2F04%2F5db2d38849184d5f2dc82a771ac93bb3cf94694d.jpeg",
         "plantType": "House Plant",
-        "plantSci": "latin name",
+        "plantSci": "Oxalis Triangularis",
+        "nonToxic": false,
         "plantScore": "12345"
     },
     {
         "plantId": "14",
         "plantCare": {
-            "hardinessZone": "0-0",
-            "soil": "Soiltype",
-            "sun": "Full sun",
-            "water": "Once every 2.5 weeks"
+            "soil": "Peat-based potting soil",
+            "sun": "Bright room, indirect sun",
+            "water": "Once every 1.5 weeks or when soil is dry"
         },
-        "plantName": "Common Name",
-        "plantPic": "urlhere",
+        "plantName": "Money Tree",
+        "plantPic": "https://www.greenandvibrant.com/sites/default/files/inline-images/Money-tree-plant-in-pot.jpg",
         "plantType": "House Plant",
-        "plantSci": "latin name",
+        "plantSci": "Pachira Aquatica",
+        "nonToxic": true,
         "plantScore": "12345"
     },
     {
         "plantId": "15",
         "plantCare": {
-            "hardinessZone": "0-0",
-            "soil": "Soiltype",
-            "sun": "Full sun",
-            "water": "Once every 2.5 weeks"
+            "soil": "none",
+            "sun": "Bright light with half direct light, half shade",
+            "water": "Mist every day"
         },
-        "plantName": "Common Name",
-        "plantPic": "urlhere",
+        "plantName": "Air Plant",
+        "plantPic": "https://www.greenandvibrant.com/sites/default/files/field/image/Air-plant-tillandsia.jpg",
         "plantType": "House Plant",
-        "plantSci": "latin name",
+        "plantSci": "Tillandsia",
+        "nonToxic": true,
         "plantScore": "12345"
     }
 ]
