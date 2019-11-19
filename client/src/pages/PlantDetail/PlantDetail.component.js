@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 
-export class PlantDetail extends Component {
+class PlantDetail extends Component {
     constructor(props){
         super(props);
     }
@@ -18,3 +18,5 @@ export class PlantDetail extends Component {
         );
     }
 }
+
+export default PlantDetail;
