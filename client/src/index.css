@@ -54,6 +54,31 @@ p {
 
 
 /* ----------------------------------------------------------- */
+/*  DASHBOARD CSS  ------------------------------------------- */
+
+.plant-img {
+  max-width: 120px;
+  max-height: 120px;
+}
+
+#dashboard-text {
+  padding-top: 20px;
+  padding-bottom: 10px;
+  background-color: #89AD39;
+  box-shadow: 5px 3px 18px #888888;
+  border-width: 5px;
+  margin-bottom: 20px;
+}
+
+#plant-info {
+  line-height: 1em;
+}
+
+.card-body {
+  border-color: black;
+  border-width: 2px;
+}
+
 
 
 
