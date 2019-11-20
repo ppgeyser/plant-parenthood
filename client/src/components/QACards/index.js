@@ -8,16 +8,14 @@ const QACards = props => {
                 <div>
                     <h2>Question #{props.questionNumber}:</h2>
                     <h3>{props.questionText}</h3>
-                    <div className="btn-group dropright">
-                        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Answer:</button>
-                        <div className="dropdown-menu" id={'q'+props.questionNumber}>
-                            <a className="dropdown-item" value='1'>{props.Answer1}</a>
-                            <a className="dropdown-item" value='2'>{props.Answer2}</a>
-                            <a className="dropdown-item" value='3'>{props.Answer3}</a>
-                            <a className="dropdown-item" value='4'>{props.Answer4}</a>
-                            <a className="dropdown-item" value='5'>{props.Answer5}</a>
-                        </div>
-                    </div>
+                        <select className="custom-select" value={props.value} onChange={props.onChange} onClick={props.onClick} id={'q'+props.questionNumber}>
+                            <option defaultValue='selected'>Answer:</option>
+                            <option value='1'>{props.Answer1}</option>
+                            <option value='2'>{props.Answer2}</option>
+                            <option value='3'>{props.Answer3}</option>
+                            <option value='4'>{props.Answer4}</option>
+                            <option value='5'>{props.Answer5}</option>
+                        </select>
                 </div>
             </div>
         </div>
