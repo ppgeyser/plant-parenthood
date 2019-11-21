@@ -2,29 +2,35 @@
     {
         "plantId": "1",
         "plantCare": {
-            "soil": "Sandy",
-            "sun": "Full sun, Part sun",
-            "water": "Once every 3 weeks"
+            "soil": "Cactus potting soil",
+            "sun": "Bright room, indirect sun",
+            "water-desc": "Once every 3 weeks",
+            "weeks": 3,
+            "days": 21
         },
         "plantName": "Aloe Vera",
         "plantPic": "https://www.almanac.com/sites/default/files/styles/primary_image_in_article/public/image_nodes/aloe-vera-white-pot_sunwand24-ss_edit.jpg?itok=Y7HnaYk3",
         "plantType": "House Plant",
         "plantSci": "Aloe Vera",
-        "nonToxic": true,
+        "nonToxic": false,
+        "plantBio": "I'm easy to care for and love a bright window! I don't like direct sun, and I am drought tolerant.",
         "plantScore": "12345"
     },
     {
         "plantId": "2",
         "plantCare": {
-            "soil": "Loamy",
-            "sun": "Full sun, Part sun, Shade",
-            "water": "Once every 4 weeks"
+            "soil": "Well-draining potting soil or Cactus potting soil",
+            "sun": "Low light tolerant, direct light tolerant",
+            "water-desc": "Once every 4 weeks",
+            "weeks": 4,
+            "days": 30
         },
         "plantName": "Snake Plant",
         "plantPic": "https://www.almanac.com/sites/default/files/styles/primary_image_in_article/public/image_nodes/shutterstock_679786570.jpg?itok=X2jXqX-x",
         "plantType": "House Plant",
         "plantSci": "Sansevieria trifasciata",
-        "nonToxic": true,
+        "nonToxic": false,
+        "plantBio": "If you don't have a lot of light for me, that's okay! I tolerate low light really well and only need to be watered once a month. I am great for those with 'brown thumbs'.",
         "plantScore": "12345"
     },
     {
@@ -32,13 +38,16 @@
         "plantCare": {
             "soil": "Sandy",
             "sun": "Full sun",
-            "water": "Once every 2.5 weeks"
+            "water-desc": "Once every 2.5 weeks",
+            "weeks": 2.5,
+            "days": 18
         },
         "plantName": "Geranium",
         "plantPic": "https://www.almanac.com/sites/default/files/styles/primary_image_in_article/public/image_nodes/geranium-2422730_1920.jpg?itok=cyx72G4f",
         "plantType": "Patio Plant",
         "plantSci": "Pelargonium",
         "nonToxic": true,
+        "plantBio": "I am really popular in windows! I love basking in the sun and don't require too much water. I will reward you with beautiful blooms!",
         "plantScore": "12345"
     },
     {
@@ -46,13 +55,16 @@
         "plantCare": {
             "soil": "Well-draining potting soil",
             "sun": "Bright room, indirect sun",
-            "water": "Once every 1.5 weeks or when top soil is dry"
+            "water-desc": "Once every 1.5 weeks or when top soil is dry",
+            "weeks": 1.5,
+            "days": 10
         },
         "plantName": "Areca Palm",
         "plantPic": "https://www.greenandvibrant.com/sites/default/files/field/image/Decorative-Areca-palm-near-white-brick-wall.jpg",
         "plantType": "House Plant",
         "plantSci": "Dypsis lutescens",
         "nonToxic": true,
+        "plantBio": "I will be the star in your room and cats and dogs can enjoy my presence as well. I like bright light. Be careful, though, to not overwater me.",
         "plantScore": "12345"
     },
     {
@@ -60,13 +72,16 @@
         "plantCare": {
             "soil": "Well-draining cactus potting soil",
             "sun": "Partial Shade",
-            "water": "Once every 1.5 weeks or when top soil is dry"
+            "water-desc": "Once every 1.5 weeks or when top soil is dry",
+            "weeks": 1.5,
+            "days": 10
         },
         "plantName": "Pothos",
         "plantPic": "https://www.houseplantsexpert.com/image-files/golden_pothos1.jpg",
         "plantType": "House Plant",
         "plantSci": "Epipremnum aureum",
         "nonToxic": false,
+        "plantBio": "I am the best beginner plant. I grow like a vine and add lots of green to your room. I can tolerate low light! Try your hand at propogating me",
         "plantScore": "12345"
     },
     {
@@ -74,13 +89,16 @@
         "plantCare": {
             "soil": "Any potting mix",
             "sun": "Bright room, indirect sun",
-            "water": "Once every 1 week"
+            "water-desc": "Once every 1 week",
+            "weeks": 1,
+            "days": 7
         },
         "plantName": "Spider Plant",
         "plantPic": "https://www.greenandvibrant.com/sites/default/files/field/image/Chlorophytum-Comosum-Spider-Plant.jpg",
         "plantType": "House Plant",
         "plantSci": "Chlorophytum comosum vittatum ",
         "nonToxic": true,
+        "plantBio": "I love light but keep me out of direct sunlight.",
         "plantScore": "12345"
     },
     {
@@ -88,13 +106,16 @@
         "plantCare": {
             "soil": "Well-draining potting soil",
             "sun": "Low light tolerant, indirect sun",
-            "water": "Once every 1.5 weeks or when top soil is dry"
+            "water-desc": "Once every 1.5 weeks or when top soil is dry",
+            "weeks": 1.5,
+            "days": 10
         },
         "plantName": "ZZ Plant",
         "plantPic": "https://www.greenandvibrant.com/sites/default/files/field/image/zz-plant.jpg",
         "plantType": "House Plant",
         "plantSci": "Zamioculcas zamiifolia",
         "nonToxic": false,
+        "plantBio": "If you have a shady spot that needs some life, I promise to brighten it up!",
         "plantScore": "12345"
     },
     {
@@ -102,13 +123,16 @@
         "plantCare": {
             "soil": "Well-draining potting soil",
             "sun": "Bright room, indirect sun",
-            "water": "Once every 1.5 weeks or when top soil is slightly dry"
+            "water-desc": "Once every 1.5 weeks or when top soil is slightly dry",
+            "weeks": 1.5,
+            "days": 10
         },
         "plantName": "Rubber tree",
         "plantPic": "https://www.greenandvibrant.com/sites/default/files/field/image/An-isolated-indoor-ficus-elastica.jpg",
         "plantType": "House Plant",
         "plantSci": "Ficus elastica",
         "nonToxic": false,
+        "plantBio": "If you love my leaves, I am easy to care for! I like a bright room.",
         "plantScore": "12345"
     },
     {
@@ -116,13 +140,16 @@
         "plantCare": {
             "soil": "Cactus potting soil",
             "sun": "Full sun",
-            "water": "Once a month. No watering during winter months."
+            "water-desc": "Once a month. No watering during winter months",
+            "weeks": 4,
+            "days": 30
         },
         "plantName": "Bunny Ear Cactus",
         "plantPic": "https://succulentcity.com/wp-content/uploads/2019/06/bunny-cactus-sc.jpg",
         "plantType": "House Plant",
         "plantSci": "latin name",
         "nonToxic": true,
+        "plantBio": "I love basking in the sun, but I don't need much water! Just once a month I need a good soak",
         "plantScore": "12345"
     },
     {
@@ -130,13 +157,16 @@
         "plantCare": {
             "soil": "Orchid potting soil",
             "sun": "Bright room, indirect sun",
-            "water": "Once every 1.5 weeks or when soil is dry"
+            "water-desc": "Once every 1.5 weeks or when soil is dry",
+            "weeks": 1.5,
+            "days": 10
         },
         "plantName": "Moth Orchid",
         "plantPic": "https://www.greenandvibrant.com/sites/default/files/inline-images/types-of-orchids/Phalaenopsis-orchid.jpg",
         "plantType": "House Plant",
         "plantSci": "Phalaenopsis",
         "nonToxic": true,
+        "plantBio": "I'm easier to care for than you think. I just need a bright spot out of the sun and moist bark and I will reward you with beautiful flowers",
         "plantScore": "12345"
     },
     {
@@ -144,13 +174,16 @@
         "plantCare": {
             "soil": "Well-draining potting soil",
             "sun": "Low light tolerant, indirect sun",
-            "water": "Once every 1.5 weeks or when top inch of soil is dry"
+            "water-desc": "Once every 1.5 weeks or when top inch of soil is dry",
+            "weeks": 1.5,
+            "days": 10
         },
         "plantName": "Cast Iron Plant",
         "plantPic": "https://i0.wp.com/farmfoodfamily.com/wp-content/uploads/2018/09/cast-iron-plant-indoor.jpg?w=1000&ssl=1",
         "plantType": "House Plant",
         "plantSci": "Aspidistra elatior",
         "nonToxic": true,
+        "plantBio": "If you don't get a lot of sunshine in your room, that's okay! I am low light tolerant",
         "plantScore": "12345"
     },
     {
@@ -158,13 +191,16 @@
         "plantCare": {
             "soil": "Peat-based potting soil",
             "sun": "Half light, half shade",
-            "water": "Once every 1 week. Keep soil moist."
+            "water-desc": "Once every 1 week. Keep soil moist",
+            "weeks": 1,
+            "days": 7
         },
         "plantName": "Peace Lily",
         "plantPic": "https://www.greenandvibrant.com/sites/default/files/field/image/peace-lily.jpg",
         "plantType": "House Plant",
         "plantSci": "Spathiphyllum Wallisii",
         "nonToxic": false,
+        "plantBio": "If you like a flowering plant, pick me! I produce white lilies you'll love. I like some sun and some shade",
         "plantScore": "12345"
     },
     {
@@ -172,13 +208,16 @@
         "plantCare": {
             "soil": "Cactus potting soil",
             "sun": "Low light tolerant, Full sun",
-            "water": "Once every 2 weeks or when soil is completely dry"
+            "water-desc": "Once every 2 weeks or when soil is completely dry",
+            "weeks": 2,
+            "days": 14
         },
         "plantName": "Zebra Plant",
         "plantPic": "https://www.greenandvibrant.com/sites/default/files/inline-images/Zebra-Cactus.jpg",
         "plantType": "House Plant",
         "plantSci": "Haworthia fasciata",
         "nonToxic": true,
+        "plantBio": "I don't require much, just a little bit of love. Low light or full sun, I can tolerate both! I require water a couple times in a month!",
         "plantScore": "12345"
     },
     {
@@ -186,13 +225,16 @@
         "plantCare": {
             "soil": "Well-draining potting soil",
             "sun": "Shade or bright room, indirect sun",
-            "water": "Once every 1 week or when top soil is dry"
+            "water-desc": "Once every 1 week or when top soil is dry",
+            "weeks": 1,
+            "days": 7
         },
         "plantName": "False Shamrock",
         "plantPic": "https://cdn.apartmenttherapy.info/image/fetch/f_auto,q_auto:eco,c_fill,g_auto,w_1098,h_1373/https%3A%2F%2Fstorage.googleapis.com%2Fgen-atmedia%2F2%2F2018%2F04%2F5db2d38849184d5f2dc82a771ac93bb3cf94694d.jpeg",
         "plantType": "House Plant",
         "plantSci": "Oxalis Triangularis",
         "nonToxic": false,
+        "plantBio": "I like closing my leaves at night when I go to sleep. I tolerate shadier spots in your room",
         "plantScore": "12345"
     },
     {
@@ -200,13 +242,16 @@
         "plantCare": {
             "soil": "Peat-based potting soil",
             "sun": "Bright room, indirect sun",
-            "water": "Once every 1.5 weeks or when soil is dry"
+            "water-desc": "Once every 1.5 weeks or when soil is dry",
+            "weeks": 1.5,
+            "days": 10
         },
         "plantName": "Money Tree",
         "plantPic": "https://www.greenandvibrant.com/sites/default/files/inline-images/Money-tree-plant-in-pot.jpg",
         "plantType": "House Plant",
         "plantSci": "Pachira Aquatica",
         "nonToxic": true,
+        "plantBio": "I like sitting in a window with lots of indirect light. People believe I bring them good luck!",
         "plantScore": "12345"
     },
     {
@@ -214,13 +259,16 @@
         "plantCare": {
             "soil": "none",
             "sun": "Bright light with half direct light, half shade",
-            "water": "Mist every day"
+            "water-desc": "Mist every day",
+            "weeks": 1,
+            "days": 1
         },
         "plantName": "Air Plant",
         "plantPic": "https://www.greenandvibrant.com/sites/default/files/field/image/Air-plant-tillandsia.jpg",
         "plantType": "House Plant",
         "plantSci": "Tillandsia",
         "nonToxic": true,
+        "plantBio": "I don't require any soil, so you can put me almost anywhere! I am not picky. Just make sure to mist me a little bit everyday",
         "plantScore": "12345"
     }
 ]
