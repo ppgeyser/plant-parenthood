@@ -1,0 +1,27 @@
+[ 
+    {
+        "number": "1",
+        "question": "Where do you think this plant will live?",
+        "answers": ["In the window with direct sun", "In the window with some sun", "In a brightly lit room", "In the shade ", "In a dark corner or far from a window"]
+    },
+    {
+        "number": "2",
+        "question": "How often could you care for a plant?",
+        "answers": ["Everyday!", "Every week", "Every week and a half", "Every couple of weeks", "Once a month"]
+    },
+    {
+        "number": "3",
+        "question": "On a scale of 1-5, how great are you with plants?",
+        "answers": ["Great!", "Good", "Fair", "Okay", "Brown Thumb"]       
+    },
+    {
+        "number": "4",
+        "question": "What to you is important in a plant?",
+        "answers": ["Tolerance to underwatering", "Tolerance to low light", "Both A and B", "Tolerance to direct sunlight", "Both A and D"]
+    },
+    {
+        "number": "5",
+        "question": "Do you have any pets?",
+        "answers": ["Yes", "No"]
+    }   
+]

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import QACards from '../../components/QACards'
-import Button from '../../components/Button'
+import Questions from "./Questions.json";
+import QACards from '../../components/QACards';
+import Button from '../../components/Button';
 
 export class Survey extends Component {
     constructor(props){
@@ -10,7 +11,6 @@ export class Survey extends Component {
                 type: "Pothos",
                 color: "green",
             },
-            surveyQuestions: {},
             q1: "1",
             q2: "1",
             q3: "1",
@@ -68,29 +68,19 @@ export class Survey extends Component {
         return (
             <div>
                 <h1>Survey page</h1>
+                {Questions.map(question =>
                 <QACards
-                questionNumber='1'
-                questionText='this is questionText'
+                questionNumber={question.number}
+                questionText={question.question}
                 onChange={this.changeAnswer}
                 value={this.state.value}
-                Answer1='this is props.Answer1'
-                Answer2='this is props.Answer2'
-                Answer3='this is props.Answer3'
-                Answer4='this is props.Answer4'
-                Answer5='this is props.Answer5'
+                Answer1={question.answers[0]}
+                Answer2={question.answers[1]}
+                Answer3={question.answers[2]}
+                Answer4={question.answers[3]}
+                Answer5={question.answers[4]}
                 />
-                <br></br>
-                <QACards
-                questionNumber='2'
-                questionText='this is questionText'
-                onChange={this.changeAnswer}
-                value={this.state.value}
-                Answer1='this is props.Answer1'
-                Answer2='this is props.Answer2'
-                Answer3='this is props.Answer3'
-                Answer4='this is props.Answer4'
-                Answer5='this is props.Answer5'
-                />
+                )}
                 <Button onClick={this.handleSubmit}>Submit</Button>
             </div>
         );
