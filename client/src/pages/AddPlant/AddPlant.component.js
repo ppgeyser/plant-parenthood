@@ -128,7 +128,7 @@ class AddPlant extends Component {
           />
 
           <FormBtn
-            disabled={!(this.state.name && this.state.suncare && this.state.species && this.state.watercare)}
+            disabled={!(this.state.name && this.state.suncare && this.state.watercare)}
             onClick={this.handleFormSubmit}
           >
             Submit
