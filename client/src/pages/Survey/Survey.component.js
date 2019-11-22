@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
+
 import Questions from "./Questions.json";
 import QACards from '../../components/QACards';
 import Button from '../../components/Button';
+import BottomNav from "../../components/BottomNavigation"
+
 
 export class Survey extends Component {
     constructor(props){
@@ -82,6 +85,7 @@ export class Survey extends Component {
                 />
                 )}
                 <Button onClick={this.handleSubmit}>Submit</Button>
+                <BottomNav />
             </div>
         );
     }

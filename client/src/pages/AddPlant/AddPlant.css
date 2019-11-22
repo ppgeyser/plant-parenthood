@@ -1,13 +1,14 @@
-.addPlantContainer {
+.top {
 	padding: 2em;
+	margin-bottom: 30%;
 }
 
-.imageContainer {
+/* .imageContainer {
 	display: flex;
 	margin: 30px 10px;
-}
+} */
 
 .photoUrlInput {
-	margin-left: 20px;
+	/* margin-left: 20px; */
 	width: 100%;
 }
