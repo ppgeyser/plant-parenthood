@@ -1,7 +1,7 @@
 import React from 'react';
 import { Login } from '../../components/Login/Login.component'
 import PlantDisplayCard from '../../components/PlantDisplayCard'
-import Nav from '../../components/Nav/Nav.component'
+import BottomNav from '../../components/BottomNavigation'
 import { Container, Row, Col } from 'reactstrap';
 
 class Dashboard extends React.Component {
@@ -37,7 +37,7 @@ class Dashboard extends React.Component {
                 {/* NAVIGATION BAR --------------  */}
                 <Row>
                     <Col sm="12" md={{ size: 8, offset: 2 }} >
-                        <Nav />
+                        <BottomNav />
                     </Col>
                 </Row>
 
