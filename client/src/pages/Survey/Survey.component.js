@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import QACards from '../../components/QACards'
 import Button from '../../components/Button'
+import BottomNav from "../../components/BottomNavigation"
 
 export class Survey extends Component {
     constructor(props){
@@ -92,6 +93,7 @@ export class Survey extends Component {
                 Answer5='this is props.Answer5'
                 />
                 <Button onClick={this.handleSubmit}>Submit</Button>
+                <BottomNav />
             </div>
         );
     }
