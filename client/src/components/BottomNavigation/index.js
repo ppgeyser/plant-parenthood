@@ -29,6 +29,7 @@ export default function BottomNav() {
   
     return (
       <BottomNavigation
+        id="navbar-row"
         value={value}
         onChange={(event, newValue) => {
           setValue(newValue);

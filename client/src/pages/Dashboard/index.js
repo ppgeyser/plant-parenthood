@@ -17,7 +17,7 @@ class Dashboard extends React.Component {
         console.log(this.state.allPlants)
 
         return (
-    
+            <div>
             <Container id="dashboard-body">
 
                 {/* USER'S NAME - ROW  --------------  */}
@@ -37,15 +37,16 @@ class Dashboard extends React.Component {
                 <Login />
 
                 {/* NAVIGATION BAR --------------  */}
-                <Row id="navbar-row">
+                <Row>
                     <Col sm="12" md={{ size: 8, offset: 2 }} >
-                        <BottomNav />
                     </Col>
                 </Row>
 
             
             </Container>
             
+            <BottomNav />
+            </div>
         )
     }
 }
