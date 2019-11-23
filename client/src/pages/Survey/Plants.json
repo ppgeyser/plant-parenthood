@@ -14,7 +14,7 @@
         "plantSci": "Aloe Vera",
         "nonToxic": false,
         "plantBio": "I'm easy to care for and love a bright window! I don't like direct sun, and I am drought tolerant.",
-        "plantScore": "12345"
+        "plantScore": [3, 4, 2, 1, 2]
     },
     {
         "plantId": "2",
@@ -31,7 +31,7 @@
         "plantSci": "Sansevieria trifasciata",
         "nonToxic": false,
         "plantBio": "If you don't have a lot of light for me, that's okay! I tolerate low light really well and only need to be watered once a month. I am great for those with 'brown thumbs'.",
-        "plantScore": "12345"
+        "plantScore": [5, 5, 5, 3, 2]
     },
     {
         "plantId": "3",
@@ -46,9 +46,9 @@
         "plantPic": "https://www.almanac.com/sites/default/files/styles/primary_image_in_article/public/image_nodes/geranium-2422730_1920.jpg?itok=cyx72G4f",
         "plantType": "Patio Plant",
         "plantSci": "Pelargonium",
-        "nonToxic": true,
+        "nonToxic": false,
         "plantBio": "I am really popular in windows! I love basking in the sun and don't require too much water. I will reward you with beautiful blooms!",
-        "plantScore": "12345"
+        "plantScore": [1, 4, 3, 5, 2]
     },
     {
         "plantId": "4",
@@ -64,8 +64,8 @@
         "plantType": "House Plant",
         "plantSci": "Dypsis lutescens",
         "nonToxic": true,
-        "plantBio": "I will be the star in your room and cats and dogs can enjoy my presence as well. I like bright light. Be careful, though, to not overwater me.",
-        "plantScore": "12345"
+        "plantBio": "I will be the star in your room and cats and dogs can enjoy my presence as well. I like bright light. Becareful, though, to not overwater me.",
+        "plantScore": [3, 3, 4, 5, 1]
     },
     {
         "plantId": "5",
@@ -82,7 +82,7 @@
         "plantSci": "Epipremnum aureum",
         "nonToxic": false,
         "plantBio": "I am the best beginner plant. I grow like a vine and add lots of green to your room. I can tolerate low light! Try your hand at propogating me",
-        "plantScore": "12345"
+        "plantScore": [4, 3, 5, 3, 2]
     },
     {
         "plantId": "6",
@@ -96,10 +96,10 @@
         "plantName": "Spider Plant",
         "plantPic": "https://www.greenandvibrant.com/sites/default/files/field/image/Chlorophytum-Comosum-Spider-Plant.jpg",
         "plantType": "House Plant",
-        "plantSci": "Chlorophytum comosum vittatum ",
+        "plantSci": "Chlorophytum comosum vittatum",
         "nonToxic": true,
         "plantBio": "I love light but keep me out of direct sunlight.",
-        "plantScore": "12345"
+        "plantScore": [3, 2, 3, 5, 1]
     },
     {
         "plantId": "7",
@@ -116,7 +116,7 @@
         "plantSci": "Zamioculcas zamiifolia",
         "nonToxic": false,
         "plantBio": "If you have a shady spot that needs some life, I promise to brighten it up!",
-        "plantScore": "12345"
+        "plantScore": [4, 3, 4, 2, 2]
     },
     {
         "plantId": "8",
@@ -133,7 +133,7 @@
         "plantSci": "Ficus elastica",
         "nonToxic": false,
         "plantBio": "If you love my leaves, I am easy to care for! I like a bright room.",
-        "plantScore": "12345"
+        "plantScore": [3, 3, 2, 5, 2]
     },
     {
         "plantId": "8",
@@ -150,7 +150,7 @@
         "plantSci": "latin name",
         "nonToxic": true,
         "plantBio": "I love basking in the sun, but I don't need much water! Just once a month I need a good soak",
-        "plantScore": "12345"
+        "plantScore": [1, 5, 3, 1, 1]
     },
     {
         "plantId": "9",
@@ -167,7 +167,7 @@
         "plantSci": "Phalaenopsis",
         "nonToxic": true,
         "plantBio": "I'm easier to care for than you think. I just need a bright spot out of the sun and moist bark and I will reward you with beautiful flowers",
-        "plantScore": "12345"
+        "plantScore": [3, 3, 4, 5, 1]
     },
     {
         "plantId": "10",
@@ -184,7 +184,7 @@
         "plantSci": "Aspidistra elatior",
         "nonToxic": true,
         "plantBio": "If you don't get a lot of sunshine in your room, that's okay! I am low light tolerant",
-        "plantScore": "12345"
+        "plantScore": [5, 3, 3, 2, 1]
     },
     {
         "plantId": "11",
@@ -201,7 +201,7 @@
         "plantSci": "Spathiphyllum Wallisii",
         "nonToxic": false,
         "plantBio": "If you like a flowering plant, pick me! I produce white lilies you'll love. I like some sun and some shade",
-        "plantScore": "12345"
+        "plantScore": [2, 2, 3, 5, 2]
     },
     {
         "plantId": "12",
@@ -218,7 +218,7 @@
         "plantSci": "Haworthia fasciata",
         "nonToxic": true,
         "plantBio": "I don't require much, just a little bit of love. Low light or full sun, I can tolerate both! I require water a couple times in a month!",
-        "plantScore": "12345"
+        "plantScore": [4, 4, 5, 3, 1]
     },
     {
         "plantId": "13",
@@ -235,7 +235,7 @@
         "plantSci": "Oxalis Triangularis",
         "nonToxic": false,
         "plantBio": "I like closing my leaves at night when I go to sleep. I tolerate shadier spots in your room",
-        "plantScore": "12345"
+        "plantScore": [3, 2, 2, 5, 2]
     },
     {
         "plantId": "14",
@@ -252,7 +252,7 @@
         "plantSci": "Pachira Aquatica",
         "nonToxic": true,
         "plantBio": "I like sitting in a window with lots of indirect light. People believe I bring them good luck!",
-        "plantScore": "12345"
+        "plantScore": [3, 3, 3, 5, 1]
     },
     {
         "plantId": "15",
@@ -269,6 +269,6 @@
         "plantSci": "Tillandsia",
         "nonToxic": true,
         "plantBio": "I don't require any soil, so you can put me almost anywhere! I am not picky. Just make sure to mist me a little bit everyday",
-        "plantScore": "12345"
+        "plantScore": [2, 1, 2, 5, 1]
     }
 ]
