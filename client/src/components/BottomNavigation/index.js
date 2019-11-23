@@ -8,6 +8,8 @@ import Icon from '@material-ui/icons';
 import HomeIcon from '@material-ui/icons/Home';
 import AddBoxIcon from '@material-ui/icons/AddBox';
 import ContactSupportIcon from '@material-ui/icons/ContactSupport';
+import ExitToAppIcon from '@material-ui/icons/ExitToApp';
+import { Login } from '../Login/Login.component';
 
 
 
@@ -40,6 +42,7 @@ export default function BottomNav() {
         <BottomNavigationAction className="links" href="../../Dashboard" icon={<HomeIcon />} />
         <BottomNavigationAction href="../../AddPlant" icon={<AddBoxIcon />} />
         <BottomNavigationAction href="../../Survey" icon={<ContactSupportIcon />} />
+        <Login />
 
       </BottomNavigation>
     );
