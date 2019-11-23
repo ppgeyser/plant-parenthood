@@ -28,7 +28,7 @@ export class Survey extends Component {
     }
 
     componentDidUpdate(){
-        console.log(this.state.matchScore)
+        localStorage.setItem('matchScore', this.state.matchScore);
     }
 
     handleSubmit = (event) => {

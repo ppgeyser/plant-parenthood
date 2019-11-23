@@ -21,7 +21,7 @@ const PlantDisplayCard = (props) => {
                       <p> Watering: 2 days</p>
                     </div>
                     </CardText>
-                {/* <Button className="float-right" onClick={props.onClick}>{props.label}</Button> */}
+                <Button className="float-right" onClick={props.onClick}>{props.label}</Button>
             </CardBody>
       </Card>
     </div>
