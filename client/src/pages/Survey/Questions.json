@@ -7,7 +7,7 @@
     {
         "number": "2",
         "question": "How often could you care for a plant?",
-        "answers": ["Everyday!", "Every week", "Every week and a half", "Every couple of weeks", "Once a month"]
+        "answers": ["Everyday!", "Every week", "Every week and a half", "Every 2-3 weeks", "Once a month"]
     },
     {
         "number": "3",
@@ -17,7 +17,7 @@
     {
         "number": "4",
         "question": "What to you is important in a plant?",
-        "answers": ["Tolerance to underwatering", "Tolerance to low light", "Both A and B", "Tolerance to direct sunlight", "Both A and D"]
+        "answers": ["Tolerance to underwatering", "Tolerance to low light", "Both A and B", "Tolerance to direct sunlight", "Attractiveness"]
     },
     {
         "number": "5",
