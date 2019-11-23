@@ -26,8 +26,8 @@ export const Login = (props) => {
       {isAuthenticated && 
       <span className="text-center">
             <Button onClick={() => logout()}>Log out</Button>
-            <Link to="/dashboard"><Button>Home</Button></Link>&nbsp;
-        </span>
+            {/* <Link to="/dashboard"><Button>Home</Button></Link>&nbsp; */}
+      </span>
       }
     </div>
   );

@@ -80,5 +80,34 @@ p {
 }
 
 
+/* ----------------------------------------------------------- */
+/* NAVIGATION BAR  ------------------------------------------- */
+
+#navbar-row {
+  bottom: 0;
+  position: fixed;
+  width: 100%;
+  border-top-color: #CFCFCF;
+  border-top-style: solid;
+  border-top-width: 2px;
+}
+
+
+.MuiSvgIcon-root {
+  color: #3B9732;
+}
+
+.MuiSvgIcon-root:active {
+  color: #91306B;
+}
+
+.MuiBottomNavigationAction-root.MuiBottomNavigationAction-iconOnly {
+  margin-top: -10px;
+}
+
+.MuiBottomNavigationAction-root.Mui-selected {
+  padding: 0px;
+  margin-bottom: 9px;
+}
 
 

@@ -11,20 +11,20 @@ import ContactSupportIcon from '@material-ui/icons/ContactSupport';
 
 
 
-const useStyles = makeStyles({
-    root: {
-      background: "darkolivegreen",
-      height: "8%",
-      width: "100%",
-      position: "fixed",
-      bottom: 0,
-      marginTop: "10%",
-    },
-  });
+// const useStyles = makeStyles({
+//     root: {
+//       background: "darkolivegreen",
+//       height: "8%",
+//       width: "100%",
+//       position: "fixed",
+//       bottom: 0,
+//       marginTop: "10%",
+//     },
+//   });
 
 
 export default function BottomNav() {
-    const classes = useStyles();
+    //const classes = useStyles();
     const [value, setValue] = React.useState(0);
   
     return (
@@ -34,11 +34,11 @@ export default function BottomNav() {
           setValue(newValue);
         }}
         // showLabels
-        className={classes.root}
+        //className={classes.root}
       >
-        <BottomNavigationAction className="links" href="../../Dashboard" label="Dashboard" icon={<HomeIcon />} />
-        <BottomNavigationAction href="../../AddPlant" label="Add Plant" icon={<AddBoxIcon />} />
-        <BottomNavigationAction href="../../Survey" label="Survey" icon={<ContactSupportIcon />} />
+        <BottomNavigationAction className="links" href="../../Dashboard" icon={<HomeIcon />} />
+        <BottomNavigationAction href="../../AddPlant" icon={<AddBoxIcon />} />
+        <BottomNavigationAction href="../../Survey" icon={<ContactSupportIcon />} />
 
       </BottomNavigation>
     );
