@@ -34,14 +34,16 @@ class Dashboard extends React.Component {
                     </Col>
                 </Row>
 
+                <Login />
+
                 {/* NAVIGATION BAR --------------  */}
-                <Row>
+                <Row id="navbar-row">
                     <Col sm="12" md={{ size: 8, offset: 2 }} >
                         <BottomNav />
                     </Col>
                 </Row>
 
-            <Login />
+            
             </Container>
             
         )
