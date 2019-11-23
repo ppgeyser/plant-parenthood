@@ -3,6 +3,7 @@ import { Button } from 'reactstrap';
 import { useAuth0 } from "../../react-auth0-spa";
 import { Link } from "react-router-dom";
 import { Redirect } from "react-router-dom";
+import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import "./styles.css";
 
 export const Login = (props) => {
@@ -25,7 +26,7 @@ export const Login = (props) => {
       }
       {isAuthenticated && 
       <span className="text-center">
-            <Button onClick={() => logout()}>Log out</Button>
+            <button onClick={() => logout()}> {<ExitToAppIcon />} </button>
             {/* <Link to="/dashboard"><Button>Home</Button></Link>&nbsp; */}
       </span>
       }
