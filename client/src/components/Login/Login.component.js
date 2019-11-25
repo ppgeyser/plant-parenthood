@@ -1,8 +1,6 @@
 import React from "react";
 import { Button } from 'reactstrap';
 import { useAuth0 } from "../../react-auth0-spa";
-import { Link } from "react-router-dom";
-import { Redirect } from "react-router-dom";
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import "./styles.css";
 
@@ -20,10 +18,6 @@ export const Login = (props) => {
           Log in
         </Button>
       )}
-      
-      {isAuthenticated &&
-      (<Redirect to="/dashboard" />)
-      }
       {isAuthenticated && 
       <span className="text-center">
             <button onClick={() => logout()}> {<ExitToAppIcon />} </button>
