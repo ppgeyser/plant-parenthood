@@ -11,16 +11,12 @@ const PlantDisplayCard = (props) => {
     <div>
       <Card>
             <CardBody>
-                <CardText>
-                    {/* when ready to populate with real data, change src below to be props.image*/}
-                    <CardImg src='../banner5.jpg' className="float-left mr-3 plant-img" alt="Plant Image" />  
-                    {props.children}
-                    <div id="plant-info">
-                      <p>Plant Name </p>
-                      <p> Plant Common Name</p>
-                      <p> Watering: 2 days</p>
-                    </div>
-                    </CardText>
+                <CardImg src={props.plantPic} className="float-left mr-3 plant-img" alt="Plant Image" />  
+                <CardText>{props.plantName}</CardText>
+                <CardText>About me: {props.plantBio}</CardText>
+                <CardText>Sun: {props.sun}</CardText>
+                <CardText>Soil: {props.soil}</CardText>
+                <CardText>Water: {props.water}</CardText>
                 <Button className="float-right" onClick={props.onClick}>{props.label}</Button>
             </CardBody>
       </Card>

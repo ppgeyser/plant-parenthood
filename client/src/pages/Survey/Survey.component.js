@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-
 import Questions from "./Questions.json";
 import QACards from '../../components/QACards';
 import Button from '../../components/Button';
@@ -10,10 +9,6 @@ export class Survey extends Component {
     constructor(props){
         super(props);
         this.state = {
-            allPlants: {
-                type: "Pothos",
-                color: "green",
-            },
             q1: "1",
             q2: "1",
             q3: "1",
@@ -34,6 +29,7 @@ export class Survey extends Component {
     handleSubmit = (event) => {
         event.preventDefault();
         this.buildMatch();
+        window.location = "/results"
     }
     
     buildMatch = () => {
@@ -44,35 +40,36 @@ export class Survey extends Component {
             }
         })
     }
-
+    
     changeAnswer = (event) => {
         switch (event.target.id) {
             case 'q1':
                 this.setState({q1: event.target.value});
                 break;
-            case 'q2':
-                this.setState({q2: event.target.value});
-                break;
-            case 'q3':
-                this.setState({q3: event.target.value});
-                break;
-            case 'q4':
-                this.setState({q4: event.target.value});
-                break;
-            case 'q5':
-                this.setState({q5: event.target.value});
-                break;
-            default:
-                break;
-        }
-    }
-
-    render() {
+                case 'q2':
+                    this.setState({q2: event.target.value});
+                    break;
+                    case 'q3':
+                        this.setState({q3: event.target.value});
+                        break;
+                        case 'q4':
+                            this.setState({q4: event.target.value});
+                            break;
+                            case 'q5':
+                                this.setState({q5: event.target.value});
+                                break;
+                                default:
+                                    break;
+                                }
+                            }
+                            
+                            render() {
         return (
             <div>
                 <h1>Survey page</h1>
                 {Questions.map(question =>
                 <QACards
+                key={question.number}
                 questionNumber={question.number}
                 questionText={question.question}
                 onChange={this.changeAnswer}
@@ -84,7 +81,7 @@ export class Survey extends Component {
                 Answer5={question.answers[4]}
                 />
                 )}
-                <Button onClick={this.handleSubmit}>Submit</Button>
+                <Button onClick={this.handleSubmit} >Submit</Button>
                 <BottomNav />
             </div>
         );
