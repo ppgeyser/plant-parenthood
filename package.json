@@ -20,7 +20,9 @@
     "express": "~4.16.1",
     "http-errors": "~1.6.3",
     "jade": "~1.11.0",
+    "moment": "^2.24.0",
     "morgan": "~1.9.1",
+    "react-moment": "^0.9.6",
     "react-router": "^5.1.2",
     "react-router-dom": "^5.1.2"
   },

@@ -5,7 +5,7 @@ import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import "./styles.css";
 
 export const Login = (props) => {
-  const { isAuthenticated, loginWithRedirect, logout } = useAuth0();
+  const { isAuthenticated, loginWithRedirect} = useAuth0();
 
   return (
     <div className="text-center">
@@ -18,12 +18,7 @@ export const Login = (props) => {
           Log in
         </Button>
       )}
-      {isAuthenticated && 
-      <span className="text-center">
-            <button onClick={() => logout()}> {<ExitToAppIcon />} </button>
-            {/* <Link to="/dashboard"><Button>Home</Button></Link>&nbsp; */}
-      </span>
-      }
+
     </div>
   );
 };
