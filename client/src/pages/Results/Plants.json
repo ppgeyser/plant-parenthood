@@ -4,7 +4,7 @@
         "plantCare": {
             "soil": "Cactus potting soil",
             "sun": "Bright room, indirect sun",
-            "water-desc": "Once every 3 weeks",
+            "water": "Once every 3 weeks",
             "weeks": 3,
             "days": 21
         },
@@ -14,14 +14,14 @@
         "plantSci": "Aloe Vera",
         "nonToxic": false,
         "plantBio": "I'm easy to care for and love a bright window! I don't like direct sun, and I am drought tolerant.",
-        "plantScore": [3, 4, 2, 1, 2]
+        "plantScore": ["3", "4", "2", "1", "2"]
     },
     {
         "plantId": "2",
         "plantCare": {
             "soil": "Well-draining potting soil or Cactus potting soil",
             "sun": "Low light tolerant, direct light tolerant",
-            "water-desc": "Once every 4 weeks",
+            "water": "Once every 4 weeks",
             "weeks": 4,
             "days": 30
         },
@@ -31,14 +31,14 @@
         "plantSci": "Sansevieria trifasciata",
         "nonToxic": false,
         "plantBio": "If you don't have a lot of light for me, that's okay! I tolerate low light really well and only need to be watered once a month. I am great for those with 'brown thumbs'.",
-        "plantScore": [5, 5, 5, 3, 2]
+        "plantScore": ["5", "5", "5", "3", "2"]
     },
     {
         "plantId": "3",
         "plantCare": {
             "soil": "Sandy",
             "sun": "Full sun",
-            "water-desc": "Once every 2.5 weeks",
+            "water": "Once every 2.5 weeks",
             "weeks": 2.5,
             "days": 18
         },
@@ -48,14 +48,14 @@
         "plantSci": "Pelargonium",
         "nonToxic": false,
         "plantBio": "I am really popular in windows! I love basking in the sun and don't require too much water. I will reward you with beautiful blooms!",
-        "plantScore": [1, 4, 3, 5, 2]
+        "plantScore": ["1", "4", "3", "5", "2"]
     },
     {
         "plantId": "4",
         "plantCare": {
             "soil": "Well-draining potting soil",
             "sun": "Bright room, indirect sun",
-            "water-desc": "Once every 1.5 weeks or when top soil is dry",
+            "water": "Once every 1.5 weeks or when top soil is dry",
             "weeks": 1.5,
             "days": 10
         },
@@ -65,14 +65,14 @@
         "plantSci": "Dypsis lutescens",
         "nonToxic": true,
         "plantBio": "I will be the star in your room and cats and dogs can enjoy my presence as well. I like bright light. Becareful, though, to not overwater me.",
-        "plantScore": [3, 3, 4, 5, 1]
+        "plantScore": ["3", "3", "4", "5", "1"]
     },
     {
         "plantId": "5",
         "plantCare": {
             "soil": "Well-draining cactus potting soil",
             "sun": "Partial Shade",
-            "water-desc": "Once every 1.5 weeks or when top soil is dry",
+            "water": "Once every 1.5 weeks or when top soil is dry",
             "weeks": 1.5,
             "days": 10
         },
@@ -82,14 +82,14 @@
         "plantSci": "Epipremnum aureum",
         "nonToxic": false,
         "plantBio": "I am the best beginner plant. I grow like a vine and add lots of green to your room. I can tolerate low light! Try your hand at propogating me",
-        "plantScore": [4, 3, 5, 3, 2]
+        "plantScore": ["4", "3", "5", "3", "2"]
     },
     {
         "plantId": "6",
         "plantCare": {
             "soil": "Any potting mix",
             "sun": "Bright room, indirect sun",
-            "water-desc": "Once every 1 week",
+            "water": "Once every 1 week",
             "weeks": 1,
             "days": 7
         },
@@ -99,14 +99,14 @@
         "plantSci": "Chlorophytum comosum vittatum",
         "nonToxic": true,
         "plantBio": "I love light but keep me out of direct sunlight.",
-        "plantScore": [3, 2, 3, 5, 1]
+        "plantScore": ["3", "2", "3", "5", "1"]
     },
     {
         "plantId": "7",
         "plantCare": {
             "soil": "Well-draining potting soil",
             "sun": "Low light tolerant, indirect sun",
-            "water-desc": "Once every 1.5 weeks or when top soil is dry",
+            "water": "Once every 1.5 weeks or when top soil is dry",
             "weeks": 1.5,
             "days": 10
         },
@@ -116,14 +116,14 @@
         "plantSci": "Zamioculcas zamiifolia",
         "nonToxic": false,
         "plantBio": "If you have a shady spot that needs some life, I promise to brighten it up!",
-        "plantScore": [4, 3, 4, 2, 2]
+        "plantScore": ["4", "3", "4", "2", "2"]
     },
     {
         "plantId": "8",
         "plantCare": {
             "soil": "Well-draining potting soil",
             "sun": "Bright room, indirect sun",
-            "water-desc": "Once every 1.5 weeks or when top soil is slightly dry",
+            "water": "Once every 1.5 weeks or when top soil is slightly dry",
             "weeks": 1.5,
             "days": 10
         },
@@ -133,14 +133,14 @@
         "plantSci": "Ficus elastica",
         "nonToxic": false,
         "plantBio": "If you love my leaves, I am easy to care for! I like a bright room.",
-        "plantScore": [3, 3, 2, 5, 2]
+        "plantScore": ["3", "3", "2", "5", "2"]
     },
     {
-        "plantId": "8",
+        "plantId": "16",
         "plantCare": {
             "soil": "Cactus potting soil",
             "sun": "Full sun",
-            "water-desc": "Once a month. No watering during winter months",
+            "water": "Once a month. No watering during winter months",
             "weeks": 4,
             "days": 30
         },
@@ -150,14 +150,14 @@
         "plantSci": "latin name",
         "nonToxic": true,
         "plantBio": "I love basking in the sun, but I don't need much water! Just once a month I need a good soak",
-        "plantScore": [1, 5, 3, 1, 1]
+        "plantScore": ["1", "5", "3", "1", "1"]
     },
     {
         "plantId": "9",
         "plantCare": {
             "soil": "Orchid potting soil",
             "sun": "Bright room, indirect sun",
-            "water-desc": "Once every 1.5 weeks or when soil is dry",
+            "water": "Once every 1.5 weeks or when soil is dry",
             "weeks": 1.5,
             "days": 10
         },
@@ -167,14 +167,14 @@
         "plantSci": "Phalaenopsis",
         "nonToxic": true,
         "plantBio": "I'm easier to care for than you think. I just need a bright spot out of the sun and moist bark and I will reward you with beautiful flowers",
-        "plantScore": [3, 3, 4, 5, 1]
+        "plantScore": ["3", "3", "4", "5", "1"]
     },
     {
         "plantId": "10",
         "plantCare": {
             "soil": "Well-draining potting soil",
             "sun": "Low light tolerant, indirect sun",
-            "water-desc": "Once every 1.5 weeks or when top inch of soil is dry",
+            "water": "Once every 1.5 weeks or when top inch of soil is dry",
             "weeks": 1.5,
             "days": 10
         },
@@ -184,14 +184,14 @@
         "plantSci": "Aspidistra elatior",
         "nonToxic": true,
         "plantBio": "If you don't get a lot of sunshine in your room, that's okay! I am low light tolerant",
-        "plantScore": [5, 3, 3, 2, 1]
+        "plantScore": ["5", "3", "3", "2", "1"]
     },
     {
         "plantId": "11",
         "plantCare": {
             "soil": "Peat-based potting soil",
             "sun": "Half light, half shade",
-            "water-desc": "Once every 1 week. Keep soil moist",
+            "water": "Once every 1 week. Keep soil moist",
             "weeks": 1,
             "days": 7
         },
@@ -201,14 +201,14 @@
         "plantSci": "Spathiphyllum Wallisii",
         "nonToxic": false,
         "plantBio": "If you like a flowering plant, pick me! I produce white lilies you'll love. I like some sun and some shade",
-        "plantScore": [2, 2, 3, 5, 2]
+        "plantScore": ["2", "2", "3", "5", "2"]
     },
     {
         "plantId": "12",
         "plantCare": {
             "soil": "Cactus potting soil",
             "sun": "Low light tolerant, Full sun",
-            "water-desc": "Once every 2 weeks or when soil is completely dry",
+            "water": "Once every 2 weeks or when soil is completely dry",
             "weeks": 2,
             "days": 14
         },
@@ -218,14 +218,14 @@
         "plantSci": "Haworthia fasciata",
         "nonToxic": true,
         "plantBio": "I don't require much, just a little bit of love. Low light or full sun, I can tolerate both! I require water a couple times in a month!",
-        "plantScore": [4, 4, 5, 3, 1]
+        "plantScore": ["4", "4", "5", "3", "1"]
     },
     {
         "plantId": "13",
         "plantCare": {
             "soil": "Well-draining potting soil",
             "sun": "Shade or bright room, indirect sun",
-            "water-desc": "Once every 1 week or when top soil is dry",
+            "water": "Once every 1 week or when top soil is dry",
             "weeks": 1,
             "days": 7
         },
@@ -235,14 +235,14 @@
         "plantSci": "Oxalis Triangularis",
         "nonToxic": false,
         "plantBio": "I like closing my leaves at night when I go to sleep. I tolerate shadier spots in your room",
-        "plantScore": [3, 2, 2, 5, 2]
+        "plantScore": ["3", "2", "2", "5", "2"]
     },
     {
         "plantId": "14",
         "plantCare": {
             "soil": "Peat-based potting soil",
             "sun": "Bright room, indirect sun",
-            "water-desc": "Once every 1.5 weeks or when soil is dry",
+            "water": "Once every 1.5 weeks or when soil is dry",
             "weeks": 1.5,
             "days": 10
         },
@@ -252,14 +252,14 @@
         "plantSci": "Pachira Aquatica",
         "nonToxic": true,
         "plantBio": "I like sitting in a window with lots of indirect light. People believe I bring them good luck!",
-        "plantScore": [3, 3, 3, 5, 1]
+        "plantScore": ["3", "3", "3", "5", "1"]
     },
     {
         "plantId": "15",
         "plantCare": {
             "soil": "none",
             "sun": "Bright light with half direct light, half shade",
-            "water-desc": "Mist every day",
+            "water": "Mist every day",
             "weeks": 1,
             "days": 1
         },
@@ -269,6 +269,6 @@
         "plantSci": "Tillandsia",
         "nonToxic": true,
         "plantBio": "I don't require any soil, so you can put me almost anywhere! I am not picky. Just make sure to mist me a little bit everyday",
-        "plantScore": [2, 1, 2, 5, 1]
+        "plantScore": ["2", "1", "2", "5", "1"]
     }
 ]
