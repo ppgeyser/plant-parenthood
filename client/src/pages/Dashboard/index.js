@@ -3,6 +3,7 @@ import { Login } from '../../components/Login/Login.component'
 import PlantDisplayCard from '../../components/PlantDisplayCard'
 import BottomNav from '../../components/BottomNavigation'
 import { Container, Row, Col } from 'reactstrap';
+import { User } from '../../components/User';
 
 class Dashboard extends React.Component {
     constructor(props) {
@@ -18,6 +19,7 @@ class Dashboard extends React.Component {
 
         return (
             <div>
+            <User />
             <Container id="dashboard-body">
 
                 {/* USER'S NAME - ROW  --------------  */}
