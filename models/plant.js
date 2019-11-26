@@ -29,10 +29,12 @@ const plantSchema = new Schema({
             type: String
         },
         weeks: {
-            type: Integer
+            // type: Integer
+            type: Number
         },
         days: {
-            type: Integer,
+            // type: Integer,
+            type: Number,
             required: true
         }
     },
