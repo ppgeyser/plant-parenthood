@@ -18,7 +18,7 @@ export default {
       return axios.delete("/api/plants/" + id);
     },
     // Saves a plants to the database
-    savePlant: function(book) {
-      return axios.post("/api/plants", book);
+    savePlant: function(plant) {
+      return axios.post("/api/plants", plant);
     }
   };
