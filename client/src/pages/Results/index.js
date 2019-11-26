@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PlantDisplayCard from '../../components/PlantDisplayCard';
 import Plants from "./Plants.json";
+import API from "../../utils/API";
 
 class Results extends Component {
     constructor(props){
@@ -102,6 +103,22 @@ class Results extends Component {
             }
         }
 
+    savePlant = plant => {
+        API.savePlant({
+            userID: "123456",
+            plantName: plant.plantName,
+            plantCare: {
+                soil: plant.plantCare.soil,
+                sun: plant.plantCare.sun,
+                water: plant.plantCare.water,
+                weeks: plant.plantCare.weeks,
+                days: plant.plantCare.days,
+            },
+            nonToxic: plant.nonToxic,
+            plantPic: plant.plantPic
+        })
+    }
+
     render() {
         return (
             <div>
@@ -115,6 +132,7 @@ class Results extends Component {
                 sun={plant.plantCare.sun}
                 soil={plant.plantCare.soil}
                 water={plant.plantCare.water}
+                onClick={() => this.savePlant(plant)}
                 label="Add Plant"
                 />)}
             </div>
