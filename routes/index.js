@@ -1,29 +1,13 @@
-var express = require('express');
-var router = express.Router();
-var path = require('path');
+const path = require("path");
+const router = require("express").Router();
+const apiRoutes = require("./api");
 
-router.get('/api/health', function(req, res, next) {
-  res.json({
-    app: "project-3",
-    health: 200
-  });
-});
+// API Routes
+router.use("/api", apiRoutes);
 
-router.get('/api/cheese/:id', (req, res) => {
-  console.log('requested cheese id:', req.params.id);
-  res.json({
-    cheese: {
-    id: 1,
-    name: "Humboldt Fog",
-    price: 1500,
-    description: "Only the foggiest!"
-    }
-  });
-});
-
-/* GET home page. */
-router.get('*', function(req, res, next) {
-  res.sendFile(path.join(__dirname, "client/build/index.html"));
+// If no API routes are hit, send the React app
+router.use(function(req, res) {
+  res.sendFile(path.join(__dirname, "../client/build/index.html"));
 });
 
 module.exports = router;
