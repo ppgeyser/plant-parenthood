@@ -10,13 +10,13 @@ class Dashboard extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            
             userPlants: [],
         };
     }
 
-    componentDidMount() {
+    componentDidUpdate() {
         this.loadPlants();
+        // console.log("userId:", localStorage.getItem("userId"));
     }
 
     loadPlants() {
@@ -26,12 +26,11 @@ class Dashboard extends React.Component {
                 this.setState({
                     userPlants: res.data
                 });
-                console.log("plants", res.data);
             })
     }
 
     render() {
-        console.log(this.state.allPlants)
+        // console.log(this.state.allPlants)
 
         return (
             <div>
@@ -55,8 +54,8 @@ class Dashboard extends React.Component {
                                 plantName={userPlant.plantName}
                                 sun={userPlant.plantCare.sun}
                                 soil={userPlant.plantCare.soil}
-                                water={userPlant.plantcare.days}
-                                onClick={event =>  window.location.href=`/plants/userPlant._id`}
+                                water={userPlant.plantCare.days}
+                                onClick={event =>  window.location.href="/plants/" + userPlant._id}
                                 label="Details"
                             />
                         </Col>
