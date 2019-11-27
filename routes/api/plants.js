@@ -3,8 +3,10 @@ const plantsController = require("../../controllers/plantsController");
 
 // Matches with "/api/plants"
 router.route("/")
-  .get(plantsController.findAll)
   .post(plantsController.create);
+
+router.route("/user/:id")
+  .get(plantsController.findAll);
 
 // Matches with "/api/plants/:id"
 router

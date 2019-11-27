@@ -3,8 +3,8 @@ import axios from 'axios'
 
 export default {
     // Gets all plants
-    getPlants: function() {
-      return axios.get("/api/plants");
+    getPlants: function(userID) {
+      return axios.get("/api/plants/user/" + userID);
     },
     //get singular plant
     getPlantbyID: function(id) {
