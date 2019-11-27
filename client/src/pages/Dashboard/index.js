@@ -1,16 +1,32 @@
 import React from 'react';
-import { Login } from '../../components/Login/Login.component'
-import PlantDisplayCard from '../../components/PlantDisplayCard'
-import BottomNav from '../../components/BottomNavigation'
+import { Login } from '../../components/Login/Login.component';
+import PlantDisplayCard from '../../components/PlantDisplayCard';
+import BottomNav from '../../components/BottomNavigation';
 import { Container, Row, Col } from 'reactstrap';
+import API from "../../utils/API";
 
 class Dashboard extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             
-            userPlants: {},
+            userPlants: [],
         };
+    }
+
+    componentDidMount() {
+        this.loadPlants();
+    }
+
+    loadPlants() {
+        const userId = localStorage.getItem('userId') 
+        API.getPlants(userId)
+            .then(res => {
+                this.setState({
+                    userPlants: res.data
+                });
+                console.log("plants", res.data);
+            })
     }
 
     render() {
@@ -28,11 +44,23 @@ class Dashboard extends React.Component {
                 </Row>
 
                 {/* PLANT CARD ROW --------------  */}
-                <Row>
-                    <Col sm="12" md={{ size: 8, offset: 2 }} >
-                        <PlantDisplayCard />
-                    </Col>
-                </Row>
+
+                {this.state.userPlants.map(userPlant =>(
+                    <Row>
+                        <Col sm="12" md={{ size: 8, offset: 2 }} >
+                            <PlantDisplayCard 
+                                plantPic={userPlant.plantPic}
+                                plantName={userPlant.plantName}
+                                sun={userPlant.plantCare.sun}
+                                soil={userPlant.plantCare.soil}
+                                water={userPlant.plantcare.days}
+                                onClick={event =>  window.location.href=`/plants/userPlant._id`}
+                                label="Details"
+                            />
+                        </Col>
+                    </Row>
+                ))}
+                
 
                 <Login />
 
