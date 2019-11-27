@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PlantDisplayCard from '../../components/PlantDisplayCard';
 import Plants from "./Plants.json";
 import API from "../../utils/API";
+// import BottomNav from "../../components/BottomNavigation"
 
 class Results extends Component {
     constructor(props){
@@ -104,8 +105,9 @@ class Results extends Component {
         }
 
     savePlant = plant => {
+        const userId = localStorage.getItem('userId')
         API.savePlant({
-            userID: "123456",
+            userID: userId,
             plantName: plant.plantName,
             plantCare: {
                 soil: plant.plantCare.soil,
@@ -135,6 +137,7 @@ class Results extends Component {
                 onClick={() => this.savePlant(plant)}
                 label="Add Plant"
                 />)}
+                {/* <BottomNav /> */}
             </div>
         )
 
