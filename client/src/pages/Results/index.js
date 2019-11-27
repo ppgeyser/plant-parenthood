@@ -126,17 +126,18 @@ class Results extends Component {
             <div>
                 <h1>Your Results</h1>
                 {this.state.bestMatch.map(plant =>
-                <PlantDisplayCard 
+                <PlantDisplayCard
                 key={plant.plantId}
                 plantPic = {plant.plantPic}
                 plantName={plant.plantName}
-                plantBio={plant.plantBio}
                 sun={plant.plantCare.sun}
                 soil={plant.plantCare.soil}
                 water={plant.plantCare.water}
                 onClick={() => this.savePlant(plant)}
                 label="Add Plant"
-                />)}
+                > 
+                About Me: {plant.plantBio}
+                </PlantDisplayCard>)}
                 {/* <BottomNav /> */}
             </div>
         )

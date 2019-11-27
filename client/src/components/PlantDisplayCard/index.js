@@ -13,7 +13,7 @@ const PlantDisplayCard = (props) => {
             <CardBody>
                 <CardImg src={props.plantPic} className="float-left mr-3 plant-img" alt="Plant Image" />  
                 <CardText>{props.plantName}</CardText>
-                <CardText>About me: {props.plantBio}</CardText>
+                <CardText>{props.children}</CardText>
                 <CardText>Sun: {props.sun}</CardText>
                 <CardText>Soil: {props.soil}</CardText>
                 <CardText>Water: {props.water}</CardText>
