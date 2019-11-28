@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Input, TextArea, FormBtn } from "../../components/AddPlantForm";
 import BottomNav from "../../components/BottomNavigation"
+import { Container, Row, Col } from 'reactstrap';
 import "./AddPlant.css";
 
 
@@ -59,9 +60,14 @@ class AddPlant extends Component {
   render() {
     return (
       <div className="addPlantContainer">
-        <div className="top">
-        {/* should we have a header component, so we can have a header that's stylized across pages and only the text inside changes? */}
-        <h1>ADD YOUR PLANT</h1>
+
+      <Container id="container-body">
+        {/* 'YOUR PLANTS' - ROW  --------------  */}
+        <Row id="header-text">
+          <Col sm="12" md={{ size: 8, offset: 2 }}>
+            <h3> Add Your Plant </h3> 
+          </Col>
+        </Row>
 
         <form>
           <div className="imageContainer">
@@ -133,13 +139,14 @@ class AddPlant extends Component {
           >
             Submit
           </FormBtn>
-        </form>
-        </div>
 
-        <div className="bottom">
-        <BottomNav />
-        </div>
-      </div>
+        </form>
+
+      </Container>
+
+      <BottomNav />
+
+    </div>
 
     );
   }

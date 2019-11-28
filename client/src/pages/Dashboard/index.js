@@ -34,12 +34,12 @@ class Dashboard extends React.Component {
         return (
             <div>
             <User />
-            <Container id="dashboard-body">
+            <Container id="container-body">
 
-                {/* USER'S NAME - ROW  --------------  */}
-                <Row id="dashboard-text">
+                {/* 'YOUR PLANTS' - ROW  --------------  */}
+                <Row id="header-text">
                     <Col sm="12" md={{ size: 8, offset: 2 }}>
-                        <h3> [Name]'s Plants </h3> 
+                        <h3> Your Plants </h3> 
                     </Col>
                 </Row>
 

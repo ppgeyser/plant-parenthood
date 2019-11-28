@@ -47,7 +47,7 @@ class PlantDetail extends Component {
                 <Container id="plantid-body">
 
                     {/* PLANT NAME - ROW  --------------  */}
-                    <Row id="dashboard-text">
+                    <Row id="header-text">
                         <Col sm="12" md={{ size: 8, offset: 2 }}>
                             <h3>{this.state.userPlant.plantName}</h3>
                         </Col>
