@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Questions from "./Questions.json";
 import QACards from '../../components/QACards';
+import { Container, Row, Col } from 'reactstrap';
 import Button from '../../components/Button';
 import BottomNav from "../../components/BottomNavigation"
 
@@ -66,7 +67,15 @@ export class Survey extends Component {
                             render() {
         return (
             <div>
-                <h1>Survey page</h1>
+                <Container id="container-body">
+
+                {/* 'SURVEY PAGE' - ROW  --------------  */}
+                <Row id="header-text">
+                    <Col sm="12" md={{ size: 8, offset: 2 }}>
+                        <h3> Survey Page </h3> 
+                    </Col>
+                </Row>
+
                 {Questions.map(question =>
                 <QACards
                 key={question.number}
@@ -82,7 +91,11 @@ export class Survey extends Component {
                 />
                 )}
                 <Button onClick={this.handleSubmit} >Submit</Button>
+
+                </Container>
+
                 <BottomNav />
+
             </div>
         );
     }
