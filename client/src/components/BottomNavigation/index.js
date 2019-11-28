@@ -4,6 +4,7 @@ import React from 'react';
 import BottomNavigation from '@material-ui/core/BottomNavigation'; 
 import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
 import Icon from '@material-ui/icons';
+import { Container, Row, Col } from 'reactstrap';
 import HomeIcon from '@material-ui/icons/Home';
 import AddBoxIcon from '@material-ui/icons/AddBox';
 import ContactSupportIcon from '@material-ui/icons/ContactSupport';
@@ -14,30 +15,37 @@ export default function BottomNav() {
     //const classes = useStyles();
     const [value, setValue] = React.useState(0);
     const { isAuthenticated, logout } = useAuth0();
-
   
     return (
+      
+      <Container>
 
-      <BottomNavigation
-        id="navbar-row"
-        value={value}
-        onChange={(event, newValue) => {
-          setValue(newValue);
-        }}
-  
-        //className={classes.root}
-      >
-        <BottomNavigationAction className="links" href="../../Dashboard" icon={<HomeIcon />} />
-        <BottomNavigationAction href="../../AddPlant" icon={<AddBoxIcon />} />
-        <BottomNavigationAction href="../../Survey" icon={<ContactSupportIcon />} />
-        <div>
-          {isAuthenticated && 
-          <span className="text-center">
-            <button onClick={() => logout()}> {<ExitToAppIcon />} </button>
-          </span>
-          }
-        </div>
+        <Row>
+          <Col sm="12" md={{ size: 8, offset: 2 }} >
 
-      </BottomNavigation>
+            <BottomNavigation
+              id="navbar-row"
+              value={value}
+              onChange={(event, newValue) => {
+                setValue(newValue);
+              }} >
+
+              <HomeIcon className="navicon" href="../../Dashboard" />
+              <AddBoxIcon className="navicon" href="../../AddPlant" />
+              <ContactSupportIcon className="navicon" href="../../Survey" />
+              <ExitToAppIcon className="navicon" onClick={() => logout()}/>
+
+              {/* <div>
+                {isAuthenticated && 
+                <span className="text-center">
+                  <button onClick={() => logout()}> {<ExitToAppIcon />} </button>
+                </span>
+                }
+              </div> */}
+            </BottomNavigation>
+          </Col>
+        </Row>
+
+      </Container>
     );
   }
