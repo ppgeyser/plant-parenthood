@@ -1,5 +1,5 @@
 {
-  "name": "project-3-react",
+  "name": "plant-parenthood",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -8,9 +8,11 @@
     "@material-ui/icons": "^4.5.1",
     "axios": "^0.19.0",
     "bootstrap": "^4.3.1",
+    "moment": "^2.24.0",
     "react": "^16.11.0",
     "react-bootstrap": "^1.0.0-beta.15",
     "react-dom": "^16.11.0",
+    "react-router-dom": "^5.1.2",
     "react-scripts": "3.2.0",
     "reactstrap": "^8.1.1"
   },
