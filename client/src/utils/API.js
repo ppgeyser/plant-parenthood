@@ -7,7 +7,7 @@ export default {
       return axios.get("/api/plants/user/" + userID);
     },
     //get singular plant
-    getPlantbyID: function(id) {
+    getPlantByID: function(id) {
         return axios.get("/api/plants/" + id)
     },
     updatePlant: function(id, plant) {

@@ -25,7 +25,7 @@ const plantSchema = new Schema({
             type: String,
             required: true
         },
-        waterDesc: {
+        water: {
             type: String
         },
         weeks: {
