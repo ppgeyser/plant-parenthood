@@ -31,6 +31,39 @@ p {
   font-family: 'Merriweather', serif;
 }
 
+#add-plant-btn{
+  color: #3B9732;
+}
+
+/* -------- NAVIGATION BAR  ------------------------------- */
+
+#navbar-row {
+  bottom: 0;
+  position: fixed;
+  width: 100%;
+  border-top-color: #CFCFCF;
+  border-top-style: solid;
+  border-top-width: 2px;
+}
+
+
+.MuiSvgIcon-root {
+  color: #3B9732;
+}
+
+.MuiSvgIcon-root:active {
+  color: #91306B;
+}
+
+.MuiBottomNavigationAction-root.MuiBottomNavigationAction-iconOnly {
+  margin-top: -10px;
+}
+
+.MuiBottomNavigationAction-root.Mui-selected {
+  padding: 0px;
+  margin-bottom: 9px;
+}
+
 /* ----------------------------------------------------------- */
 
 
@@ -68,6 +101,12 @@ p {
   box-shadow: 5px 3px 18px #888888;
   border-width: 5px;
   margin-bottom: 20px;
+
+    top: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+
 }
 
 #plant-info {
@@ -79,35 +118,10 @@ p {
   border-width: 2px;
 }
 
-
 /* ----------------------------------------------------------- */
-/* NAVIGATION BAR  ------------------------------------------- */
+/* RESULTS PAGE CSS ------------------------------------------- */
 
-#navbar-row {
-  bottom: 0;
-  position: fixed;
-  width: 100%;
-  border-top-color: #CFCFCF;
-  border-top-style: solid;
-  border-top-width: 2px;
+#results-body {
+  margin-bottom: 20%;
+  margin-top:25%;
 }
-
-
-.MuiSvgIcon-root {
-  color: #3B9732;
-}
-
-.MuiSvgIcon-root:active {
-  color: #91306B;
-}
-
-.MuiBottomNavigationAction-root.MuiBottomNavigationAction-iconOnly {
-  margin-top: -10px;
-}
-
-.MuiBottomNavigationAction-root.Mui-selected {
-  padding: 0px;
-  margin-bottom: 9px;
-}
-
-
