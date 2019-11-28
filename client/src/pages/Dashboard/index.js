@@ -15,8 +15,9 @@ class Dashboard extends React.Component {
     }
 
     componentDidUpdate() {
-        this.loadPlants();
-        // console.log("userId:", localStorage.getItem("userId"));
+        if (this.state.userPlants.length == 0) {
+            this.loadPlants();
+        }
     }
 
     loadPlants() {
@@ -30,8 +31,6 @@ class Dashboard extends React.Component {
     }
 
     render() {
-        // console.log(this.state.allPlants)
-
         return (
             <div>
             <User />
@@ -50,6 +49,7 @@ class Dashboard extends React.Component {
                     <Row>
                         <Col sm="12" md={{ size: 8, offset: 2 }} >
                             <PlantDisplayCard 
+                                key={userPlant._id}
                                 plantPic={userPlant.plantPic}
                                 plantName={userPlant.plantName}
                                 sun={userPlant.plantCare.sun}
