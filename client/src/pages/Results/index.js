@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import PlantDisplayCard from '../../components/PlantDisplayCard';
 import Plants from "./Plants.json";
+import BottomNav from '../../components/BottomNavigation';
+import { Container, Row, Col } from 'reactstrap';
 import API from "../../utils/API";
 // import BottomNav from "../../components/BottomNavigation"
 
@@ -124,21 +126,32 @@ class Results extends Component {
     render() {
         return (
             <div>
-                <h1>Your Results</h1>
-                {this.state.bestMatch.map(plant =>
-                <PlantDisplayCard
-                key={plant.plantId}
-                plantPic = {plant.plantPic}
-                plantName={plant.plantName}
-                sun={plant.plantCare.sun}
-                soil={plant.plantCare.soil}
-                water={plant.plantCare.water}
-                onClick={() => this.savePlant(plant)}
-                label="Add Plant"
-                > 
-                About Me: {plant.plantBio}
-                </PlantDisplayCard>)}
-                {/* <BottomNav /> */}
+                <Container id="results-body">
+
+                    <Row id="dashboard-text">
+                        <Col sm="12" md={{ size: 8, offset: 2 }}>
+                            <h3>Your Results</h3>
+                        </Col>
+                    </Row>
+
+                    {this.state.bestMatch.map(plant =>
+                        <PlantDisplayCard
+                            key={plant.plantId}
+                            plantPic = {plant.plantPic}
+                            plantName={plant.plantName}
+                            sun={plant.plantCare.sun}
+                            soil={plant.plantCare.soil}
+                            water={plant.plantCare.water}
+                            onClick={() => this.savePlant(plant)}
+                            label="Add Plant"
+                        > 
+                        About Me: {plant.plantBio}
+                        </PlantDisplayCard>)}
+
+                </Container>
+
+                <BottomNav />
+                
             </div>
         )
 
