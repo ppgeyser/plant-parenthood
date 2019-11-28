@@ -15,7 +15,7 @@ class Dashboard extends React.Component {
     }
 
     componentDidUpdate() {
-        if (this.state.userPlants.length == 0) {
+        if (this.state.userPlants.length === 0) {
             this.loadPlants();
         }
     }
