@@ -35,6 +35,20 @@ p {
   color: #3B9732;
 }
 
+#header-text {
+  padding-top: 20px;
+  padding-bottom: 10px;
+  background-color: #89AD39;
+  box-shadow: 5px 3px 18px #888888;
+  border-width: 5px;
+  margin-bottom: 20px;
+
+    top: 0;
+    /* position: fixed; */
+    /* width: 100%; */
+    z-index: 100;
+}
+
 /* -------- NAVIGATION BAR  ------------------------------- */
 
 #navbar-row {
@@ -93,21 +107,6 @@ p {
   max-height: 120px;
 }
 
-#dashboard-text {
-  padding-top: 20px;
-  padding-bottom: 10px;
-  background-color: #89AD39;
-  box-shadow: 5px 3px 18px #888888;
-  border-width: 5px;
-  margin-bottom: 20px;
-
-    top: 0;
-    position: fixed;
-    width: 100%;
-    z-index: 100;
-
-}
-
 #plant-info {
   line-height: 1em;
 }
@@ -122,5 +121,18 @@ p {
 
 #results-body {
   margin-bottom: 20%;
-  margin-top:25%;
+  /* margin-top:25%; */
+}
+
+
+/* ----------------------------------------------------------- */
+/* RESPONSIVNESS CSS ------------------------------------------- */
+
+@media screen and (min-width: 575px) {
+  #header-text{
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 800px;
+  }
 }

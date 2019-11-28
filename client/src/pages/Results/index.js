@@ -128,7 +128,8 @@ class Results extends Component {
             <div>
                 <Container id="results-body">
 
-                    <Row id="dashboard-text">
+                    {/* 'YOUR RESULTS' - ROW  --------------  */}
+                    <Row id="header-text">
                         <Col sm="12" md={{ size: 8, offset: 2 }}>
                             <h3>Your Results</h3>
                         </Col>
