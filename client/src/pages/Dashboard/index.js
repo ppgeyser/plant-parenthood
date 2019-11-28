@@ -54,7 +54,7 @@ class Dashboard extends React.Component {
                                 plantName={userPlant.plantName}
                                 sun={userPlant.plantCare.sun}
                                 soil={userPlant.plantCare.soil}
-                                water={userPlant.plantCare.days}
+                                water={userPlant.plantCare.water}
                                 onClick={event =>  window.location.href="/plants/" + userPlant._id}
                                 label="Details"
                             />
