@@ -7,8 +7,8 @@ const QACards = props => {
         <div className="card">
             <div className="card-body">
                 <div>
-                    <h2>Question #{props.questionNumber}:</h2>
-                    <h3>{props.questionText}</h3>
+                    <h6>Question #{props.questionNumber}:</h6>
+                    <h5>{props.questionText}</h5>
                     <UncontrolledButtonDropdown>
                         <select className="custom-select" value={props.value} onChange={props.onChange} onClick={props.onClick} id={'q'+props.questionNumber}>
                             <option defaultValue='1'>Answer:</option>

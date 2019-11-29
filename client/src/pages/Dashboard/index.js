@@ -45,7 +45,10 @@ class Dashboard extends React.Component {
 
                 {/* PLANT CARD ROW --------------  */}
 
-                {this.state.userPlants.map(userPlant =>(
+                {/* {this.state.userPlants.map(userPlant =>( */}
+                {this.state.userPlants.length === 0
+                ? <h1 id="ifNo">You have no plants yet! Take our survey to see what plant you can parent, or add your own!</h1>
+                : this.state.userPlants.map(userPlant =>(
                     <Row>
                         <Col sm="12" md={{ size: 8, offset: 2 }} >
                             <PlantDisplayCard 
@@ -66,15 +69,16 @@ class Dashboard extends React.Component {
                 <Login />
 
                 {/* NAVIGATION BAR --------------  */}
-                <Row>
+                {/* <Row>
                     <Col sm="12" md={{ size: 8, offset: 2 }} >
                     </Col>
-                </Row>
+                </Row> */}
 
             
             </Container>
             
             <BottomNav />
+
             </div>
         )
     }

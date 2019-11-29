@@ -15,19 +15,11 @@ code {
     monospace;
 }
 
-h1 {
+h1, h2, h3 {
   font-family:'Comfortaa', cursive;
 }
 
-h2 {
-  font-family:'Comfortaa', cursive;
-}
-
-h3 {
-  font-family:'Comfortaa', cursive;
-}
-
-p {
+h4, h5, h6, p {
   font-family: 'Merriweather', serif;
 }
 
@@ -49,11 +41,21 @@ p {
     z-index: 100;
 }
 
+button {
+  background-color: #91306B;
+  color: white;
+  border-style: none;
+  padding: 5px;
+  width: 100px;
+  border-radius: 15px;
+}
+
 /* -------- NAVIGATION BAR  ------------------------------- */
 
 #navbar-row {
   bottom: 0;
   position: fixed;
+  left: 0;
   width: 100%;
   border-top-color: #CFCFCF;
   border-top-style: solid;
@@ -63,6 +65,9 @@ p {
 
 .MuiSvgIcon-root {
   color: #3B9732;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 10px;
 }
 
 .MuiSvgIcon-root:active {
@@ -116,6 +121,10 @@ p {
   border-width: 2px;
 }
 
+#ifNo {
+  margin-top: 100px;
+}
+
 /* ----------------------------------------------------------- */
 /* RESULTS PAGE CSS ------------------------------------------- */
 
@@ -124,10 +133,27 @@ p {
   /* margin-top:25%; */
 }
 
+/* ----------------------------------------------------------- */
+/* SURVEY PAGE CSS ------------------------------------------- */
+#survey-container-body {
+  margin-bottom: 15%;
+}
+
+#button-row {
+  margin-top: 5%;
+  text-align: center;
+}
+
+.survey-button {
+  padding: 5px;
+  border-radius: 15px;
+}
+
 
 /* ----------------------------------------------------------- */
 /* RESPONSIVNESS CSS ------------------------------------------- */
 
+/* HEADER TEXT */
 @media screen and (min-width: 575px) {
   #header-text{
     display: block;

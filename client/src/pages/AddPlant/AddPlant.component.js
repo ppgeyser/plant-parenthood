@@ -69,6 +69,8 @@ class AddPlant extends Component {
           </Col>
         </Row>
 
+        <h6>* denotes required field</h6>
+
         <form>
           <div className="imageContainer">
             {/* <div>
@@ -80,7 +82,7 @@ class AddPlant extends Component {
                 value={this.state.url}
                 onChange={this.handleInputChange}
                 name="url"
-                placeholder="Insert Photo URL (optional)"
+                placeholder="Insert Photo URL"
               />
             </div>
           </div>
@@ -89,48 +91,58 @@ class AddPlant extends Component {
             value={this.state.name}
             onChange={this.handleInputChange}
             name="name"
-            placeholder="Plant Name (required)"
+            placeholder="Plant Name*"
           />
 
           <Input
             value={this.state.nickname}
             onChange={this.handleInputChange}
             name="nickname"
-            placeholder="Plant Nickname (optional)"
+            placeholder="Plant Nickname"
           />
 
           <Input
             value={this.state.sciname}
             onChange={this.handleInputChange}
             name="sciname"
-            placeholder="Scientific Name (optional)"
+            placeholder="Scientific Name"
           />
 
           <Input
             value={this.state.soilcare}
             onChange={this.handleInputChange}
             name="soilcare"
-            placeholder="Plant Soil Care (optional)"
+            placeholder="Soil Type"
           />
 
           <Input
             value={this.state.suncare}
             onChange={this.handleInputChange}
             name="suncare"
-            placeholder="Plant Sun Care (required)"
+            placeholder="Sun*"
           />
-          <TextArea
+          <Input
             value={this.state.watercare}
             onChange={this.handleInputChange}
             name="watercare"
-            placeholder="Plant Watering Care (required)"
+            placeholder="Watering Frequency (in days)*"
+          />
+
+          <Input
+            // NOTE: this 'value' needs to be confirmed - Added in this new input form for front-end purposes
+            // and watering schedule purposes 
+
+            // value={this.state.lastwatered}
+            onChange={this.handleInputChange}
+            name="watercare"
+            placeholder="Last Watered (in days)"
           />
 
           <Input
             value={this.state.toxicity}
             onChange={this.handleInputChange}
             name="toxicity"
-            placeholder="Plant Toxicity(optional)"
+            placeholder="Is the plant toxic to pets? (Yes or No)"
           />
 
           <FormBtn
