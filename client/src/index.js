@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 import { Auth0Provider } from "./react-auth0-spa";
-import config from "./auth_config.json";
+// import config from "./auth_config.json";
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -14,14 +14,14 @@ const onRedirectCallback = appState => {
     document.title,
     appState && appState.targetUrl
       ? appState.targetUrl
-      : window.location.pathname || "http://localhost:3000/profile"
+      : window.location.pathname || "http://localhost:3000/dashboard"
   );
 };
 
 ReactDOM.render(
   <Auth0Provider
-    domain={config.domain}
-    client_id={config.clientId}
+    domain={process.env.REACT_APP_domain}
+    client_id={process.env.REACT_APP_clientId}
     redirect_uri={window.location.origin}
     onRedirectCallback={onRedirectCallback}
 >
