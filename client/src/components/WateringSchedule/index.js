@@ -3,13 +3,12 @@ var moment = require('moment');
  
 
 function waterSchedule(arg) {
-    console.log(arg)
-    const date = new Date(); 
 
     // date the plant was added (assuming that is the day the plant is being watered)
-     var plantAddedDate = date; // THIS NEEDS TO BE REPLACED WITH ACTUAL PLANT ADDED DATE
+    const plantAddedDate = arg.createdAt; //round to midnight
+
     // how often the plant needs to be watered 
-     var wateringFreq = arg; // THIS NEEDS TO BE REPLACED WITH ACTAL WATER FREQ DATA FROM DB
+     var wateringFreq = arg.days; // THIS NEEDS TO BE REPLACED WITH ACTAL WATER FREQ DATA FROM DB
 
      // find next watering date by adding plant-added-date with watering frequency 
      // ex: Plant added Oct 15 || Water-Freq is 7 days || Oct 15th + 7 days = October 22nd 
@@ -20,15 +19,17 @@ function waterSchedule(arg) {
     var date1 = new Date();
     var date2 = moment(nextWateringDate);
     var diffInDays = date2.diff(date1, 'days');
-        console.log('diff: ' + diffInDays);
-        return diffInDays;
+        console.log(typeof(diffInDays));
+        return (
+            (diffInDays > 0) ? (<h5> Water again in {diffInDays} days </h5>):(<h5>Watering overdue. Water today!</h5>)
+        )
 }
 
 let WateringSchedule = (props) => {    
 console.log(props)
         return (
             <div>
-                <h5> Water again in {waterSchedule(props.data.days)} days </h5>
+                {waterSchedule(props.data)} 
             </div>
         );
     
