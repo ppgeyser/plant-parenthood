@@ -67,7 +67,7 @@ export class Survey extends Component {
                             render() {
         return (
             <div>
-                <Container id="container-body">
+                <Container id="survey-container-body">
 
                 {/* 'SURVEY PAGE' - ROW  --------------  */}
                 <Row id="header-text">
@@ -90,7 +90,13 @@ export class Survey extends Component {
                 Answer5={question.answers[4]}
                 />
                 )}
-                <Button onClick={this.handleSubmit} >Submit</Button>
+
+                {/* 'SUBMIT BUTTON' - ROW  --------------  */}
+                <Row id="button-row">
+                    <Col sm="12" md={{ size: 8, offset: 2 }}>
+                        <Button className="rounded" onClick={this.handleSubmit} >Submit</Button>
+                    </Col>
+                </Row>
 
                 </Container>
 

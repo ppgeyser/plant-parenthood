@@ -15,19 +15,11 @@ code {
     monospace;
 }
 
-h1 {
+h1, h2, h3 {
   font-family:'Comfortaa', cursive;
 }
 
-h2 {
-  font-family:'Comfortaa', cursive;
-}
-
-h3 {
-  font-family:'Comfortaa', cursive;
-}
-
-p {
+h4, h5, h6, p {
   font-family: 'Merriweather', serif;
 }
 
@@ -47,6 +39,15 @@ p {
     /* position: fixed; */
     /* width: 100%; */
     z-index: 100;
+}
+
+button {
+  background-color: #91306B;
+  color: white;
+  border-style: none;
+  padding: 5px;
+  width: 100px;
+  border-radius: 15px;
 }
 
 /* -------- NAVIGATION BAR  ------------------------------- */
@@ -124,10 +125,27 @@ p {
   /* margin-top:25%; */
 }
 
+/* ----------------------------------------------------------- */
+/* SURVEY PAGE CSS ------------------------------------------- */
+#survey-container-body {
+  margin-bottom: 15%;
+}
+
+#button-row {
+  margin-top: 5%;
+  text-align: center;
+}
+
+.survey-button {
+  padding: 5px;
+  border-radius: 15px;
+}
+
 
 /* ----------------------------------------------------------- */
 /* RESPONSIVNESS CSS ------------------------------------------- */
 
+/* HEADER TEXT */
 @media screen and (min-width: 575px) {
   #header-text{
     display: block;
