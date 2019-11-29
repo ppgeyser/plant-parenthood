@@ -4,6 +4,7 @@ import InfoCard from '../../components/InfoCard'
 import BottomNav from '../../components/BottomNavigation'
 import { Container, Row, Col } from 'reactstrap';
 import API from "../../utils/API";
+import './style.css';
 
 import WateringSchedule from '../../components/WateringSchedule'
 
@@ -42,6 +43,7 @@ class PlantDetail extends Component {
     }
     
     render() {
+        console.log(this.state)
         return (
             <div>
                 <Container id="plantid-body">
@@ -50,6 +52,13 @@ class PlantDetail extends Component {
                     <Row id="header-text">
                         <Col sm="12" md={{ size: 8, offset: 2 }}>
                             <h3>{this.state.userPlant.plantName}</h3>
+                        </Col>
+                    </Row>
+
+                    {/* IMAGE ROW --------------  */}
+                    <Row>
+                        <Col sm="12" md={{ size: 8, offset: 2 }} >
+                            <img src={this.state.userPlant.plantPic} alt="Plant Picture" />
                         </Col>
                     </Row>
 
