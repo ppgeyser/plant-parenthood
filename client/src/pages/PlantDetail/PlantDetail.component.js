@@ -5,7 +5,6 @@ import BottomNav from '../../components/BottomNavigation'
 import { Container, Row, Col } from 'reactstrap';
 import API from "../../utils/API";
 import './style.css';
-
 import WateringSchedule from '../../components/WateringSchedule'
 
 
@@ -25,7 +24,8 @@ class PlantDetail extends Component {
                 userID: "",
                 plantName: "",
                 nonToxic: null,
-                plantPic: ""
+                plantPic: "",
+                createdAt: ""
             }
         }
     }
@@ -65,7 +65,7 @@ class PlantDetail extends Component {
                     {/* WATERING SCHEDULE ROW --------------  */}
                     <Row>
                         <Col sm="12" md={{ size: 8, offset: 2 }} >
-                            <WateringSchedule />
+                            <WateringSchedule data = {this.state.userPlant.plantCare} />
                         </Col>
                     </Row>
 

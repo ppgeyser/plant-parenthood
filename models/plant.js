@@ -34,6 +34,9 @@ const plantSchema = new Schema({
         days: {
             type: Number,
             required: true
+        },
+        lastWatered: {
+            type: Date
         }
     },
     nonToxic: {
@@ -41,6 +44,10 @@ const plantSchema = new Schema({
     },
     plantPic: {
         type: String
+    },
+    createdAt: {
+        type: Date,
+        required: true
     }
 });
 
