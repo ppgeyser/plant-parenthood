@@ -55,6 +55,7 @@ button {
 #navbar-row {
   bottom: 0;
   position: fixed;
+  left: 0;
   width: 100%;
   border-top-color: #CFCFCF;
   border-top-style: solid;
@@ -64,6 +65,9 @@ button {
 
 .MuiSvgIcon-root {
   color: #3B9732;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 10px;
 }
 
 .MuiSvgIcon-root:active {
