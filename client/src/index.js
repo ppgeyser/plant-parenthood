@@ -14,7 +14,7 @@ const onRedirectCallback = appState => {
     document.title,
     appState && appState.targetUrl
       ? appState.targetUrl
-      : window.location.pathname || "http://localhost:3000/dashboard"
+      : window.location.pathname || "http://localhost:3000/profile"
   );
 };
 
