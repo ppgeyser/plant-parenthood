@@ -4,8 +4,7 @@ const Schema = mongoose.Schema;
 const plantSchema = new Schema({
     userID: {
         type: String,
-        required: true,
-        unique: true
+        required: true
     },
     plantNickname: {
         type: String
