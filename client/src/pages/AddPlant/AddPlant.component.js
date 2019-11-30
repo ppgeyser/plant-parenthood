@@ -19,7 +19,9 @@ class AddPlant extends Component {
     plantName: "",
     nonToxic: false,
     plantPic: "",
-    plantNickname: ""   
+    plantNickname: "",
+    createdAt: new Date()  
+    
 };
 
   handleInputChange = event => {
@@ -46,7 +48,8 @@ class AddPlant extends Component {
           days: 10,
       },
       nonToxic: this.state.nonToxic,
-      plantPic: this.state.plantPic
+      plantPic: this.state.plantPic,
+      createdAt: new Date()
   }
     console.log(newPlant);
     API.savePlant(newPlant)
