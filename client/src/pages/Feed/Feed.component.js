@@ -3,6 +3,7 @@ import firebase from "firebase";
 import FileUploader from "react-firebase-file-uploader";
 import BottomNav from '../../components/BottomNavigation';
 import { Container, Row, Col } from 'reactstrap';
+import API from "../../utils/API";
 // import {DropzoneDialog} from 'material-ui-dropzone'
 // import Button from '@material-ui/core/Button';
  
@@ -19,6 +20,21 @@ class Feed extends Component {
     isUploading: false,
     uploadProgress: 0
   };
+
+  componentDidMount(){
+      this.loadPosts();
+  }
+
+  loadPosts = () => {
+      let postArr = [];
+      API.getAllPosts()
+      .then(res => {
+          res.data.forEach(post => {
+        postArr.push(post.imageURL);
+        })
+        this.setState({downloadURLs: [...postArr]})
+      })
+  }
  
   handleUploadStart = () =>
     this.setState({
@@ -40,19 +56,30 @@ class Feed extends Component {
   };
  
   handleUploadSuccess = async filename => {
+      const userId = localStorage.getItem('userId');
     const downloadURL = await firebase
       .storage()
       .ref("images")
       .child(filename)
       .getDownloadURL();
- 
+
     this.setState(oldState => ({
       filenames: [...oldState.filenames, filename],
-      downloadURLs: [...oldState.downloadURLs, downloadURL],
+      downloadURLs: [downloadURL, ...oldState.downloadURLs],
       uploadProgress: 100,
       isUploading: false
-    }));
+    }),
+    this.savePost({
+        imageURL: downloadURL,
+        createdAt: new Date(),
+        userID: userId
+        })
+    );
   };
+
+  savePost = (post) => {
+    API.savePost(post)
+  }
  
   render() {
     return (
@@ -89,6 +116,7 @@ class Feed extends Component {
             return <img key={i} src={downloadURL} />;
           })}
         </div>
+
 
         </Container>
         
