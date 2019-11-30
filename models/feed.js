@@ -7,7 +7,8 @@ const feedSchema = new Schema({
         required: true
     },
     imageURL: {
-        type: String
+        type: String,
+        required: true
     },
     post: {
         type: String
@@ -16,7 +17,8 @@ const feedSchema = new Schema({
         type: Array
     },
     crreatedAt: {
-        type: Date
+        type: Date,
+        required: true
     }
 });
 
