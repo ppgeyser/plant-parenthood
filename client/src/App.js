@@ -5,6 +5,7 @@ import { noMatch } from "./components/noMatch/";
 import {Landing } from "./pages/Landing"
 import { Survey } from "./pages/Survey/Survey.component";
 import { Plants } from "./pages/Plants/Plants.component";
+import Feed from "./pages/Feed/Feed.component";
 import  AddPlant  from "./pages/AddPlant/";
 import Results  from "./pages/Results";
 import PlantDetail from "./pages/PlantDetail/PlantDetail.component";
@@ -18,6 +19,7 @@ function App() {
       </header>
       <Switch>
         <Route exact path="/" component={Landing} />
+        <PrivateRoute exact path="/feed" component={Feed} />
         <PrivateRoute exact path="/dashboard" component={Dashboard} />
         <PrivateRoute exact path="/survey" component={Survey} />
         <PrivateRoute exact path="/plants" component={Plants} />
