@@ -3,6 +3,7 @@ import { Login } from '../../components/Login/Login.component'
 import InfoCard from '../../components/InfoCard'
 import BottomNav from '../../components/BottomNavigation'
 import { Container, Row, Col } from 'reactstrap';
+import CreateIcon from '@material-ui/icons/Create';
 import API from "../../utils/API";
 import './style.css';
 import WateringSchedule from '../../components/WateringSchedule'
@@ -18,7 +19,8 @@ class PlantDetail extends Component {
                     sun: "",
                     water: "",
                     weeks: null,
-                    days: null
+                    days: null,
+                    lastWatered: ""
                 },
                 _id: "",
                 userID: "",
@@ -28,6 +30,7 @@ class PlantDetail extends Component {
                 createdAt: ""
             }
         }
+        this.handleWater = this.handleWater.bind(this)
     }
     
     componentDidMount(){
@@ -40,6 +43,13 @@ class PlantDetail extends Component {
                 userPlant: res.data
             });
         })
+    }
+
+    handleWater(data) {
+        var todaysDate = new Date();
+
+        this.setState(this.state.userPlant.plantCare.lastWatered = todaysDate)
+        console.log(this.state.userPlant.plantCare.lastWatered)
     }
     
     render() {
@@ -64,9 +74,13 @@ class PlantDetail extends Component {
 
                     {/* WATERING SCHEDULE ROW --------------  */}
                     <Row>
-                        <Col sm="12" md={{ size: 8, offset: 2 }} >
+                        <Col xs="10">
                             <WateringSchedule data = {this.state.userPlant.plantCare} />
                         </Col>
+                        <Col xs="2">
+                            <CreateIcon onClick={this.handleWater} />
+                        </Col>
+
                     </Row>
 
 
