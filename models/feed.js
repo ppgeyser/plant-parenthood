@@ -16,12 +16,12 @@ const feedSchema = new Schema({
     comment: {
         type: Array
     },
-    crreatedAt: {
+    createdAt: {
         type: Date,
         required: true
     }
 });
 
-const Plant = mongoose.model("Feed", feedSchema);
+const Feed = mongoose.model("Feed", feedSchema);
 
 module.exports = Feed;
