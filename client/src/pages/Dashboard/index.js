@@ -55,6 +55,7 @@ class Dashboard extends React.Component {
                                 key={userPlant._id}
                                 plantPic={userPlant.plantPic}
                                 plantName={userPlant.plantName}
+                                plantNickname={userPlant.plantNickname}
                                 sun={userPlant.plantCare.sun}
                                 soil={userPlant.plantCare.soil}
                                 water={userPlant.plantCare.water}

@@ -1,24 +1,26 @@
 import React, { Component } from 'react';
 import { Input, TextArea, FormBtn } from "../../components/AddPlantForm";
 import BottomNav from "../../components/BottomNavigation"
-import { Container, Row, Col } from 'reactstrap';
+import { Container, Row, Col, FormGroup, Label } from 'reactstrap';
 import "./AddPlant.css";
+import API from "../../utils/API";
 
 
 class AddPlant extends Component {
   state = {
-    url: "",
-    name:"",
-    nickname: "",
-    sciname: "",
-    soilcare: "",
-    suncare: "",
-    watercare:"",
-    toxicity:"",
-      // {
-      // how do we want this set up?? a watering checkbox for each day? and then one state for each day and you are chaning the state of the selected objects
-      // }
-  };
+    soil: "",
+    sun: "",
+    water: "",
+    lastwatered: "",
+    weeks: "",
+    days: "",
+    _id: "",
+    userID: "",
+    plantName: "",
+    nonToxic: false,
+    plantPic: "",
+    plantNickname: ""   
+};
 
   handleInputChange = event => {
     const { name, value } = event.target;
@@ -29,33 +31,33 @@ class AddPlant extends Component {
 
   handleFormSubmit = event => {
     event.preventDefault();
-    let { url, name, nickname, sciname, soilcare, suncare, watercare, toxicity } = this.state
-    let something = {
-      url,
-      name,
-      nickname,
-      sciname,
-      soilcare,
-      suncare,
-      watercare,
-      toxicity
-    }
-    console.log("something", something);
-    // if (this.state.title && this.state.author) {
-    //   API.saveBook({
-    //     title: this.state.title,
-    //     author: this.state.author,
-    //     synopsis: this.state.synopsis
-    //   })
-    //     .then(res => this.loadBooks())
-    //     .catch(err => console.log(err));
-    // }
+    const userId = localStorage.getItem('userId')
+    let newPlant = {
+      userID: userId,
+      plantName: this.state.plantName,
+      plantNickname: this.state.plantNickname,
+      plantCare: {
+          soil: this.state.soil,
+          sun: this.state.sun,
+          water: this.state.water,
+          // lastwatered: this.state.lastwatered,
+          // We can change weeks and days to a state later
+          weeks: 1.5,
+          days: 10,
+      },
+      nonToxic: this.state.nonToxic,
+      plantPic: this.state.plantPic
+  }
+    console.log(newPlant);
+    API.savePlant(newPlant)
+    .catch(err => console.log(err));
   };
   
   
   componentDidMount(){
     console.log('Plant Id', this.props.match.params.id);
   }
+
   
   render() {
     return (
@@ -79,52 +81,45 @@ class AddPlant extends Component {
             {/* <Input className="photoUrl" */}
             <div className="photoUrlInput">
               <Input
-                value={this.state.url}
+                value={this.state.plantPic}
                 onChange={this.handleInputChange}
-                name="url"
+                name="plantPic"
                 placeholder="Insert Photo URL"
               />
             </div>
           </div>
 
           <Input
-            value={this.state.name}
+            value={this.state.plantName}
             onChange={this.handleInputChange}
-            name="name"
+            name="plantName"
             placeholder="Plant Name*"
           />
 
           <Input
-            value={this.state.nickname}
+            value={this.state.plantNickname}
             onChange={this.handleInputChange}
-            name="nickname"
+            name="plantNickname"
             placeholder="Plant Nickname"
           />
 
           <Input
-            value={this.state.sciname}
+            value={this.state.soil}
             onChange={this.handleInputChange}
-            name="sciname"
-            placeholder="Scientific Name"
+            name="soil"
+            placeholder="Soil Type *"
           />
 
           <Input
-            value={this.state.soilcare}
+            value={this.state.sun}
             onChange={this.handleInputChange}
-            name="soilcare"
-            placeholder="Soil Type"
-          />
-
-          <Input
-            value={this.state.suncare}
-            onChange={this.handleInputChange}
-            name="suncare"
+            name="sun"
             placeholder="Sun*"
           />
           <Input
-            value={this.state.watercare}
+            value={this.state.water}
             onChange={this.handleInputChange}
-            name="watercare"
+            name="water"
             placeholder="Watering Frequency (in days)*"
           />
 
@@ -132,21 +127,43 @@ class AddPlant extends Component {
             // NOTE: this 'value' needs to be confirmed - Added in this new input form for front-end purposes
             // and watering schedule purposes 
 
-            // value={this.state.lastwatered}
+            value={this.state.lastwatered}
             onChange={this.handleInputChange}
-            name="watercare"
+            name="lastwatered"
             placeholder="Last Watered (in days)"
           />
 
-          <Input
-            value={this.state.toxicity}
-            onChange={this.handleInputChange}
-            name="toxicity"
-            placeholder="Is the plant toxic to pets? (Yes or No)"
-          />
+          <h6 id="toxicDiv">Is your plant toxic?</h6>
+          
+          <FormGroup tag="fieldset">
+            <FormGroup check>
+              <Label check id="radioPlace">
+                <Input 
+                  className="radioSize"
+                  type="radio" 
+                  name="nonToxic" 
+                  value={true} 
+                  onChange={this.handleInputChange} />{' '}
+                True
+              </Label>
+          {/* </FormGroup> */}
+
+          {/* <FormGroup check> */}
+              <Label check id="radioPlace">
+                <Input 
+                  className="radioSize"
+                  type="radio" 
+                  name="nonToxic" 
+                  value={false} 
+                  onChange={this.handleInputChange} />{' '}
+                False
+              </Label>
+          </FormGroup>
+        </FormGroup>
+
 
           <FormBtn
-            disabled={!(this.state.name && this.state.suncare && this.state.watercare)}
+            disabled={!(this.state.plantName && this.state.sun && this.state.soil &&this.state.water)}
             onClick={this.handleFormSubmit}
           >
             Submit
