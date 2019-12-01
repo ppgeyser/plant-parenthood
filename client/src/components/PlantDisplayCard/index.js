@@ -18,7 +18,7 @@ const PlantDisplayCard = (props) => {
                 { props.plantNickname && <CardText> Nickname: {props.plantNickname}</CardText> }
                 <CardText>Sun: {props.sun}</CardText>
                 <CardText>Soil: {props.soil}</CardText>
-                <CardText>Water: {props.water}</CardText>
+                <CardText>Water every {props.water} days.</CardText>
                 <Button className="float-right" onClick={props.onClick}>{props.label}</Button>
             </CardBody>
       </Card>

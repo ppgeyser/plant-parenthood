@@ -14,8 +14,8 @@ class AddPlant extends Component {
     sun: "",
     water: "",
     lastwatered: "",
-    weeks: "",
-    days: "",
+    weeks: Number,
+    days: Number,
     _id: "",
     userID: "",
     plantName: "",
@@ -48,9 +48,8 @@ class AddPlant extends Component {
           sun: this.state.sun,
           water: this.state.water,
           // lastwatered: this.state.lastwatered,
-          // We can change weeks and days to a state later
-          weeks: 1.5,
-          days: 10,
+          weeks: this.state.weeks,
+          days: this.state.days,
       },
       nonToxic: this.state.nonToxic,
       plantPic: this.state.plantPic,
@@ -142,11 +141,25 @@ class AddPlant extends Component {
             name="sun"
             placeholder="Sun*"
           />
-          <Input
+         <Input
             value={this.state.water}
             onChange={this.handleInputChange}
             name="water"
-            placeholder="Watering Frequency (in days)*"
+            placeholder="Watering frequency (in days). *" 
+          />
+
+          <Input
+            value={this.state.weeks}
+            onChange={this.handleInputChange}
+            name="weeks"
+            placeholder='Ex: "Water every X week(s)." '  
+          />
+
+          <Input
+            value={this.state.days}
+            onChange={this.handleInputChange}
+            name="days"
+            placeholder='Ex: "Water again in X days(s)." * '  
           />
 
           <Input

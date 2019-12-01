@@ -92,6 +92,7 @@ class PlantDetail extends Component {
                             sun = {this.state.userPlant.plantCare.sun}
                             soil = {this.state.userPlant.plantCare.soil}
                             water = {this.state.userPlant.plantCare.water}
+                            weeks = {this.state.userPlant.plantCare.weeks}
                             />
                         </Col>
                     </Row>
