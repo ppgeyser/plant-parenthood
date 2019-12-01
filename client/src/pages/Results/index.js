@@ -38,7 +38,7 @@ class Results extends Component {
             nonToxic = Plants.filter(plant => plant.nonToxic === true);
             let match = 0;
             for (let i = 0; i < nonToxic.length; i++) {
-                for (let j = 0; j < 4; j++)
+                for (let j = 0; j < 5; j++)
                 if (nonToxic[i].plantScore[j] === this.state.matchScore[j]){
                     match++;
                 }
