@@ -22,7 +22,9 @@ class AddPlant extends Component {
     nonToxic: false,
     plantPic: "",
     plantNickname: "",
-    createdAt: new Date()  
+    createdAt: new Date() ,
+    filename: "",
+    picText: "Add your plant pic!",
     
 };
 
@@ -59,7 +61,6 @@ class AddPlant extends Component {
   };
 
   handleUploadSuccess = async filename => {
-    const userId = localStorage.getItem('userId');
   const downloadURL = await firebase
     .storage()
     .ref("images")
@@ -67,18 +68,14 @@ class AddPlant extends Component {
     .getDownloadURL();
 
   this.setState(oldState => ({
-    filenames: [...oldState.filenames, filename],
-    downloadURLs: [downloadURL, ...oldState.downloadURLs],
-    uploadProgress: 100,
-    isUploading: false
-  }),
-  this.savePost({
-      imageURL: downloadURL,
-      createdAt: new Date(),
-      userID: userId
-      })
-  );
+    filename: filename,
+    plantPic: downloadURL
+  }));
   };
+
+  handlePictoggle = () => {
+    this.setState({picText: "Does this look right?"})
+  }
   
   
   componentDidMount(){
@@ -171,26 +168,29 @@ class AddPlant extends Component {
                   onChange={this.handleInputChange} />{' '}
                 False
               </Label>
+              {this.state.plantPic === ""
+                ? null
+                : <div style={{float: 'right'}}>
+                <img src={this.state.plantPic} style={{height: '250px', width: '250px'}} />;
+                </div>
+              }
                 <div className="imageContainer" style={{float:'right'}}>
                   <label style={{backgroundColor: '#3B9732', color: 'white', padding: 10, borderRadius: 4, cursor: 'pointer'}}>
-                      Add your plant pic!
+                      {this.state.picText}
                     <FileUploader
                     hidden
                     accept="image/*"
                     name="image-uploader-multiple"
                     randomizeFilename
                     storageRef={firebase.storage().ref("images")}
-                    onUploadStart={this.handleUploadStart}
-                    onUploadError={this.handleUploadError}
                     onUploadSuccess={this.handleUploadSuccess}
-                    onProgress={this.handleProgress}
+                    onClick={this.handlePictoggle}
                     multiple
                     />
                   </label>
                 </div>
           </FormGroup>
         </FormGroup>
-
 
           <FormBtn
             disabled={!(this.state.plantName && this.state.sun && this.state.soil &&this.state.water)}
