@@ -10,17 +10,16 @@ import { PinDropRounded } from '@material-ui/icons';
 const PlantDisplayCard = (props) => {
   return (
     <div>
-      <Card>
-            <CardBody>
+      <Card className="border-0">
+            <CardBody >
                 <CardImg src={props.plantPic} className="float-left mr-3 plant-img" alt="Plant Image" />  
-                <CardText>{props.plantName}</CardText>
+                <CardText style={{fontWeight: "bold"}} >{props.plantName}</CardText>
                 <CardText>{props.children}</CardText>
                 { props.plantNickname && <CardText> Nickname: {props.plantNickname}</CardText> }
-                <CardText>Sun: {props.sun}</CardText>
-                <CardText>Soil: {props.soil}</CardText>
-                {/* <CardText>Water every {props.water} days.</CardText> */}
+                {/* <CardText>Sun: {props.sun}</CardText> */}
+                {/* <CardText>Soil: {props.soil}</CardText> */}
                 <CardText>Water: {props.water}</CardText>
-                <Button className="float-right" onClick={props.onClick}>{props.label}</Button>
+                <Button  className="float-right" onClick={props.onClick}>{props.label}</Button>
             </CardBody>
       </Card>
     </div>
