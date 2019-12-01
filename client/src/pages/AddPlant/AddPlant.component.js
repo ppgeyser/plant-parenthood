@@ -145,7 +145,7 @@ class AddPlant extends Component {
             value={this.state.water}
             onChange={this.handleInputChange}
             name="water"
-            placeholder="Watering frequency (in days). *" 
+            placeholder='Ex: "Mist 3x a day."' 
           />
 
           <Input
