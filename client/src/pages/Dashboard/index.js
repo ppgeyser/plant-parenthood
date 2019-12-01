@@ -11,18 +11,18 @@ class Dashboard extends React.Component {
         super(props);
         this.state = {
             userPlants: [],
+            user: {
+                id: window.localStorage.userId
+            }
         };
     }
 
-    componentDidUpdate() {
-        if (this.state.userPlants.length === 0) {
-            this.loadPlants();
-        }
+    componentDidMount() {
+        this.loadPlants()
     }
 
     loadPlants() {
-        const userId = localStorage.getItem('userId') 
-        API.getPlants(userId)
+        API.getPlants(this.state.user.id)
             .then(res => {
                 this.setState({
                     userPlants: res.data
