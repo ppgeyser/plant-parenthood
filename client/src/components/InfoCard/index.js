@@ -1,9 +1,5 @@
 import React from 'react';
-import { Button } from 'reactstrap';
-import {
-    Card, CardImg, CardText, 
-    CardBody
-  } from 'reactstrap';
+import { Button, Card, CardImg, CardText, CardBody } from 'reactstrap';
 
 // const InfoCard = ({sun , soil, water, days, weeks}) => {
     const InfoCard = (props) => {
