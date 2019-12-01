@@ -28,6 +28,7 @@ h4, h5, h6, p {
 }
 
 #header-text {
+  color: white;
   padding-top: 20px;
   padding-bottom: 10px;
   background-color: #89AD39;
@@ -65,7 +66,7 @@ button {
 
 .MuiSvgIcon-root {
   color: #3B9732;
-  margin-left: 10%;
+  margin-left: 8%;
   margin-right: 5%;
   margin-top: 10px;
 }
@@ -125,6 +126,14 @@ button {
   margin-top: 100px;
 }
 
+#plant-row {
+  padding: 0px;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color:#b6b6b6;
+}
+
+
 /* ----------------------------------------------------------- */
 /*  ADD PLANT CSS  ------------------------------------------- */
 #radioPlace{
@@ -178,3 +187,12 @@ button {
     max-width: 800px;
   }
 }
+
+/* @media screen and (min-width: 575px) {
+  #container-body{
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 800px;
+  }
+} */

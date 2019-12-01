@@ -3,10 +3,10 @@
 }
 
 div.card-body {
-    border-style: none;
-    border-color:#89AD39;
+    border: none;
     margin-top: 5px;
     margin-bottom: 5px;
+    width: 100%;
 }
 
 div.card {

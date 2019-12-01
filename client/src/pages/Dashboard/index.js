@@ -49,7 +49,7 @@ class Dashboard extends React.Component {
                 {this.state.userPlants.length === 0
                 ? <h1 id="ifNo">You have no plants yet! Take our survey to see what plant you can parent, or add your own!</h1>
                 : this.state.userPlants.map(userPlant =>(
-                    <Row>
+                    <Row id="plant-row">
                         <Col sm="12" md={{ size: 8, offset: 2 }} >
                             <PlantDisplayCard 
                                 key={userPlant._id}
@@ -57,7 +57,7 @@ class Dashboard extends React.Component {
                                 plantName={userPlant.plantName}
                                 plantNickname={userPlant.plantNickname}
                                 sun={userPlant.plantCare.sun}
-                                soil={userPlant.plantCare.soil}
+                                // soil={userPlant.plantCare.soil}
                                 water={userPlant.plantCare.water}
                                 onClick={event =>  window.location.href="/plants/" + userPlant._id}
                                 label="Details"
