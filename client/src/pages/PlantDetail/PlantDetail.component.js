@@ -51,6 +51,10 @@ class PlantDetail extends Component {
         this.setState(this.state.userPlant.plantCare.lastWatered = todaysDate)
         console.log(this.state.userPlant.plantCare.lastWatered)
     }
+
+    handlePlantDelete = id => {
+        API.deletePlant(id).then(res => this.getPlants()).then(window.location.href="/dashboard/") 
+    };
     
     render() {
         console.log(this.state)
@@ -89,10 +93,14 @@ class PlantDetail extends Component {
                         <Col sm="12" md={{ size: 8, offset: 2 }} >
                             <h5>Care Info:</h5>
                             <InfoCard 
+                            key={this.state.userPlant._id}
                             sun = {this.state.userPlant.plantCare.sun}
                             soil = {this.state.userPlant.plantCare.soil}
                             water = {this.state.userPlant.plantCare.water}
+                            days = {this.state.userPlant.plantCare.days}
                             weeks = {this.state.userPlant.plantCare.weeks}
+                            onClick={event => this.handlePlantDelete(this.state.userPlant._id)}
+                            label="Delete"
                             />
                         </Col>
                     </Row>
