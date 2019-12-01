@@ -5,6 +5,7 @@ import {
 } from 'reactstrap';
 import { Container, Row, Col } from 'reactstrap';
 import "./styles.css";
+import { PinDropRounded } from '@material-ui/icons';
 
 const PlantDisplayCard = (props) => {
   return (
@@ -14,7 +15,7 @@ const PlantDisplayCard = (props) => {
                 <CardImg src={props.plantPic} className="float-left mr-3 plant-img" alt="Plant Image" />  
                 <CardText>{props.plantName}</CardText>
                 <CardText>{props.children}</CardText>
-                <CardText>Nickname: {props.plantNickname}</CardText>
+                { props.plantNickname && <CardText> Nickname: {props.plantNickname}</CardText> }
                 <CardText>Sun: {props.sun}</CardText>
                 <CardText>Soil: {props.soil}</CardText>
                 <CardText>Water: {props.water}</CardText>
