@@ -50,6 +50,7 @@ class PlantDetail extends Component {
 
         this.setState(this.state.userPlant.plantCare.lastWatered = todaysDate)
         console.log(this.state.userPlant.plantCare.lastWatered)
+        API.updatePlant(this.props.match.params.id, this.state.userPlant)
     }
 
     handlePlantDelete = id => {
