@@ -3,7 +3,7 @@ import { Input, FormBtn } from "../../components/AddPlantForm";
 import FileUploader from "react-firebase-file-uploader";
 import firebase from "firebase";
 import BottomNav from "../../components/BottomNavigation"
-import { Container, Row, Col, FormGroup, Label } from 'reactstrap';
+import { Container, Row, Col, FormGroup, Label, Alert } from 'reactstrap';
 import "./AddPlant.css";
 import API from "../../utils/API";
 
@@ -25,6 +25,7 @@ class AddPlant extends Component {
     createdAt: new Date() ,
     filename: "",
     picText: "Add your plant pic!",
+    isVisible: false
     
 };
 
@@ -58,6 +59,7 @@ class AddPlant extends Component {
     console.log(newPlant);
     API.savePlant(newPlant)
     .catch(err => console.log(err));
+    this.setVisible(true);
   };
 
   handleUploadSuccess = async filename => {
@@ -76,6 +78,16 @@ class AddPlant extends Component {
   handlePictoggle = () => {
     this.setState({picText: "Does this look right?"})
   }
+
+  setVisible = (boolean) => {
+    this.setState({
+        isVisible: boolean
+    });
+  };
+
+  onDismiss = () => {
+    this.setVisible(false);
+  }
   
   
   componentDidMount(){
@@ -86,6 +98,10 @@ class AddPlant extends Component {
   render() {
     return (
       <div className="addPlantContainer">
+        {/* Alert on successful plant add*/}
+        <Alert color="success" isOpen={this.state.isVisible} toggle={this.onDismiss} style={{ position: 'fixed', zIndex: 1000, width: '100%' }}>
+                Plant Added!
+        </Alert>
 
       <Container id="container-body">
         {/* 'YOUR PLANTS' - ROW  --------------  */}
