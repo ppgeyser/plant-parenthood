@@ -50,7 +50,7 @@ class Dashboard extends React.Component {
                 ? <h1 id="ifNo">You have no plants yet! Take our survey to see what plant you can parent, or add your own!</h1>
                 : this.state.userPlants.map(userPlant =>(
                     <Row id="plant-row">
-                        <Col sm="12" md={{ size: 8, offset: 2 }} >
+                        <Col id="plant-col" sm="12" md={{ size: 8, offset: 2 }} >
                             <PlantDisplayCard 
                                 key={userPlant._id}
                                 plantPic={userPlant.plantPic}
