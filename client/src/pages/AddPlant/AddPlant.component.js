@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import { Input, TextArea, FormBtn } from "../../components/AddPlantForm";
+import { Input, FormBtn } from "../../components/AddPlantForm";
+import FileUploader from "react-firebase-file-uploader";
+import firebase from "firebase";
 import BottomNav from "../../components/BottomNavigation"
 import { Container, Row, Col, FormGroup, Label } from 'reactstrap';
 import "./AddPlant.css";
@@ -55,6 +57,28 @@ class AddPlant extends Component {
     API.savePlant(newPlant)
     .catch(err => console.log(err));
   };
+
+  handleUploadSuccess = async filename => {
+    const userId = localStorage.getItem('userId');
+  const downloadURL = await firebase
+    .storage()
+    .ref("images")
+    .child(filename)
+    .getDownloadURL();
+
+  this.setState(oldState => ({
+    filenames: [...oldState.filenames, filename],
+    downloadURLs: [downloadURL, ...oldState.downloadURLs],
+    uploadProgress: 100,
+    isUploading: false
+  }),
+  this.savePost({
+      imageURL: downloadURL,
+      createdAt: new Date(),
+      userID: userId
+      })
+  );
+  };
   
   
   componentDidMount(){
@@ -77,20 +101,6 @@ class AddPlant extends Component {
         <h6>* denotes required field</h6>
 
         <form>
-          <div className="imageContainer">
-            {/* <div>
-              Plant image component will go here
-            </div> */}
-            {/* <Input className="photoUrl" */}
-            <div className="photoUrlInput">
-              <Input
-                value={this.state.plantPic}
-                onChange={this.handleInputChange}
-                name="plantPic"
-                placeholder="Insert Photo URL"
-              />
-            </div>
-          </div>
 
           <Input
             value={this.state.plantName}
@@ -161,6 +171,23 @@ class AddPlant extends Component {
                   onChange={this.handleInputChange} />{' '}
                 False
               </Label>
+                <div className="imageContainer" style={{float:'right'}}>
+                  <label style={{backgroundColor: '#3B9732', color: 'white', padding: 10, borderRadius: 4, cursor: 'pointer'}}>
+                      Add your plant pic!
+                    <FileUploader
+                    hidden
+                    accept="image/*"
+                    name="image-uploader-multiple"
+                    randomizeFilename
+                    storageRef={firebase.storage().ref("images")}
+                    onUploadStart={this.handleUploadStart}
+                    onUploadError={this.handleUploadError}
+                    onUploadSuccess={this.handleUploadSuccess}
+                    onProgress={this.handleProgress}
+                    multiple
+                    />
+                  </label>
+                </div>
           </FormGroup>
         </FormGroup>
 
