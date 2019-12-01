@@ -92,7 +92,7 @@ class PlantDetail extends Component {
                     {/* INFO CARD ROW --------------  */}
                     <Row id='info-card'>
                         <Col sm="12" md={{ size: 8, offset: 2 }} >
-                            <h5>Care Info:</h5>
+                            {/* <h5>Care Info:</h5> */}
                             <InfoCard 
                             key={this.state.userPlant._id}
                             sun = {this.state.userPlant.plantCare.sun}
