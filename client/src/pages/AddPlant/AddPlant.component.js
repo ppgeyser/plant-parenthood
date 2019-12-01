@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
-import { Input, TextArea, FormBtn } from "../../components/AddPlantForm";
+import { Input, FormBtn } from "../../components/AddPlantForm";
+import FileUploader from "react-firebase-file-uploader";
+import firebase from "firebase";
 import BottomNav from "../../components/BottomNavigation"
-import { Container, Row, Col, FormGroup, Label } from 'reactstrap';
+import { Container, Row, Col, FormGroup, Label, Alert } from 'reactstrap';
 import "./AddPlant.css";
 import API from "../../utils/API";
 
@@ -20,7 +22,10 @@ class AddPlant extends Component {
     nonToxic: false,
     plantPic: "",
     plantNickname: "",
-    createdAt: new Date()  
+    createdAt: new Date() ,
+    filename: "",
+    picText: "Add your plant pic!",
+    isVisible: false
     
 };
 
@@ -54,7 +59,35 @@ class AddPlant extends Component {
     console.log(newPlant);
     API.savePlant(newPlant)
     .catch(err => console.log(err));
+    this.setVisible(true);
   };
+
+  handleUploadSuccess = async filename => {
+  const downloadURL = await firebase
+    .storage()
+    .ref("images")
+    .child(filename)
+    .getDownloadURL();
+
+  this.setState(oldState => ({
+    filename: filename,
+    plantPic: downloadURL
+  }));
+  };
+
+  handlePictoggle = () => {
+    this.setState({picText: "Does this look right?"})
+  }
+
+  setVisible = (boolean) => {
+    this.setState({
+        isVisible: boolean
+    });
+  };
+
+  onDismiss = () => {
+    this.setVisible(false);
+  }
   
   
   componentDidMount(){
@@ -65,6 +98,10 @@ class AddPlant extends Component {
   render() {
     return (
       <div className="addPlantContainer">
+        {/* Alert on successful plant add*/}
+        <Alert color="success" isOpen={this.state.isVisible} toggle={this.onDismiss} style={{ position: 'fixed', zIndex: 1000, width: '100%' }}>
+                Plant Added!
+        </Alert>
 
       <Container id="container-body">
         {/* 'YOUR PLANTS' - ROW  --------------  */}
@@ -77,20 +114,6 @@ class AddPlant extends Component {
         <h6>* denotes required field</h6>
 
         <form>
-          <div className="imageContainer">
-            {/* <div>
-              Plant image component will go here
-            </div> */}
-            {/* <Input className="photoUrl" */}
-            <div className="photoUrlInput">
-              <Input
-                value={this.state.plantPic}
-                onChange={this.handleInputChange}
-                name="plantPic"
-                placeholder="Insert Photo URL"
-              />
-            </div>
-          </div>
 
           <Input
             value={this.state.plantName}
@@ -161,9 +184,29 @@ class AddPlant extends Component {
                   onChange={this.handleInputChange} />{' '}
                 False
               </Label>
+              {this.state.plantPic === ""
+                ? null
+                : <div style={{float: 'right'}}>
+                <img src={this.state.plantPic} style={{height: '250px', width: '250px'}} />;
+                </div>
+              }
+                <div className="imageContainer" style={{float:'right'}}>
+                  <label style={{backgroundColor: '#3B9732', color: 'white', padding: 10, borderRadius: 4, cursor: 'pointer'}}>
+                      {this.state.picText}
+                    <FileUploader
+                    hidden
+                    accept="image/*"
+                    name="image-uploader-multiple"
+                    randomizeFilename
+                    storageRef={firebase.storage().ref("images")}
+                    onUploadSuccess={this.handleUploadSuccess}
+                    onClick={this.handlePictoggle}
+                    multiple
+                    />
+                  </label>
+                </div>
           </FormGroup>
         </FormGroup>
-
 
           <FormBtn
             disabled={!(this.state.plantName && this.state.sun && this.state.soil &&this.state.water)}
