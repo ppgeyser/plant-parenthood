@@ -2,16 +2,16 @@ import React, { Component } from 'react';
 import PlantDisplayCard from '../../components/PlantDisplayCard';
 import Plants from "./Plants.json";
 import BottomNav from '../../components/BottomNavigation';
-import { Container, Row, Col } from 'reactstrap';
+import { Container, Row, Col, Alert } from 'reactstrap';
 import API from "../../utils/API";
-// import BottomNav from "../../components/BottomNavigation"
 
 class Results extends Component {
     constructor(props){
         super(props);
         this.state = {
         matchScore: [],
-        bestMatch: []
+        bestMatch: [],
+        isVisible: false
     }
     }
 
@@ -123,13 +123,31 @@ class Results extends Component {
             plantPic: plant.plantPic,
             createdAt: new Date()
         })
+        this.setVisible(true);
+    }
+
+    setVisible = (boolean) => {
+        this.setState({
+            isVisible: boolean
+        });
+    };
+    
+      onDismiss = () => {
+        this.setVisible(false);
     }
 
     render() {
         return (
             <div>
-                <Container id="results-body">
+                
+                {/* Alert on successful plant add*/}
+                    <Alert color="success" isOpen={this.state.isVisible} toggle={this.onDismiss} style={{ position: 'fixed', zIndex: 1000, width: '100%' }}>
+                        Plant Added!
+                    </Alert>    
 
+                <Container id="results-body">
+                
+                    
                     {/* 'YOUR RESULTS' - ROW  --------------  */}
                     <Row id="header-text">
                         <Col sm="12" md={{ size: 8, offset: 2 }}>
