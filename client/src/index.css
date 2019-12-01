@@ -188,6 +188,15 @@ button {
   }
 }
 
+@media screen and (min-width: 575px) {
+  #plant-row{
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 800px;
+  }
+}
+
 /* @media screen and (min-width: 575px) {
   #container-body{
     display: block;
