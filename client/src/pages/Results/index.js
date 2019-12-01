@@ -117,7 +117,7 @@ class Results extends Component {
                 water: plant.plantCare.water,
                 weeks: plant.plantCare.weeks,
                 days: plant.plantCare.days,
-                lastWatered: plant.plantCare.lastWatered
+                lastWatered: new Date()
             },
             nonToxic: plant.nonToxic,
             plantPic: plant.plantPic,
