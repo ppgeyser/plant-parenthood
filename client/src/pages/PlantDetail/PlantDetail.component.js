@@ -78,6 +78,7 @@ class PlantDetail extends Component {
                     </Row>
 
                     {/* WATERING SCHEDULE ROW --------------  */}
+
                     <Row>
                         <Col xs="10">
                             <WateringSchedule data = {this.state.userPlant.plantCare} />
@@ -91,6 +92,7 @@ class PlantDetail extends Component {
 
                     {/* INFO CARD ROW --------------  */}
                     <Row id='info-card'>
+
                         <Col sm="12" md={{ size: 8, offset: 2 }} >
                             {/* <h5>Care Info:</h5> */}
                             <InfoCard 
