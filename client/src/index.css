@@ -154,6 +154,14 @@ button {
   opacity: 0.5
 }
 
+#submit-btn-row {
+  margin-bottom: 20%;
+}
+
+#form-row {
+  margin-top: 5%;
+}
+
 /* ----------------------------------------------------------- */
 /* RESULTS PAGE CSS ------------------------------------------- */
 
@@ -178,6 +186,19 @@ button {
   border-radius: 15px;
 }
 
+/* ----------------------------------------------------------- */
+/* PLANT DETAIL ------------------------------------------- */
+
+#water-icon:hover {
+  color: #428bff;
+}
+
+#info-card {
+  margin-bottom: 20%;
+}
+
+
+
 
 /* ----------------------------------------------------------- */
 /* RESPONSIVNESS CSS ------------------------------------------- */
@@ -200,6 +221,7 @@ button {
     max-width: 800px;
   }
 }
+
 
 /* @media screen and (min-width: 575px) {
   #container-body{

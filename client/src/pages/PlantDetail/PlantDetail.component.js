@@ -2,11 +2,12 @@ import React, { Component } from 'react';
 import { Login } from '../../components/Login/Login.component'
 import InfoCard from '../../components/InfoCard'
 import BottomNav from '../../components/BottomNavigation'
-import { Container, Row, Col } from 'reactstrap';
+import { Container, Row, Col, Alert, Card, CardImg, CardText, CardBody } from 'reactstrap';
 import CreateIcon from '@material-ui/icons/Create';
 import API from "../../utils/API";
 import './style.css';
 import WateringSchedule from '../../components/WateringSchedule'
+import OpacityIcon from '@material-ui/icons/Opacity';
 
 
 class PlantDetail extends Component {
@@ -45,14 +46,31 @@ class PlantDetail extends Component {
         })
     }
 
+    // FUNCTION TO UPDATE LAST WATERED DATE -----------------------------
     handleWater(data) {
         var todaysDate = new Date();
 
         this.setState(this.state.userPlant.plantCare.lastWatered = todaysDate)
-        console.log(this.state.userPlant.plantCare.lastWatered)
+            //console.log(this.state.userPlant.plantCare.lastWatered)
+        // Send NEW last watered date to user's database 
         API.updatePlant(this.props.match.params.id, this.state.userPlant)
+        
+        // set alert to visible
+        this.setVisible(true);
     }
 
+    // ALERT FUNCTIONALITY --------------------------------------------
+    setVisible = (boolean) => {
+        this.setState({
+            isVisible: boolean
+        });
+    };
+    
+      onDismiss = () => {
+        this.setVisible(false);
+    }
+
+    // REMVOVING A PLANT --------------------------------------------
     handlePlantDelete = id => {
         API.deletePlant(id).then(res => this.getPlants()).then(window.location.href="/dashboard/") 
     };
@@ -61,6 +79,11 @@ class PlantDetail extends Component {
         console.log(this.state)
         return (
             <div>
+                {/* Alert on successful plant add*/}
+                <Alert color="success" isOpen={this.state.isVisible} toggle={this.onDismiss} style={{ position: 'fixed', zIndex: 1000, width: '100%' }}>
+                    Plant Watered!
+                </Alert>    
+
                 <Container id="plantid-body">
 
                     {/* PLANT NAME - ROW  --------------  */}
@@ -78,21 +101,27 @@ class PlantDetail extends Component {
                     </Row>
 
                     {/* WATERING SCHEDULE ROW --------------  */}
-
                     <Row>
-                        <Col xs="10">
-                            <WateringSchedule data = {this.state.userPlant.plantCare} />
-                        </Col>
-                        <Col xs="2">
-                            <CreateIcon onClick={this.handleWater} />
-                        </Col>
+                    <Col sm="12" md={{ size: 8, offset: 2 }} >
+                    <Card id="water-card">
+                        <CardBody>
+                            <Row>
+                                <Col xs="10">
+                                    <WateringSchedule data = {this.state.userPlant.plantCare} />
+                                </Col>
+                                <Col xs="2">
+                                    <OpacityIcon id="water-icon" onClick={this.handleWater} />
+                                </Col>
 
+                            </Row>
+                        </CardBody>
+                    </Card>
+                    </Col>
                     </Row>
 
 
                     {/* INFO CARD ROW --------------  */}
                     <Row id='info-card'>
-
                         <Col sm="12" md={{ size: 8, offset: 2 }} >
                             {/* <h5>Care Info:</h5> */}
                             <InfoCard 
@@ -103,7 +132,7 @@ class PlantDetail extends Component {
                             days = {this.state.userPlant.plantCare.days}
                             weeks = {this.state.userPlant.plantCare.weeks}
                             onClick={event => this.handlePlantDelete(this.state.userPlant._id)}
-                            label="Delete"
+                            label="Remove"
                             />
                         </Col>
                     </Row>
