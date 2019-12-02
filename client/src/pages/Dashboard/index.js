@@ -48,33 +48,35 @@ class Dashboard extends React.Component {
 
                 {/* PLANT CARD ROW --------------  */}
                 {/* {this.state.userPlants.map(userPlant =>( */}
-                
-                {this.state.userPlants.length === 0
-                ? <h1 id="ifNo">You have no plants yet! Take our survey to see what plant you can parent, or add your own!</h1>
-                : this.state.userPlants.map(userPlant =>(
+                <div id="plant-row-top">
+                    {this.state.userPlants.length === 0
+                    ? <h1 id="ifNo">You have no plants yet! Take our survey to see what plant you can parent, or add your own!</h1>
+                    : this.state.userPlants.map(userPlant =>(
 
-                    <Row id="plant-row">
+                        <Row id="plant-row">
 
-                        <Col sm="12" md={{ size: 8, offset: 2 }} >
-                            <PlantDashCard 
-                                key={userPlant._id}
-                                plantPic={userPlant.plantPic}
-                                plantName={userPlant.plantName}
-                                plantNickname={userPlant.plantNickname}
-                                water={userPlant.plantCare.days}
-                                onClick={event =>  window.location.href="/plants/" + userPlant._id}
-                                label="Details"
-                            />
-                            
-                        </Col>
-
-                        <Row>
                             <Col sm="12" md={{ size: 8, offset: 2 }} >
-                            {/* <Button className="float-right" onClick={props.onClick}>{props.label}</Button> */}
-                            </ Col>
+                                <PlantDashCard 
+                                    key={userPlant._id}
+                                    plantPic={userPlant.plantPic}
+                                    plantName={userPlant.plantName}
+                                    plantNickname={userPlant.plantNickname}
+                                    water={userPlant.plantCare.days}
+                                    onClick={event =>  window.location.href="/plants/" + userPlant._id}
+                                    label="Details"
+                                />
+                                
+                            </Col>
+
+                            <Row>
+                                <Col sm="12" md={{ size: 8, offset: 2 }} >
+                                {/* <Button className="float-right" onClick={props.onClick}>{props.label}</Button> */}
+                                </ Col>
+                            </Row>
                         </Row>
-                    </Row>
-                ))}
+                        
+                    ))}     
+                </div>
                 
                 <Login />
             

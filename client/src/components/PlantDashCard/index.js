@@ -9,7 +9,7 @@ const PlantDashCard = (props) => {
   return (
     <div>        
       <Card className="border-0">
-            <CardBody >
+            <CardBody>
                 <CardImg onClick={props.onClick} src={props.plantPic} className="float-left mr-3 plant-img" alt="Plant Image" />  
                 <CardText style={{fontWeight: "bold"}} >{props.plantName}
                     <OpacityIcon />
