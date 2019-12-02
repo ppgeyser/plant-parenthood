@@ -65,6 +65,7 @@ class Dashboard extends React.Component {
                                     onClick={event =>  window.location.href="/plants/" + userPlant._id}
                                     label="Details"
                                 />
+                                <hr/>
                                 
                             </Col>
 

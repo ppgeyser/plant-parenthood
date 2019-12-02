@@ -147,30 +147,29 @@ class Results extends Component {
 
                 <Container id="results-body">
                 
-                    
                     {/* 'YOUR RESULTS' - ROW  --------------  */}
                     <Row id="header-text">
                         <Col sm="12" md={{ size: 8, offset: 2 }}>
                             <h3>Your Results</h3>
                         </Col>
                     </Row>
-
-
-                            {this.state.bestMatch.map(plant =>
-                                <Row id="plant-row">
-                                    <Col sm="12" md={{ size: 8, offset: 2 }}>
-                                <PlantDisplayCard
-                                    key={plant.plantId}
-                                    plantPic = {plant.plantPic}
-                                    plantName={plant.plantName}
-                                    sun={plant.plantCare.sun}
-                                    soil={plant.plantCare.soil}
-                                    water={plant.plantCare.water}
-                                    onClick={() => this.savePlant(plant)}
-                                    label="Add Plant"
-                                > 
-                                About Me: {plant.plantBio}
-                                </PlantDisplayCard>
+                            
+                    {this.state.bestMatch.map(plant =>
+                    <Row id="plant-row">
+                        <Col sm="12" md={{ size: 8, offset: 2 }}>
+                            <PlantDisplayCard
+                                key={plant.plantId}
+                                plantPic = {plant.plantPic}
+                                plantName={plant.plantName}
+                                sun={plant.plantCare.sun}
+                                soil={plant.plantCare.soil}
+                                water={plant.plantCare.water}
+                                onClick={() => this.savePlant(plant)}
+                                label="Add Plant"
+                            > 
+                            About Me: {plant.plantBio}
+                            </PlantDisplayCard>
+                            <hr/>
                         </Col>
                     </Row>
                           )}  
