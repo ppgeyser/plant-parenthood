@@ -14,6 +14,7 @@ class PlantDetail extends Component {
     constructor(props){
         super(props);
         this.state = {
+            isVisible: false,
             userPlant: {
                 plantCare: {
                     soil: "",
