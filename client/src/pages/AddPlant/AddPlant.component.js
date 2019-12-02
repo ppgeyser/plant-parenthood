@@ -6,6 +6,7 @@ import BottomNav from "../../components/BottomNavigation"
 import { Container, Row, Col, FormGroup, Label, Alert } from 'reactstrap';
 import "./AddPlant.css";
 import API from "../../utils/API";
+import { ModeComment } from '@material-ui/icons';
 
 
 class AddPlant extends Component {
@@ -35,6 +36,7 @@ class AddPlant extends Component {
       [name]: value
     });
   };
+ 
 
   handleFormSubmit = event => {
     event.preventDefault();
@@ -136,7 +138,7 @@ class AddPlant extends Component {
                 value={this.state.soil}
                 onChange={this.handleInputChange}
                 name="soil"
-                placeholder="Soil Type *"
+                placeholder="Soil Type"
               />
 
               <Input
@@ -145,25 +147,20 @@ class AddPlant extends Component {
                 name="sun"
                 placeholder="Sun*"
               />
+
             <Input
                 value={this.state.water}
                 onChange={this.handleInputChange}
                 name="water"
-                placeholder='Ex: "Mist 3x a day."' 
+                placeholder="Additional Watering Instructions."
               />
 
               <Input
-                value={this.state.weeks}
-                onChange={this.handleInputChange}
-                name="weeks"
-                placeholder='Ex: "Water every X week(s)." '  
-              />
-
-              <Input
+                type="number"
                 value={this.state.days}
                 onChange={this.handleInputChange}
                 name="days"
-                placeholder='Ex: "Water again in X days(s)." * '  
+                placeholder="# of days between watering (integer only).* " 
               />
 
               <Input
@@ -173,10 +170,10 @@ class AddPlant extends Component {
                 value={this.state.lastwatered}
                 onChange={this.handleInputChange}
                 name="lastwatered"
-                placeholder="Last Watered (in days)"
+                placeholder="Last Watered. Please input YYYY-MM-DD"
               />
 
-              <h6 id="toxicDiv">Is your plant toxic?</h6>
+              <h6 id="toxicDiv">Is your plant toxic to pets?</h6>
               
               <FormGroup tag="fieldset">
                 <FormGroup check>
@@ -187,7 +184,7 @@ class AddPlant extends Component {
                       name="nonToxic" 
                       value={true} 
                       onChange={this.handleInputChange} />{' '}
-                    True
+                    Yes
                   </Label>
               {/* </FormGroup> */}
 
@@ -199,7 +196,7 @@ class AddPlant extends Component {
                       name="nonToxic" 
                       value={false} 
                       onChange={this.handleInputChange} />{' '}
-                    False
+                    No
                   </Label>
                   {this.state.plantPic === ""
                     ? null
@@ -232,7 +229,7 @@ class AddPlant extends Component {
         <Row id="submit-btn-row">
           <Col sm="12" md={{ size: 8, offset: 2 }}>
             <FormBtn
-                disabled={!(this.state.plantName && this.state.sun && this.state.soil &&this.state.water)}
+                disabled={!(this.state.plantName && this.state.sun &&this.state.days)}
                 onClick={this.handleFormSubmit}
                 >
                 Submit
