@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import firebase from "firebase";
 import FileUploader from "react-firebase-file-uploader";
+import { FormBtn } from "../../components/AddPlantForm";
 import BottomNav from '../../components/BottomNavigation';
-import { Container, Row, Col } from 'reactstrap';
+import { Container, Row, Col, Card, Input } from 'reactstrap';
 import API from "../../utils/API";
 // import {DropzoneDialog} from 'material-ui-dropzone'
 // import Button from '@material-ui/core/Button';
@@ -18,7 +19,8 @@ class Feed extends Component {
     filenames: [],
     downloadURLs: [],
     isUploading: false,
-    uploadProgress: 0
+    uploadProgress: 0,
+    captionText: ""
   };
 
   componentDidMount(){
@@ -91,10 +93,16 @@ class Feed extends Component {
                 <h3> Plant Feed </h3> 
             </Col>
         </Row>
-            
-        <div className="addPic text-center">
-        <label style={{backgroundColor: '#3B9732', color: 'white', padding: 10, borderRadius: 4, cursor: 'pointer'}}>
-        Add your plant pic!
+        <Row>
+        <Col sm="12" md={{ size: 8, offset: 2 }}>
+      <Card style={{border: '0px'}}>
+        <Row>
+        <Col sm="8" >
+        <Input type="textarea" className="form-control" style={{height: "100%", width: "100%"}} placeholder="Write a caption..." />
+        </Col>
+        <Col sm="4">
+        <button className="btn btn-success" disabled={!this.state.captionText} style={{backgroundColor: '#3B9732', color: 'white', height: '100%', width: '100%', padding: 10, borderRadius: 4, cursor: 'pointer'}}>
+        Click here to add a picture to your post!
             <FileUploader
             hidden
             accept="image/*"
@@ -107,10 +115,13 @@ class Feed extends Component {
             onProgress={this.handleProgress}
             multiple
             />
-        </label>
- 
-        <p>Progress: {this.state.uploadProgress}</p>
-        </div>
+        </button>
+        </Col>
+        {/* <p>Progress: {this.state.uploadProgress}</p> */}
+        </Row>
+        </Card>
+        </Col>
+        </Row>
         <div>
           {this.state.downloadURLs.map((downloadURL, i) => {
             return <img key={i} src={downloadURL} />;
