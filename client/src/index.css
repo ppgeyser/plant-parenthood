@@ -8,6 +8,11 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  height: auto;
+  min-height: 100%;
+  display: block;
+  overflow: auto;
 }
 
 code {
@@ -134,6 +139,10 @@ button {
 }
 
 #plant-col {
+  margin-bottom: 20%;
+}
+
+#plant-row-top {
   margin-bottom: 20%;
 }
 
