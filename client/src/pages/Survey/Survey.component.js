@@ -76,6 +76,8 @@ export class Survey extends Component {
                     </Col>
                 </Row>
 
+                 {/* QUESTIONS ROW  --------------  */}
+                 <div id="questions-box">
                 {Questions.map(question =>
                 <QACards
                 key={question.number}
@@ -90,6 +92,7 @@ export class Survey extends Component {
                 Answer5={question.answers[4]}
                 />
                 )}
+                </div>
 
                 {/* 'SUBMIT BUTTON' - ROW  --------------  */}
                 <Row id="button-row">
