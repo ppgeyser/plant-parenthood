@@ -1,14 +1,11 @@
 import React, { Component } from 'react';
 import firebase from "firebase";
 import FileUploader from "react-firebase-file-uploader";
-import { FormBtn } from "../../components/AddPlantForm";
 import BottomNav from '../../components/BottomNavigation';
 import { Container, Row, Col, Card, Input } from 'reactstrap';
 import API from "../../utils/API";
-// import {DropzoneDialog} from 'material-ui-dropzone'
-// import Button from '@material-ui/core/Button';
  
-// Setup Firebase
+
 firebase.initializeApp({
   apiKey: process.env.REACT_APP_firebase_apiKey,
   storageBucket: process.env.REACT_APP_firebase_storageBucket
@@ -17,7 +14,7 @@ firebase.initializeApp({
 class Feed extends Component {
   state = {
     filenames: [],
-    downloadURLs: [],
+    post: [],
     isUploading: false,
     uploadProgress: 0,
     captionText: ""
@@ -32,11 +29,18 @@ class Feed extends Component {
       API.getAllPosts()
       .then(res => {
           res.data.forEach(post => {
-        postArr.push(post.imageURL);
+        postArr.push(post);
         })
-        this.setState({downloadURLs: [...postArr]})
+        this.setState({post: [...postArr]})
       })
   }
+
+  handleInputChange = event => {
+    const { name, value } = event.target;
+    this.setState({
+      [name]: value
+    });
+  };
  
   handleUploadStart = () =>
     this.setState({
@@ -52,7 +56,6 @@ class Feed extends Component {
   handleUploadError = error => {
     this.setState({
       isUploading: false
-      // Todo: handle error
     });
     console.error(error);
   };
@@ -65,22 +68,19 @@ class Feed extends Component {
       .child(filename)
       .getDownloadURL();
 
-    this.setState(oldState => ({
-      filenames: [...oldState.filenames, filename],
-      downloadURLs: [downloadURL, ...oldState.downloadURLs],
-      uploadProgress: 100,
-      isUploading: false
-    }),
     this.savePost({
         imageURL: downloadURL,
         createdAt: new Date(),
-        userID: userId
-        })
-    );
+        userID: userId,
+        post: this.state.captionText
+        });
   };
 
   savePost = (post) => {
-    API.savePost(post)
+    API.savePost(post);
+    this.setState(oldState => ({
+      post: [post, ...oldState.post],
+    }));
   }
  
   render() {
@@ -93,38 +93,52 @@ class Feed extends Component {
                 <h3> Plant Feed </h3> 
             </Col>
         </Row>
-        <Row>
+      <Row>
         <Col sm="12" md={{ size: 8, offset: 2 }}>
-      <Card style={{border: '0px'}}>
-        <Row>
-        <Col sm="8" >
-        <Input type="textarea" className="form-control" style={{height: "100%", width: "100%"}} placeholder="Write a caption..." />
-        </Col>
-        <Col sm="4">
-        <button className="btn btn-success" disabled={!this.state.captionText} style={{backgroundColor: '#3B9732', color: 'white', height: '100%', width: '100%', padding: 10, borderRadius: 4, cursor: 'pointer'}}>
-        Click here to add a picture to your post!
-            <FileUploader
-            hidden
-            accept="image/*"
-            name="image-uploader-multiple"
-            randomizeFilename
-            storageRef={firebase.storage().ref("images")}
-            onUploadStart={this.handleUploadStart}
-            onUploadError={this.handleUploadError}
-            onUploadSuccess={this.handleUploadSuccess}
-            onProgress={this.handleProgress}
-            multiple
-            />
-        </button>
-        </Col>
-        {/* <p>Progress: {this.state.uploadProgress}</p> */}
-        </Row>
+        <Card style={{border: '0px'}}>
+          <Row>
+            <Col sm="8" >
+              <Input 
+              type="textarea" className="form-control"
+              style={{height: "100%", width: "100%"}}
+              value={this.state.captionText}
+              onChange={this.handleInputChange}
+              name="captionText"
+              placeholder="Write a caption..."
+              />
+            </Col>
+
+            <Col sm="4">
+                {!this.state.captionText
+                ? <label className='text-center' style={{backgroundColor: '#3B9732', color: 'white', height: '100%', width: '100%', padding: 10, borderRadius: 4, cursor: 'pointer'}}>
+                  Please add a caption first
+                </label>
+                : <label className='text-center' style={{backgroundColor: '#3B9732', color: 'white', height: '100%', width: '100%', padding: 10, borderRadius: 4, cursor: 'pointer'}}>
+              Click here to add a picture to your post!
+                  <FileUploader
+                  disabled={!this.state.captionText}
+                  hidden
+                  accept="image/*"
+                  name="image-uploader-multiple"
+                  randomizeFilename
+                  storageRef={firebase.storage().ref("images")}
+                  onUploadStart={this.handleUploadStart}
+                  onUploadError={this.handleUploadError}
+                  onUploadSuccess={this.handleUploadSuccess}
+                  onProgress={this.handleProgress}
+                  multiple
+                  />
+              </label>
+                }
+            </Col>
+            
+          </Row>
         </Card>
         </Col>
-        </Row>
+      </Row>
         <div>
-          {this.state.downloadURLs.map((downloadURL, i) => {
-            return <img key={i} src={downloadURL} />;
+          {this.state.post.map((post, i) => {
+          return <div key={i}><img key={i} src={post.imageURL} alt={'plantpost#' + i}/> <h3>{post.post}</h3></div>;
           })}
         </div>
 
