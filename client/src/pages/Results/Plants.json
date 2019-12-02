@@ -64,7 +64,7 @@
         "plantType": "House Plant",
         "plantSci": "Dypsis lutescens",
         "nonToxic": true,
-        "plantBio": "I will be the star in your room and cats and dogs can enjoy my presence as well. I like bright light. Becareful, though, to not overwater me.",
+        "plantBio": "I will be the star in your room and cats and dogs can enjoy my presence as well. I like bright light. Be careful, though, to not overwater me.",
         "plantScore": ["3", "3", "4", "5", "1"]
     },
     {
@@ -72,7 +72,7 @@
         "plantCare": {
             "soil": "Well-draining cactus potting soil",
             "sun": "Partial Shade",
-            "water": "Once every 1.5 weeks or when top soil is dry",
+            "water": "Once every 1.5 weeks or when top soil is dry.",
             "weeks": 1.5,
             "days": 10
         },
@@ -81,7 +81,7 @@
         "plantType": "House Plant",
         "plantSci": "Epipremnum aureum",
         "nonToxic": false,
-        "plantBio": "I am the best beginner plant. I grow like a vine and add lots of green to your room. I can tolerate low light! Try your hand at propogating me",
+        "plantBio": "I am the best beginner plant. I grow like a vine and add lots of green to your room. I can tolerate low light! Try your hand at propogating me.",
         "plantScore": ["4", "3", "5", "3", "2"]
     },
     {
@@ -106,7 +106,7 @@
         "plantCare": {
             "soil": "Well-draining potting soil",
             "sun": "Low light tolerant, indirect sun",
-            "water": "Once every 1.5 weeks or when top soil is dry",
+            "water": "Once every 1.5 weeks or when top soil is dry.",
             "weeks": 1.5,
             "days": 10
         },
@@ -123,7 +123,7 @@
         "plantCare": {
             "soil": "Well-draining potting soil",
             "sun": "Bright room, indirect sun",
-            "water": "Once every 1.5 weeks or when top soil is slightly dry",
+            "water": "Once every 1.5 weeks or when top soil is slightly dry.",
             "weeks": 1.5,
             "days": 10
         },
@@ -140,7 +140,7 @@
         "plantCare": {
             "soil": "Cactus potting soil",
             "sun": "Full sun",
-            "water": "Once a month. No watering during winter months",
+            "water": "Once a month. No watering during winter months.",
             "weeks": 4,
             "days": 30
         },
@@ -149,7 +149,7 @@
         "plantType": "House Plant",
         "plantSci": "latin name",
         "nonToxic": true,
-        "plantBio": "I love basking in the sun, but I don't need much water! Just once a month I need a good soak",
+        "plantBio": "I love basking in the sun, but I don't need much water! Just once a month I need a good soak.",
         "plantScore": ["1", "5", "3", "1", "1"]
     },
     {
@@ -166,7 +166,7 @@
         "plantType": "House Plant",
         "plantSci": "Phalaenopsis",
         "nonToxic": true,
-        "plantBio": "I'm easier to care for than you think. I just need a bright spot out of the sun and moist bark and I will reward you with beautiful flowers",
+        "plantBio": "I'm easier to care for than you think. I just need a bright spot out of the sun and moist bark and I will reward you with beautiful flowers.",
         "plantScore": ["3", "3", "4", "5", "1"]
     },
     {
@@ -174,7 +174,7 @@
         "plantCare": {
             "soil": "Well-draining potting soil",
             "sun": "Low light tolerant, indirect sun",
-            "water": "Once every 1.5 weeks or when top inch of soil is dry",
+            "water": "Once every 1.5 weeks or when top inch of soil is dry.",
             "weeks": 1.5,
             "days": 10
         },
@@ -183,7 +183,7 @@
         "plantType": "House Plant",
         "plantSci": "Aspidistra elatior",
         "nonToxic": true,
-        "plantBio": "If you don't get a lot of sunshine in your room, that's okay! I am low light tolerant",
+        "plantBio": "If you don't get a lot of sunshine in your room, that's okay! I am low light tolerant.",
         "plantScore": ["5", "3", "3", "2", "1"]
     },
     {
@@ -191,7 +191,7 @@
         "plantCare": {
             "soil": "Peat-based potting soil",
             "sun": "Half light, half shade",
-            "water": "Once every 1 week. Keep soil moist",
+            "water": "Once every 1 week. Keep soil moist.",
             "weeks": 1,
             "days": 7
         },
