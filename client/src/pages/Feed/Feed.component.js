@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import firebase from "firebase";
 import FileUploader from "react-firebase-file-uploader";
 import BottomNav from '../../components/BottomNavigation';
-import { Container, Row, Col } from 'reactstrap';
+import { Container, Row, Col, CardColumns, Card, CardImg } from 'reactstrap';
 import API from "../../utils/API";
 // import {DropzoneDialog} from 'material-ui-dropzone'
 // import Button from '@material-ui/core/Button';
@@ -111,12 +111,16 @@ class Feed extends Component {
  
         <p>Progress: {this.state.uploadProgress}</p>
         </div>
-        <div>
-          {this.state.downloadURLs.map((downloadURL, i) => {
-            return <img key={i} src={downloadURL} />;
-          })}
-        </div>
 
+        <CardColumns>
+          {this.state.downloadURLs.map((downloadURL, i) => {
+            return (
+              <Card>
+                <CardImg top width="100%" id={i} src={downloadURL} alt="Plant Imnage" />
+              </Card>
+            );
+          })}
+        </CardColumns>
 
         </Container>
         
