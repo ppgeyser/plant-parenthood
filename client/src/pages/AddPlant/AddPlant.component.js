@@ -3,6 +3,7 @@ import { Input, FormBtn } from "../../components/AddPlantForm";
 import FileUploader from "react-firebase-file-uploader";
 import firebase from "firebase";
 import BottomNav from "../../components/BottomNavigation"
+import WaterCalendar from "../../components/WaterCalendar"
 import { Container, Row, Col, FormGroup, Label, Alert } from 'reactstrap';
 import "./AddPlant.css";
 import API from "../../utils/API";
@@ -163,7 +164,13 @@ class AddPlant extends Component {
                 placeholder="# of days between watering (integer only).* " 
               />
 
-              <Input
+              <WaterCalendar 
+                value={this.state.lastWatered}
+                onChange={this.handleInputChange}
+                name="lastWatered"
+              />
+
+              {/* <Input
                 // NOTE: this 'value' needs to be confirmed - Added in this new input form for front-end purposes
                 // and watering schedule purposes 
 
@@ -171,7 +178,7 @@ class AddPlant extends Component {
                 onChange={this.handleInputChange}
                 name="lastwatered"
                 placeholder="Last Watered. Please input YYYY-MM-DD"
-              />
+              /> */}
 
               <h6 id="toxicDiv">Is your plant toxic to pets?</h6>
               
