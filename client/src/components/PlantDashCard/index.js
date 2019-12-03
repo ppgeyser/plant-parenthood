@@ -16,7 +16,6 @@ const PlantDashCard = (props) => {
                   <Row>
                     <Col sm="12" md={{ size: 8, offset: 2 }}>
                       <CardText id="plant-dash-header-text" style={{fontWeight: "bold"}} >{props.plantName} </CardText>
-                      <CardText>{props.children}</CardText>
                       { props.plantNickname && <CardText> Nickname: {props.plantNickname}</CardText> }
                     </Col>
                   </Row>
@@ -32,10 +31,10 @@ const PlantDashCard = (props) => {
                     {/* COL 2 - WATER */}
                     <Col xs="8">
                       <Row>
-                        <CardText>Water every {props.water} days </CardText>  
+                        {/* <CardText>Water every {props.water} days </CardText>   */}
                       </Row>
                       <Row>
-                        <OpacityIcon/>
+                        {props.children}
                       </Row>
                     </Col>
 
