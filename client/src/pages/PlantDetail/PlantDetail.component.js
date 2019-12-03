@@ -27,6 +27,7 @@ class PlantDetail extends Component {
                 _id: "",
                 userID: "",
                 plantName: "",
+                plantNickname: "",
                 nonToxic: null,
                 plantPic: "",
                 createdAt: ""
@@ -91,7 +92,7 @@ class PlantDetail extends Component {
                     {/* PLANT NAME - ROW  --------------  */}
                     <Row id="header-text">
                         <Col sm="12" md={{ size: 8, offset: 2 }}>
-                            <h3>{this.state.userPlant.plantName}</h3>
+                            <h3>{this.state.userPlant.plantNickname || this.state.userPlant.plantName}</h3>
                         </Col>
                     </Row>
 

@@ -10,7 +10,7 @@ import { Button, Card, CardImg, CardText, CardBody } from 'reactstrap';
                 <CardText>Care Info:</CardText>
                     <ul>
                         <li>Sun: {props.sun}</li>
-                        <li>Soil: {props.soil}</li>
+                        { props.soil && <li> Soil: {props.soil}</li> }
                         {/* { props.days &&  <li>Water every {props.days} days.</li> } */}
                         { props.water && <li>{props.water}</li> }
 
