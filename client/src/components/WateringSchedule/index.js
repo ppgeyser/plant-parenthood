@@ -5,9 +5,9 @@ var moment = require('moment');
 function waterSchedule(arg) {
 
     // date the plant was added (assuming that is the day the plant is being watered)
-    //const plantLastWatered = arg.lastWatered;
-    const plantLastWatered = "2019-11-27T23:19:57.286Z"
-    console.log(plantLastWatered);
+     const plantLastWatered = arg.lastWatered;
+    // const plantLastWatered = "2019-11-27T23:19:57.286Z"
+    // console.log(plantLastWatered);
 
     // how often the plant needs to be watered 
      var wateringFreq = arg.days; 
