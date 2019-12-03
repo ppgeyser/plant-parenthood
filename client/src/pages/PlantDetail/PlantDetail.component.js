@@ -50,6 +50,7 @@ class PlantDetail extends Component {
     // FUNCTION TO UPDATE LAST WATERED DATE -----------------------------
     handleWater(data) {
         var todaysDate = new Date();
+    
 
         this.setState(this.state.userPlant.plantCare.lastWatered = todaysDate)
             //console.log(this.state.userPlant.plantCare.lastWatered)
