@@ -13,6 +13,7 @@
 ![Results_RM](https://user-images.githubusercontent.com/49423028/70081187-ea782a00-15bc-11ea-8232-7e1f0d3e56f5.gif)
 
 ## Dashboard 2
+![image](https://user-images.githubusercontent.com/49423028/70081725-f0223f80-15bd-11ea-9741-96a385d6b953.png)
 
 ## AddPlant
 
