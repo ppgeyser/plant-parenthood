@@ -21,14 +21,14 @@ function waterSchedule(arg) {
     var date1 = new Date();
     var date2 = moment(nextWateringDate);
     var diffInDays = date2.diff(date1, 'days');
-        console.log(typeof(diffInDays));
+        //console.log(typeof(diffInDays));
         return ( (diffInDays > 0) ? ( (diffInDays === 1) ? (<h5> Water tomorrow </h5>) : (<h5> Water again in {diffInDays} days </h5>) ) 
             : (<h5> Watering overdue. Water today!</h5>)
         )
 }
 
 let WateringSchedule = (props) => {    
-console.log(props)
+//console.log(props)
         return (
             <div>
                 {waterSchedule(props.data)} 

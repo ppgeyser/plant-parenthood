@@ -2,20 +2,26 @@ import React from 'react';
 import { Login } from '../../components/Login/Login.component';
 import PlantDashCard from '../../components/PlantDashCard';
 import BottomNav from '../../components/BottomNavigation';
-import { Container, Row, Col } from 'reactstrap';
+import { Container, Row, Col, Alert } from 'reactstrap';
 import API from "../../utils/API";
 import { User } from '../../components/User';
+import OpacityIcon from '@material-ui/icons/Opacity';
+import WateringSchedule from '../../components/WateringSchedule';
+
 
 
 class Dashboard extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
+            isVisible: false,
             userPlants: [],
+            index: null,
             user: {
                 id: window.localStorage.userId
             }
         };
+        this.handleWater = this.handleWater.bind(this)
     }
 
     componentDidMount() {
@@ -31,10 +37,57 @@ class Dashboard extends React.Component {
             })
     }
 
+        // FUNCTION TO UPDATE LAST WATERED DATE -----------------------------
+        handleWater(plant) {
+            //console.log('handleWater', plant)
+            // Make a request to the API to update the lastWatered to the current Time
+            API.updatePlant(plant._id, {
+                ...plant,
+                plantCare: {
+                    ...plant.plantCare,
+                    lastWatered: new Date(),
+                }
+            })
+            .then(res => {
+                console.log('UPDATED PLANT', res);
+                this.loadPlants();
+                this.setVisible(true);
+
+
+            })
+            .catch(err => {
+                console.log('ERR - Failed to update plant', err);
+                // TODO - handle gracefully
+            });
+
+        }
+
+
+        // ALERT FUNCTIONALITY --------------------------------------------
+        setVisible = (boolean) => {
+            this.setState({
+                isVisible: boolean
+            });
+        };
+        
+          onDismiss = () => {
+            this.setVisible(false);
+        }
+
+        navigateToPlant = (e, userPlant) => {
+            e.preventDefault();
+            this.props.history.push(`/plants/${userPlant._id}`);
+        }
+
 
     render() {
+        console.log('this.props', this.props);
         return (
             <div>  
+
+                <Alert color="success" isOpen={this.state.isVisible} toggle={this.onDismiss} style={{ position: 'fixed', zIndex: 1000, width: '100%' }}>
+                    Plant Watered!
+                </Alert>  
 
             <User />
             <Container id="container-body">
@@ -51,20 +104,25 @@ class Dashboard extends React.Component {
                 <div id="plant-row-top">
                     {this.state.userPlants.length === 0
                     ? <h1 id="ifNo">You have no plants yet! Take our survey to see what plant you can parent, or add your own!</h1>
-                    : this.state.userPlants.map(userPlant =>(
+                    : this.state.userPlants.map((userPlant, index) => (
 
                         <Row id="plant-row">
 
                             <Col sm="12" md={{ size: 8, offset: 2 }} >
-                                <PlantDashCard 
+                                <PlantDashCard
                                     key={userPlant._id}
                                     plantPic={userPlant.plantPic}
                                     plantName={userPlant.plantName}
                                     plantNickname={userPlant.plantNickname}
                                     water={userPlant.plantCare.days}
-                                    onClick={event =>  window.location.href="/plants/" + userPlant._id}
+                                    onClick={e => this.navigateToPlant(e, userPlant)}
                                     label="Details"
-                                />
+                                
+                                >
+                                
+                                    <OpacityIcon id="water-icon" onClick={e => this.handleWater(userPlant)} />
+                                    <WateringSchedule data = {userPlant.plantCare} />
+                                </PlantDashCard>
                                 <hr/>
                                 
                             </Col>
