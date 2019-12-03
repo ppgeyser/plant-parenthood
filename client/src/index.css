@@ -146,6 +146,13 @@ button {
   margin-bottom: 20%;
 }
 
+#plant-dash-header-text {
+  background-color: #F1F1F1;
+  padding: 2px;
+  border-radius: 4px;
+  padding-left: 4px;
+}
+
 
 /* ----------------------------------------------------------- */
 /*  ADD PLANT CSS  ------------------------------------------- */
@@ -233,6 +240,12 @@ button {
     margin-right: auto;
     margin-left: auto;
     max-width: 800px;
+  }
+}
+
+@media screen and (min-width: 575px) {
+  #plant-dash-header-text {
+  width: 100%;
   }
 }
 
