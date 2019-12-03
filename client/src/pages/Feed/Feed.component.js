@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 import firebase from "firebase";
 import FileUploader from "react-firebase-file-uploader";
 import BottomNav from '../../components/BottomNavigation';
-import { Container, Row, Col, Card, Input } from 'reactstrap';
+import CreateIcon from '@material-ui/icons/Create';
+import CloudUploadIcon from '@material-ui/icons/CloudUpload';
+import { Container, Row, Col, Card, Input, CardColumns, CardImg, CardBody, CardText } from 'reactstrap';
 import API from "../../utils/API";
  
 
@@ -97,24 +99,24 @@ class Feed extends Component {
         <Col sm="12" md={{ size: 8, offset: 2 }}>
         <Card style={{border: '0px'}}>
           <Row>
-            <Col sm="8" >
+            <Col xs={{ size:9 }} sm={{ size:10 }}>
               <Input 
               type="textarea" className="form-control"
               style={{height: "100%", width: "100%"}}
               value={this.state.captionText}
               onChange={this.handleInputChange}
               name="captionText"
-              placeholder="Write a caption..."
+              placeholder="Write a caption *"
               />
             </Col>
 
-            <Col sm="4">
+            <Col xs={{ size:3 }} sm={{ size:2 }}>
                 {!this.state.captionText
-                ? <label className='text-center' style={{backgroundColor: '#3B9732', color: 'white', height: '100%', width: '100%', padding: 10, borderRadius: 4, cursor: 'pointer'}}>
-                  Please add a caption first
-                </label>
+                ? <button className='text-center' style={{backgroundColor: '#3B9732', color: 'white', height: '100%', width: '100%', padding: 10, borderRadius: 4, cursor: 'pointer'}}>
+                  <CreateIcon fontSize='large' style={{color: 'white'}}/>
+                </button>
                 : <label className='text-center' style={{backgroundColor: '#3B9732', color: 'white', height: '100%', width: '100%', padding: 10, borderRadius: 4, cursor: 'pointer'}}>
-              Click here to add a picture to your post!
+                  <CloudUploadIcon fontSize='large' style={{color: 'white'}}/>
                   <FileUploader
                   disabled={!this.state.captionText}
                   hidden
@@ -136,13 +138,25 @@ class Feed extends Component {
         </Card>
         </Col>
       </Row>
-        <div>
+
+      <Container style={{maxWidth: '800px', marginBottom: '10%'}}>
+        <Row>
+          <Col>
+          <CardColumns>
           {this.state.post.map((post, i) => {
-          return <div key={i}><img key={i} src={post.imageURL} alt={'plantpost#' + i}/> <h3>{post.post}</h3></div>;
-          })}
-        </div>
-
-
+          return (
+            <Card >
+        <CardImg src={post.imageURL} alt="Plant Post and Image" />
+        <CardBody>
+          <CardText>{post.post}</CardText>
+        </CardBody>
+      </Card>
+          )}
+          )}
+          </CardColumns>
+          </Col>
+        </Row>
+      </Container>
         </Container>
         
         <BottomNav />
