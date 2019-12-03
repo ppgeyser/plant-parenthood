@@ -8,8 +8,6 @@ import API from "../../utils/API";
 import './style.css';
 import WateringSchedule from '../../components/WateringSchedule'
 import OpacityIcon from '@material-ui/icons/Opacity';
-
-
 class PlantDetail extends Component {
     constructor(props){
         super(props);
@@ -27,6 +25,7 @@ class PlantDetail extends Component {
                 _id: "",
                 userID: "",
                 plantName: "",
+                plantNickname: "",
                 nonToxic: null,
                 plantPic: "",
                 createdAt: ""
@@ -38,7 +37,6 @@ class PlantDetail extends Component {
     componentDidMount(){
         this.loadUserPlant();
     };
-
     loadUserPlant(){
         API.getPlantByID(this.props.match.params.id).then(res => {
             this.setState({
@@ -46,12 +44,10 @@ class PlantDetail extends Component {
             });
         })
     }
-
     // FUNCTION TO UPDATE LAST WATERED DATE -----------------------------
     handleWater(data) {
         var todaysDate = new Date();
     
-
         this.setState(this.state.userPlant.plantCare.lastWatered = todaysDate)
             //console.log(this.state.userPlant.plantCare.lastWatered)
         // Send NEW last watered date to user's database 
@@ -60,7 +56,6 @@ class PlantDetail extends Component {
         // set alert to visible
         this.setVisible(true);
     }
-
     // ALERT FUNCTIONALITY --------------------------------------------
     setVisible = (boolean) => {
         this.setState({
@@ -71,7 +66,6 @@ class PlantDetail extends Component {
       onDismiss = () => {
         this.setVisible(false);
     }
-
     // REMVOVING A PLANT --------------------------------------------
     handlePlantDelete = id => {
         API.deletePlant(id).then(res => this.getPlants()).then(window.location.href="/dashboard/") 
@@ -85,23 +79,19 @@ class PlantDetail extends Component {
                 <Alert color="success" isOpen={this.state.isVisible} toggle={this.onDismiss} style={{ position: 'fixed', zIndex: 1000, width: '100%' }}>
                     Plant Watered!
                 </Alert>    
-
                 <Container id="plantid-body">
-
                     {/* PLANT NAME - ROW  --------------  */}
                     <Row id="header-text">
                         <Col sm="12" md={{ size: 8, offset: 2 }}>
-                            <h3>{this.state.userPlant.plantName}</h3>
+                            <h3>{this.state.userPlant.plantNickname || this.state.userPlant.plantName}</h3>
                         </Col>
                     </Row>
-
                     {/* IMAGE ROW --------------  */}
                     <Row>
                         <Col sm="12" md={{ size: 8, offset: 2 }} >
                             <img src={this.state.userPlant.plantPic} alt="Plant Picture" />
                         </Col>
                     </Row>
-
                     {/* WATERING SCHEDULE ROW --------------  */}
                     <Row>
                     <Col sm="12" md={{ size: 8, offset: 2 }} >
@@ -114,14 +104,11 @@ class PlantDetail extends Component {
                                 <Col xs="2">
                                     <OpacityIcon id="water-icon" onClick={this.handleWater} />
                                 </Col>
-
                             </Row>
                         </CardBody>
                     </Card>
                     </Col>
                     </Row>
-
-
                     {/* INFO CARD ROW --------------  */}
                     <Row id='info-card'>
                         <Col sm="12" md={{ size: 8, offset: 2 }} >
@@ -138,16 +125,11 @@ class PlantDetail extends Component {
                             />
                         </Col>
                     </Row>
-
                     <Login />
-
                 </Container>
-
                     <BottomNav />
-
             </div>
         );
     }
 }
-
 export default PlantDetail;
