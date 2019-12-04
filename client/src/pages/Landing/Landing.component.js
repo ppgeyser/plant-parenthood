@@ -18,12 +18,12 @@ export const Landing = (props) => {
                 <Col sm="12" md={{ size: 8, offset: 2 }}>
                     <h3> Welcome to </h3> 
                     <h2> Plant Parenthood </h2>
-                </Col>
-            </Row>
+                {/* </Col>
+            </Row> */}
 
             {/* LOGIN BUTTON ROW --------------  */}
-            <Row>
-                <Col sm="12" md={{ size: 8, offset: 2 }} >
+            {/* <Row>
+                <Col sm="12" md={{ size: 8, offset: 2 }} > */}
                     <Login />
                 </Col>
             </Row>

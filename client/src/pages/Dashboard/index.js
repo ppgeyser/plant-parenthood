@@ -103,7 +103,7 @@ class Dashboard extends React.Component {
                 {/* {this.state.userPlants.map(userPlant =>( */}
                 <div id="plant-row-top">
                     {this.state.userPlants.length === 0
-                    ? <h1 id="ifNo">You have no plants yet! Take our survey to see what plant you can parent, or add your own!</h1>
+                    ? <h2 id="ifNo">You have no plants yet! Take our survey to see what plant you can parent, or add your own!</h2>
                     : this.state.userPlants.map((userPlant, index) => (
 
                         <Row id="plant-row">

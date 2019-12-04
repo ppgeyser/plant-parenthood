@@ -108,6 +108,10 @@ button {
 #landing-welcome-text {
   text-align: center;
   padding-top: 50px;
+  position: fixed;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
 
 /* ----------------------------------------------------------- */
@@ -128,7 +132,11 @@ button {
 }
 
 #ifNo {
-  margin-top: 100px;
+  margin-top: 10em;
+  text-align: center;
+  font-family: 'Merriweather', serif;
+  line-height: 48px;
+  
 }
 
 /* #plant-row {
@@ -156,6 +164,10 @@ button {
 
 /* ----------------------------------------------------------- */
 /*  ADD PLANT CSS  ------------------------------------------- */
+.form-control {
+  font-family: 'Merriweather', serif;
+}
+
 #radioPlace{
   margin-right: 15%;
 }
@@ -176,6 +188,43 @@ button {
 
 #form-row {
   margin-top: 5%;
+}
+
+#toxicBorder{
+  max-width: 100%;
+  position: relative;
+  height: calc(1.5em + .75rem + 2px);
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+
+#toxicLeft {
+  display:inline-block;
+  font-family: 'Merriweather', serif;
+  opacity: 0.7;
+}
+#toxicRight {
+  float: right;
+  clear: right;
+  clear: left;
+}
+
+.AddButton {
+  position: absolute;
+  left: 50%;
+  margin-left: -50px;
+  border-radius: .25rem!important;
+  background-color:rgb(145, 48, 107);
+  font-family: 'Merriweather', serif;
 }
 
 /* ----------------------------------------------------------- */
@@ -248,6 +297,31 @@ button {
   width: 100%;
   }
 }
+
+/* DASHBOARD ALERT */
+@media screen and (max-width: 992px) {
+  #ifNo {
+  margin-top: 8em;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  #ifNo {
+  margin-top: 7em;
+  }
+}
+
+/* ADD PLANT */
+@media screen and (max-width: 389px) {
+  #toxicBorder {
+  height: 75px;
+  }
+  #toxicRight{
+    float: none;
+    clear: right;
+  }
+}
+
 
 
 /* @media screen and (min-width: 575px) {
