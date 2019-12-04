@@ -1,6 +1,7 @@
 import React from 'react';
 import { Card, CardImg, CardText, CardBody, Row, Col, Container, Button } from 'reactstrap';
 import OpacityIcon from '@material-ui/icons/Opacity';
+import { fontSize } from '@material-ui/system';
 
 
 
@@ -15,7 +16,7 @@ const PlantDashCard = (props) => {
                   {/* PLANT TITLE ROW  */}
                   <Row>
                     <Col sm="12" md={{ size: 8, offset: 2 }}>
-                      <CardText id="plant-dash-header-text" style={{fontWeight: "bold"}} >{props.plantName} </CardText>
+                      <CardText id="plant-dash-header-text" style={{fontWeight: "bold", fontSize: "20px"}} >{props.plantName} </CardText>
                       { props.plantNickname && <CardText> Nickname: {props.plantNickname}</CardText> }
                     </Col>
                   </Row>
@@ -29,7 +30,7 @@ const PlantDashCard = (props) => {
                     </Col>
 
                     {/* COL 2 - WATER */}
-                    <Col xs="8">
+                    <Col xs="6">
                       <Row>
                         {/* <CardText>Water every {props.water} days </CardText>   */}
                       </Row>
