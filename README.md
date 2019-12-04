@@ -10,12 +10,7 @@ Plant Parenthood is a mobile-first app centered around new plant parents looking
 
 ![Splash_RM](https://user-images.githubusercontent.com/49423028/70077923-9bc79180-15b6-11ea-9d11-1b63493d7748.jpg)
 
-When you first visit our web app, you will be prompted to log in. You will need a Google account in order to use our app. If you do not have one, you can use our guest account:
-
-  - username: plantparenthoodapp@gmail.com
-  - password: Default123
-  
-Once you have passed through all of the auth0 authentication, you will be taken to the main dashboard page.
+When you first visit our web app, you will be prompted to log in. You will need a Google account in order to use our app. Once you have passed through all of the auth0 authentication, you will be taken to the main dashboard page.
 
 ### Dashboard
 
