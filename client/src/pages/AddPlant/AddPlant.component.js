@@ -3,8 +3,8 @@ import { Input, FormBtn } from "../../components/AddPlantForm";
 import FileUploader from "react-firebase-file-uploader";
 import firebase from "firebase";
 import BottomNav from "../../components/BottomNavigation"
-import { Container, Row, Col, FormGroup, Label, Alert } from 'reactstrap';
-import "./AddPlant.css";
+import { Container, Row, Col, FormGroup, Label, Alert, CustomInput } from 'reactstrap';
+
 import API from "../../utils/API";
 import { ModeComment } from '@material-ui/icons';
 
@@ -170,34 +170,38 @@ class AddPlant extends Component {
                 value={this.state.lastwatered}
                 onChange={this.handleInputChange}
                 name="lastwatered"
-                placeholder="Last Watered. Please input YYYY-MM-DD"
+                placeholder="Last Watered (YYYY-MM-DD)."
               />
 
-              <h6 id="toxicDiv">Is your plant toxic to pets?</h6>
-              
-              <FormGroup tag="fieldset">
-                <FormGroup check>
-                  <Label check id="radioPlace">
-                    <Input 
-                      className="radioSize"
+              <FormGroup >
+                <div id="toxicBorder">
+                 
+                    <Label id="toxicLeft">
+                      Is your plant toxic to pets?
+                    </Label>
+      
+                  <div id="toxicRight">
+                    <CustomInput 
                       type="radio" 
+                      id="exampleCustomInline" 
+                      label="Yes" 
                       name="nonToxic" 
                       value={true} 
-                      onChange={this.handleInputChange} />{' '}
-                    Yes
-                  </Label>
-              {/* </FormGroup> */}
-
-              {/* <FormGroup check> */}
-                  <Label check id="radioPlace">
-                    <Input 
-                      className="radioSize"
+                      onChange={this.handleInputChange}
+                      inline />
+                    <CustomInput 
                       type="radio" 
+                      id="exampleCustomInline2" 
+                      label="No" 
                       name="nonToxic" 
                       value={false} 
-                      onChange={this.handleInputChange} />{' '}
-                    No
-                  </Label>
+                      onChange={this.handleInputChange} 
+                      inline />
+                  </div>
+                </div>
+              </FormGroup>
+              
+      
                   {this.state.plantPic === ""
                     ? null
                     : <div style={{float: 'right'}}>
@@ -205,7 +209,7 @@ class AddPlant extends Component {
                     </div>
                   }
                     <div className="imageContainer" style={{float:'right'}}>
-                      <label style={{backgroundColor: '#3B9732', color: 'white', padding: 10, borderRadius: 4, cursor: 'pointer'}}>
+                      <label style={{backgroundColor: '#3B9732', color: 'white', padding: 10, borderRadius: 4, cursor: 'pointer',fontFamily: "'Merriweather', serif"}}>
                           {this.state.picText}
                         <FileUploader
                         hidden
@@ -219,8 +223,7 @@ class AddPlant extends Component {
                         />
                       </label>
                     </div>
-              </FormGroup>
-            </FormGroup>
+
             </form>
           </Col>
         </Row>
@@ -229,6 +232,7 @@ class AddPlant extends Component {
         <Row id="submit-btn-row">
           <Col sm="12" md={{ size: 8, offset: 2 }}>
             <FormBtn
+                className="AddButton"
                 disabled={!(this.state.plantName && this.state.sun &&this.state.days)}
                 onClick={this.handleFormSubmit}
                 >
