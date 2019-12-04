@@ -13,7 +13,7 @@ import { Button, Card, CardImg, CardText, CardBody } from 'reactstrap';
                         {/* { props.days &&  <li>Water every {props.days} days.</li> } */}
                         { props.water && <li> {props.water}</li> }
                     </ul>
-                    <Button className="float-right" onClick={props.onClick}>{props.label}</Button>
+                    <button className="float-right" onClick={props.onClick}>{props.label}</button>
                 </CardBody>
             </Card>
         </div>
