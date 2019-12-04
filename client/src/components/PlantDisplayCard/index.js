@@ -33,7 +33,7 @@ const PlantDisplayCard = (props) => {
                   <p>Water: {props.water}</p>
               </Col>
             </Row>
-                  <Button className="float-right" onClick={props.onClick}>{props.label}</Button>
+                  <button className="float-right" onClick={props.onClick}>{props.label}</button>
             </div>
 
       </Card>
