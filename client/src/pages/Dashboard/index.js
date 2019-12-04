@@ -94,7 +94,7 @@ class Dashboard extends React.Component {
 
                 {/* HEADER TEXT ROW  --------------  */}
                 <Row id="header-text">
-                    <Col sm="12" md={{ size: 8, offset: 2 }}>
+                    <Col sm="12" md={{ size: 6, offset: 3 }}>
                         <h3> Your Plants </h3> 
                     </Col>
                 </Row>
@@ -106,9 +106,7 @@ class Dashboard extends React.Component {
                     ? <h2 id="ifNo">You have no plants yet! Take our survey to see what plant you can parent, or add your own!</h2>
                     : this.state.userPlants.map((userPlant, index) => (
 
-                        <Row id="plant-row">
-
-                            <Col sm="12" md={{ size: 8, offset: 2 }} >
+                            <div>
                                 <PlantDashCard
                                     key={userPlant._id}
                                     plantPic={userPlant.plantPic}
@@ -117,22 +115,12 @@ class Dashboard extends React.Component {
                                     water={userPlant.plantCare.days}
                                     onClick={e => this.navigateToPlant(e, userPlant)}
                                     label="Details"
-                                
                                 >
-                                
                                     <OpacityIcon id="water-icon" onClick={e => this.handleWater(userPlant)} />
-                                    <WateringSchedule data = {userPlant.plantCare} />
+                                    <WateringSchedule  data = {userPlant.plantCare} />
                                 </PlantDashCard>
                                 <hr/>
-                                
-                            </Col>
-
-                            <Row>
-                                <Col sm="12" md={{ size: 8, offset: 2 }} >
-                                {/* <Button className="float-right" onClick={props.onClick}>{props.label}</Button> */}
-                                </ Col>
-                            </Row>
-                        </Row>
+                            </div>
                         
                     ))}     
                 </div>

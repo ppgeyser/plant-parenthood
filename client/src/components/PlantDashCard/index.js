@@ -8,32 +8,27 @@ import { fontSize } from '@material-ui/system';
 
 const PlantDashCard = (props) => {
   return (
-    <div>   
-      <Container>     
-        <Card className="border-0">
-              <CardBody>
 
+      <Container>     
+        
                   {/* PLANT TITLE ROW  */}
                   <Row>
-                    <Col sm="12" md={{ size: 8, offset: 2 }}>
-                      <CardText id="plant-dash-header-text" style={{fontWeight: "bold", fontSize: "20px"}} >{props.plantName} </CardText>
-                      { props.plantNickname && <CardText> Nickname: {props.plantNickname}</CardText> }
+                    <Col sm="12" md={{ size: 8, offset: 2 }} lg={{ size: 8, offset: 3 }}>
+                      <h5 id="plant-dash-header-text" style={{fontWeight: "bold", fontSize: "20px"}}>{props.plantName} </h5>
+                      { props.plantNickname && <h5> Nickname: {props.plantNickname}</h5> }
                     </Col>
                   </Row>
                     
                   {/* IMG / WATER / DROP - ROW */}
-                  <Row>
+                  <Row id="water-img-row">
 
                     {/* COL 1 - IMAGE COLUMN */}
-                    <Col xs="4">
-                      <CardImg onClick={props.onClick} src={props.plantPic} className="float-left mr-3 plant-img" alt="Plant Image" />
+                    <Col xs="4" md={{ size: 8, offset: 2 }} lg={{ size: 5, offset: 2 }}>
+                      <img onClick={props.onClick} src={props.plantPic} className="float-left mr-3 plant-img" alt="Plant Image" />
                     </Col>
 
                     {/* COL 2 - WATER */}
-                    <Col xs="6">
-                      <Row>
-                        {/* <CardText>Water every {props.water} days </CardText>   */}
-                      </Row>
+                    <Col  xs={{ size: 5, offset: 2 }} md={{ size: 8, offset: 5 }} lg={{ size: 3, offset: 0 }}>
                       <Row>
                         {props.children}
                       </Row>
@@ -41,12 +36,7 @@ const PlantDashCard = (props) => {
 
                   </Row>
 
-              </CardBody>
-
-          </Card>
-
         </Container>
-      </div>
   );
 };
 

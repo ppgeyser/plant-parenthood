@@ -139,19 +139,13 @@ button {
   
 }
 
-/* #plant-row {
-  padding: 0px;
-  border-bottom-style: solid;
-  border-bottom-width: 1px;
-  border-bottom-color:#b6b6b6;
-} */
-
 #plant-col {
   margin-bottom: 20%;
 }
 
 #plant-row-top {
   margin-bottom: 20%;
+  max-width: 800px;
 }
 
 #plant-dash-header-text {
@@ -161,8 +155,6 @@ button {
   padding-left: 4px;
   margin-bottom: 10px;
 }
-
-
 
 
 /* ----------------------------------------------------------- */
@@ -270,7 +262,9 @@ button {
   margin-bottom: 20%;
 }
 
-
+#water-test {
+  font-size: 20px;
+}
 
 
 /* ----------------------------------------------------------- */
@@ -286,20 +280,30 @@ button {
   }
 }
 
-@media screen and (min-width: 575px) {
+/* @media screen and (min-width: 575px) {
   #plant-row {
     display: block;
-    max-width: 800px;
+    min-width: 800px;
   }
-}
+} */
 
 
 @media screen and (min-width: 768px) {
   #plant-dash-header-text {
-  width:400px;
+  /* width:400px; */
   margin-left:-30%;
+  padding-left: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
   }
 }
+
+@media screen and (min-width: 768px) {
+  #water-img-row {
+    margin-top: 10px;
+  }
+}
+
 
 /* DASHBOARD ALERT */
 @media screen and (max-width: 992px) {
@@ -326,13 +330,20 @@ button {
 }
 
 
+@media screen and (min-width: 800px) {
+  .plant-img {
+  max-width: 800px;
+  max-height: 200px;
+  margin-left: -15%;
+  }
+}
 
 
-/* @media screen and (min-width: 575px) {
+@media screen and (min-width: 575px) {
   #container-body{
     display: block;
     margin-right: auto;
     margin-left: auto;
     max-width: 800px;
   }
-} */
+}

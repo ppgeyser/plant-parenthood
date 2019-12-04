@@ -22,8 +22,8 @@ function waterSchedule(arg) {
     var date2 = moment(nextWateringDate);
     var diffInDays = date2.diff(date1, 'days');
         //console.log(typeof(diffInDays));
-        return ( (diffInDays > 0) ? ( (diffInDays === 1) ? (<h5> Water tomorrow </h5>) : (<h5> Water in {diffInDays} days </h5>) ) 
-            : (<h5> Watering overdue. Water today!</h5>)
+        return ( (diffInDays > 0) ? ( (diffInDays === 1) ? (<p> Water tomorrow </p>) : (<p> Water in {diffInDays} days </p>) ) 
+            : (<p> Watering overdue. Water today!</p>)
         )
 }
 
