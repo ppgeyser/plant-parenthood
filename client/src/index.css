@@ -57,6 +57,14 @@ button {
   font-family: 'Merriweather', serif !important;
 }
 
+a {
+  color: #91306B !important;
+}
+a:hover {
+  color: #B8B73D !important;
+  text-decoration: none !important;
+}
+
 /* -------- NAVIGATION BAR  ------------------------------- */
 
 #navbar-row {
