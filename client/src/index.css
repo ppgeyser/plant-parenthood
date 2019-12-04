@@ -151,7 +151,10 @@ button {
   padding: 2px;
   border-radius: 4px;
   padding-left: 4px;
+  margin-bottom: 10px;
 }
+
+
 
 
 /* ----------------------------------------------------------- */
@@ -235,19 +238,20 @@ button {
 }
 
 @media screen and (min-width: 575px) {
-  #plant-row{
+  #plant-row {
     display: block;
-    margin-right: auto;
-    margin-left: auto;
     max-width: 800px;
   }
 }
 
-@media screen and (min-width: 575px) {
+
+@media screen and (min-width: 768px) {
   #plant-dash-header-text {
-  width: 100%;
+  width:400px;
+  margin-left:-30%;
   }
 }
+
 
 
 /* @media screen and (min-width: 575px) {
