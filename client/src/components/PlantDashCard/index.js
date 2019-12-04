@@ -15,6 +15,12 @@ const PlantDashCard = (props) => {
                   <Row>
                     <Col sm="12" md={{ size: 8, offset: 2 }} lg={{ size: 8, offset: 3 }}>
                       <h5 id="plant-dash-header-text" style={{fontWeight: "bold"}}>{props.plantName} </h5>
+                    </Col>
+                  </Row>
+                  
+                  {/* NICKNAME ROW  */}
+                  <Row>
+                    <Col sm="12" md={{ size: 8, offset: 2 }} lg={{ size: 8, offset: 3 }}>
                       { props.plantNickname && <h5> Nickname: {props.plantNickname}</h5> }
                     </Col>
                   </Row>

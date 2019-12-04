@@ -1,9 +1,5 @@
 import React from 'react';
-import {
-  Card, CardImg, CardText, 
-  CardBody, Button
-} from 'reactstrap';
-import { Container, Row, Col } from 'reactstrap';
+import { Card, Button, Row, Col } from 'reactstrap';
 import "./styles.css";
 import { PinDropRounded } from '@material-ui/icons';
 
