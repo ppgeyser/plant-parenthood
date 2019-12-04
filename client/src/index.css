@@ -54,6 +54,7 @@ button {
   padding: 5px;
   width: 100px;
   border-radius: 15px;
+  font-family: 'Merriweather', serif !important;
 }
 
 /* -------- NAVIGATION BAR  ------------------------------- */
@@ -255,6 +256,7 @@ button {
   max-width:800px;
   margin: auto;
 }
+
 
 /* ----------------------------------------------------------- */
 /* QA CARDS ------------------------------------------- */
