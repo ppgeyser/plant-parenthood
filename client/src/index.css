@@ -345,7 +345,7 @@ button {
 @media screen and (min-width: 800px) {
   .plant-img {
   max-width: 800px;
-  max-height: 200px;
+  max-height: 150px;
   margin-left: -15%;
   }
 }
