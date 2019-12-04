@@ -6,7 +6,7 @@ import { Button, Card, CardImg, CardText, CardBody } from 'reactstrap';
         <div>
             <Card>
             <CardBody>
-                <CardText>Care Info:</CardText>
+                <p id="care-info-text"> Care Info: </p>
                     <ul>
                         <li>Sun: {props.sun}</li>
                         { props.soil && <li> Soil: {props.soil}</li> }
