@@ -59,6 +59,7 @@ class AddPlant extends Component {
   }
     console.log(newPlant);
     API.savePlant(newPlant)
+    .then(window.location.href="/dashboard/")
     .catch(err => console.log(err));
     this.setVisible(true);
   };
@@ -160,10 +161,10 @@ class AddPlant extends Component {
                 value={this.state.days}
                 onChange={this.handleInputChange}
                 name="days"
-                placeholder="# of days between watering (integer only).* " 
+                placeholder="# of days between watering * " 
               />
 
-              <Input
+              {/* <Input
                 // NOTE: this 'value' needs to be confirmed - Added in this new input form for front-end purposes
                 // and watering schedule purposes 
 
@@ -171,7 +172,7 @@ class AddPlant extends Component {
                 onChange={this.handleInputChange}
                 name="lastwatered"
                 placeholder="Last Watered (YYYY-MM-DD)."
-              />
+              /> */}
 
               <FormGroup >
                 <div id="toxicBorder">
@@ -223,7 +224,6 @@ class AddPlant extends Component {
                         />
                       </label>
                     </div>
-
             </form>
           </Col>
         </Row>
