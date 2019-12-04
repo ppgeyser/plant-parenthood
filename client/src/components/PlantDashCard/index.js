@@ -20,7 +20,7 @@ const PlantDashCard = (props) => {
                   
                   {/* NICKNAME ROW  */}
                   <Row>
-                    <Col sm="12" md={{ size: 8, offset: 2 }} lg={{ size: 8, offset: 3 }}>
+                    <Col sm="12" md={{ size: 8, offset: 0 }} lg={{ size: 8, offset: 1 }}>
                       { props.plantNickname && <h5> Nickname: {props.plantNickname}</h5> }
                     </Col>
                   </Row>
