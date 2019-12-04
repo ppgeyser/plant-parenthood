@@ -106,7 +106,7 @@ class Dashboard extends React.Component {
                     ? <h2 id="ifNo">You have no plants yet! Take our survey to see what plant you can parent, or add your own!</h2>
                     : this.state.userPlants.map((userPlant, index) => (
 
-                            <div>
+                            <div id="plant-dash-lg">
                                 <PlantDashCard
                                     key={userPlant._id}
                                     plantPic={userPlant.plantPic}
@@ -119,7 +119,7 @@ class Dashboard extends React.Component {
                                     <OpacityIcon id="water-icon" onClick={e => this.handleWater(userPlant)} />
                                     <WateringSchedule  data = {userPlant.plantCare} />
                                 </PlantDashCard>
-                                <hr/>
+                                <hr id="plant-hr"/>
                             </div>
                         
                     ))}     
