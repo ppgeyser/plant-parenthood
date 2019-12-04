@@ -12,16 +12,16 @@ const PlantDisplayCard = (props) => {
   return (
     <div>
       <Card className="border-0">
-            <CardBody >
-                <CardImg onClick={props.onClick} src={props.plantPic} className="float-left mr-3 plant-img" alt="Plant Image" />  
-                <CardText style={{fontWeight: "bold"}} >{props.plantName}</CardText>
-                <CardText>{props.children}</CardText>
-                { props.plantNickname && <CardText> Nickname: {props.plantNickname}</CardText> }
-                <CardText>Sun: {props.sun}</CardText>
-                <CardText>Soil: {props.soil}</CardText>
-                <CardText>Water: {props.water}</CardText>
+            <div>
+                <img onClick={props.onClick} src={props.plantPic} className="float-left mr-3 plant-img" alt="Plant Image" />  
+                <p style={{fontWeight: "bold"}} >{props.plantName} </p>
+                <p>{props.children}</p>
+                { props.plantNickname && <p> Nickname: {props.plantNickname}</p> }
+                <p>Sun: {props.sun}</p>
+                <p>Soil: {props.soil}</p>
+                <p>Water: {props.water}</p>
                   <Button className="float-right" onClick={props.onClick}>{props.label}</Button>
-            </CardBody>
+            </div>
       </Card>
     </div>
   );
