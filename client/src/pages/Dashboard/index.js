@@ -7,6 +7,7 @@ import API from "../../utils/API";
 import { User } from '../../components/User';
 import OpacityIcon from '@material-ui/icons/Opacity';
 import WateringSchedule from '../../components/WateringSchedule';
+import Button from "../../components/Button";
 
 
 
@@ -103,7 +104,11 @@ class Dashboard extends React.Component {
                 {/* {this.state.userPlants.map(userPlant =>( */}
                 <div id="plant-row-top">
                     {this.state.userPlants.length === 0
-                    ? <h2 id="ifNo">You have no plants yet! <a href="/survey">Take our survey</a> to see what plant you can parent, or <a href="/addplant">add your own!</a></h2>
+                    ? <div id="ifNo">
+                        <h2>You have no plants yet! Take our survey to get a plant match, or manually add your own.</h2> 
+                        <Button style={{marginRight: "10px"}} onClick={e => this.props.history.push("/survey")}>Survey</Button> 
+                        <Button onClick={e => this.props.history.push("/addplant")}>Add Plant</Button>
+                    </div>
                     : this.state.userPlants.map((userPlant, index) => (
 
                             <div id="plant-dash-lg">
